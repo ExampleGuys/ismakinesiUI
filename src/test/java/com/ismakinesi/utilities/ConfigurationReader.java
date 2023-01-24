@@ -1,4 +1,4 @@
-package com.ismakinesi.utilities.utilities;
+package com.ismakinesi.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;
