@@ -1,4 +1,4 @@
-package com.ismakinesi.utilities.utilities;
+package com.ismakinesi.utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;

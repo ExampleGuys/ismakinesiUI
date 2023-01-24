@@ -1,6 +1,6 @@
 package com.ismakinesi.stepDefinitions;
 
-import com.ismakinesi.utilities.utilities.Driver;
+import com.ismakinesi.utilities.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.AfterStep;
 import io.cucumber.java.Before;
