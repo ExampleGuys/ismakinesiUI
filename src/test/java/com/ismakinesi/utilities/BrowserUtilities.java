@@ -1,4 +1,4 @@
-package com.ismakinesi.utilities.utilities;
+package com.ismakinesi.utilities;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -17,8 +17,6 @@ import java.awt.event.KeyEvent;
 import java.io.*;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
@@ -53,17 +51,17 @@ public class BrowserUtilities {
     }
 
     public static WebElement waitForVisibility(WebElement element, int timeToWaitInSec) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeToWaitInSec));
+        WebDriverWait wait = new WebDriverWait(Driver.get(), Duration.ofSeconds(timeToWaitInSec));
         return wait.until(ExpectedConditions.visibilityOf(element));
     }
 
     public static WebElement waitForVisibility(By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
+        WebDriverWait wait = new WebDriverWait(Driver.get(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public static WebElement waitForClickability(WebElement element, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout));
+        WebDriverWait wait = new WebDriverWait(Driver.get(), Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
@@ -74,7 +72,7 @@ public class BrowserUtilities {
             }
         };
         try {
-            WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeOutInSeconds));
+            WebDriverWait wait = new WebDriverWait(Driver.get(), Duration.ofSeconds(timeOutInSeconds));
             wait.until(expectation);
         } catch (Throwable error) {
             error.printStackTrace();
@@ -83,7 +81,7 @@ public class BrowserUtilities {
 
     public static void verifyElementDisplayed(By by) {
         try {
-            Assert.assertTrue("Element not visible: " + by, Driver.getDriver().findElement(by).isDisplayed());
+            Assert.assertTrue("Element not visible: " + by, Driver.get().findElement(by).isDisplayed());
         } catch (NoSuchElementException e) {
             e.printStackTrace();
             Assert.fail("Element not found: " + by);
@@ -103,7 +101,7 @@ public class BrowserUtilities {
 
     public static void verifyElementNotDisplayed(By by) {
         try {
-            Assert.assertFalse("Element should not be visible: " + by, Driver.getDriver().findElement(by).isDisplayed());
+            Assert.assertFalse("Element should not be visible: " + by, Driver.get().findElement(by).isDisplayed());
         } catch (NoSuchElementException e) {
             e.printStackTrace();
 
@@ -120,16 +118,16 @@ public class BrowserUtilities {
     }
 
     public static void clickWithJS(WebElement element) {
-        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
-        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].click();", element);
+        ((JavascriptExecutor) Driver.get()).executeScript("arguments[0].scrollIntoView(true);", element);
+        ((JavascriptExecutor) Driver.get()).executeScript("arguments[0].click();", element);
     }
 
     public static void scrollToElement(WebElement element) {
-        ((JavascriptExecutor) Driver.getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+        ((JavascriptExecutor) Driver.get()).executeScript("arguments[0].scrollIntoView(true);", element);
     }
 
     public static void doubleClick(WebElement element) {
-        new Actions(Driver.getDriver()).doubleClick(element).build().perform();
+        new Actions(Driver.get()).doubleClick(element).build().perform();
     }
 
     public static void waitFor(int seconds) {
@@ -141,19 +139,19 @@ public class BrowserUtilities {
     }
 
     public static void switchToWindow(String targetTitle) {
-        String origin = Driver.getDriver().getWindowHandle();
-        for (String handle : Driver.getDriver().getWindowHandles()) {
-            Driver.getDriver().switchTo().window(handle);
-            if (Driver.getDriver().getTitle().equals(targetTitle)) {
+        String origin = Driver.get().getWindowHandle();
+        for (String handle : Driver.get().getWindowHandles()) {
+            Driver.get().switchTo().window(handle);
+            if (Driver.get().getTitle().equals(targetTitle)) {
                 return;
             }
         }
-        Driver.getDriver().switchTo().window(origin);
+        Driver.get().switchTo().window(origin);
     }
 
     public static List<String> getElementsText(By locator) {
 
-        List<WebElement> elems = Driver.getDriver().findElements(locator);
+        List<WebElement> elems = Driver.get().findElements(locator);
         List<String> elemTexts = new ArrayList<>();
 
         for (WebElement el : elems) {
@@ -264,20 +262,20 @@ public class BrowserUtilities {
         return format1.format(cal.getTime());
     }
     public static void hover(WebElement element) {
-        Actions actions = new Actions(Driver.getDriver());
+        Actions actions = new Actions(Driver.get());
         actions.moveToElement(element).perform();
     }
 
     public static void refreshPage() {
-        Driver.getDriver().navigate().refresh();
+        Driver.get().navigate().refresh();
         waitForPageToLoad(10);
     }
     public static void clearLocalSessionCookies() {
-        LocalStorage local = ((WebStorage) Driver.getDriver()).getLocalStorage();
-        SessionStorage session = ((WebStorage)Driver.getDriver()).getSessionStorage();
+        LocalStorage local = ((WebStorage) Driver.get()).getLocalStorage();
+        SessionStorage session = ((WebStorage)Driver.get()).getSessionStorage();
         local.clear();
         session.clear();
-        Driver.getDriver().manage().deleteAllCookies();
+        Driver.get().manage().deleteAllCookies();
     }
     public static void cleanTextInBox(WebElement element) {
         String inputText = element.getAttribute("value");
@@ -299,7 +297,7 @@ public class BrowserUtilities {
         return simpleformat.format(cal.getTime());
     }
     public static void staleElementClick(WebElement element, int timeout) {
-        new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(timeout))
+        new WebDriverWait(Driver.get(), Duration.ofSeconds(timeout))
                 .ignoring(StaleElementReferenceException.class)
                 .until((WebDriver d) -> {
                     clickWithJS(element);

@@ -1,4 +1,4 @@
-package com.ismakinesi.utilities.utilities;
+package com.ismakinesi.utilities;
 
 import java.io.FileInputStream;
 import java.util.Properties;
@@ -8,8 +8,8 @@ public class ConfigurationReader {
     private static Properties properties;
     static {
 
-        String path = "configuration.properties";
         try {
+            String path = "configuration.properties";
 
             FileInputStream file = new FileInputStream(path);
 
@@ -23,7 +23,7 @@ public class ConfigurationReader {
     }
 
     //    This method accepts the key and returns the value
-    public static String getProperty(String key){
+    public static String get(String key){
 
         return properties.getProperty(key);
     }
