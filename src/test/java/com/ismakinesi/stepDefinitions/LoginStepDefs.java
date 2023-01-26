@@ -8,6 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class LoginStepDefs {
 
@@ -29,6 +30,8 @@ public class LoginStepDefs {
 
     @Then("Uye Girisi sayfasi acilir")
     public void uyeGirisiSayfasiAcilir() {
+        Assert.assertEquals("Uye Girisi",loginPage.uyeGirisi.getText());
+
 
     }
 
