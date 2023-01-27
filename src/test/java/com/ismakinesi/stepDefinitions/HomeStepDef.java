@@ -28,15 +28,15 @@ public class HomeStepDef {
 
     @When("Tüm Filtreler e tıklar")
     public void tüm_filtreler_e_tıklar() {
-        BrowserUtilities.hover(homePage.All_filters);
-        homePage.All_filters.click();
+        BrowserUtilities.hover(homePage.allFilters);
+        homePage.allFilters.click();
 
     }
 
     @Then("{string} başlığını doğrular")
     public void başlığını_doğrular(String string) {
         WebElement element=Driver.get().findElement(By.xpath("//h3[.='Kategori']"));
-        Assert.assertTrue("Kategori Yazısı Doğrulanmadı",homePage.Category.isEnabled());
+        Assert.assertTrue("Kategori Yazısı Doğrulanmadı",homePage.category.isEnabled());
         System.out.println(element.getText());
 
     }
