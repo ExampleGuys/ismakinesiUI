@@ -60,6 +60,8 @@ public class AldiklarimStepDef {
             System.out.println(element.getText());
 
         }
+
+
     }
 
     @Then("kullanici onceden almis oldugu urunleri gorur")
