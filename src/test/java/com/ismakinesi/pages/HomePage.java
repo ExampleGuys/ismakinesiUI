@@ -4,16 +4,19 @@ import com.ismakinesi.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
 public class HomePage {
 
-    public HomePage(){
-        PageFactory.initElements(Driver.get(),this);
+    public HomePage() {
+        PageFactory.initElements(Driver.get(), this);
     }
 //***Locate başlama ****Engin Akgül tarafından hazırlanan "Tüm Filtreler ve Ana Sayfa" Locate leridir.
 
     //****Tüm Filitreler***
+    @FindBy(xpath = "//div[contains(@style, 'eda')]")
+    public WebElement forklift;
 
-    @FindBy(xpath = "//div[@class='filter']")
+    @FindBy(xpath = "//button[contains(@class, 'bottom')]")
     public WebElement All_filters;
 
     @FindBy(xpath = "//h3[.='Kategori']")
@@ -57,7 +60,7 @@ public class HomePage {
     public WebElement Limited_Service;
 
     @FindBy(xpath = "//h3[.='Üretim Yılı']")
-    public WebElement year_Of_Production ;
+    public WebElement year_Of_Production;
 
     @FindBy(xpath = "//h3[.='Çalışma Saati']")
     public WebElement study_time;
@@ -88,8 +91,6 @@ public class HomePage {
 
     @FindBy(xpath = "//a[contains(text(),'Mini Ekskavatör (<12t)')]")
     public WebElement Mini_Excavator;
-
-
 
 
 //***Locate bitiş ****Engin Akgül tarafından hazırlanan "Tüm Filtreler ve Ana Sayfa Locate leridir.

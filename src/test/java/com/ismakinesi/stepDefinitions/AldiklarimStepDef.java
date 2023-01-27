@@ -59,6 +59,8 @@ public class AldiklarimStepDef {
             System.out.println(element.getText());
 
         }
+
+
     }
 
 
