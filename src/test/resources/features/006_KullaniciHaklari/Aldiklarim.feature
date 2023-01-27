@@ -9,11 +9,15 @@ Feature:
 
 
   @IS-95
-  Scenario: Adiklarim sayfasinda Aldiklarim, Tekliflerim, Teklif Haklarim basliklari bulunur
+  Scenario: TC:IS-95 Adiklarim sayfasinda Aldiklarim, Tekliflerim, Teklif Haklarim basliklari bulunur
     Then Aldiklarim, Tekliflerim,Teklif Haklarim basliklari visible olur
       | Aldıklarım      |
       | Tekliflerim     |
       | Teklif Haklarım |
 
 
+  @IS-96
+  Scenario: TC:IS-96 Kullanici Aldiklarim sayfasindaki Aldiklarim'a tiklayinca onceden satin almis oldugu urunleri gorur
+
+    Then kullanici onceden almis oldugu urunleri gorur
 
