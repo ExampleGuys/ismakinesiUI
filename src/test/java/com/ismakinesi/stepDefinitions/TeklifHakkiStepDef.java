@@ -27,7 +27,6 @@ public class TeklifHakkiStepDef {
             WebElement element = Driver.get().findElement(By.xpath("//a[contains(text(),'" + label + "')]"));
 
             Assert.assertTrue(element.isDisplayed());
-            System.out.println(element.getText());
         }
 
     }
