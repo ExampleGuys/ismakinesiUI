@@ -8,6 +8,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
 
 public class LoginStepDefs {
 
@@ -21,11 +22,10 @@ public class LoginStepDefs {
 
     @When("kullanici Uye Ol Veya Giris Yapa tiklar")
     public void kullaniciUyeOlVeyaGirisYapaTiklar() {
-        BrowserUtilities.waitForClickability(loginPage.loginOrBeMemberButton,30);
+        BrowserUtilities.waitForClickability(loginPage.loginOrBeMemberButton, 30);
         loginPage.loginOrBeMemberButton.click();
         BrowserUtilities.waitFor(5);
     }
-
 
     @Then("Uye Girisi sayfasi acilir")
     public void uyeGirisiSayfasiAcilir() {

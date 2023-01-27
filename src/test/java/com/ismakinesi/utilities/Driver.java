@@ -8,6 +8,9 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class Driver {
     // Eğer bir class'tan NESNE ÜRETİLMESİNİ İSTEMİYORSANIZ
     // constructor'ı private yapabilirsiniz (Singleton Class)
@@ -28,8 +31,15 @@ public class Driver {
         if(driver == null){
             switch (ConfigurationReader.get("browser")){
                 case "chrome":
-                    WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                   WebDriverManager.chromedriver().setup();
+                   driver = new ChromeDriver();
+                    Map<String, Object>coordianateMap=new HashMap<String, Object>();
+                    coordianateMap.put("latitude", 40.766666);
+                    coordianateMap.put("longitude", 29.916668);
+                    coordianateMap.put("accuracy", 1);
+                    ((ChromeDriver)driver).executeCdpCommand("Emulation.setGeolocationOverride",coordianateMap);
+                    driver.get("https://ismakinesi.com/");
+
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
