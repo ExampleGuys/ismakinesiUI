@@ -1,3 +1,4 @@
+@allFilters
 Feature: All Filters
 
   Background:
