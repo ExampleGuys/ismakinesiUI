@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class TeklifHakkiStepDef {
-    TeklifHakkiPage teklifHakkiPage=new TeklifHakkiPage();
+    TeklifHakkiPage teklifHakkiPage = new TeklifHakkiPage();
 
     @When("kullanici bu sayfadaki Teklif Haklarim'a tiklar")
     public void kullaniciBuSayfadakiTeklifHaklarimATiklar() {
@@ -28,6 +28,18 @@ public class TeklifHakkiStepDef {
 
             Assert.assertTrue(element.isDisplayed());
         }
+
+    }
+
+    @When("kullanici Aktif buttonuna tiklar")
+    public void kullanici_aktif_buttonuna_tiklar() {
+        BrowserUtilities.doubleClick(teklifHakkiPage.aktifBtn);
+        BrowserUtilities.waitFor(3);
+    }
+
+    @Then("kullanici  kullanilabilir durumdaki teklif haklarini gorur")
+    public void kullanici_kullanilabilir_durumdaki_teklif_haklarini_gorur() {
+        Assert.assertEquals("Kullanılabilir",teklifHakkiPage.kullanTek.getText());
 
     }
 }
