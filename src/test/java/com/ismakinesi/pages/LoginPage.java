@@ -24,4 +24,25 @@ public class LoginPage extends BasePage {
 
     @FindBy(css=".loginAccountTitle:nth-child(1)")
     public WebElement hesabimBtn;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @FindBy(css = ".twitter.float-left")
+    public WebElement twitterLink;
+
+    @FindBy(xpath = "(//a[@role='link'])[3]")
+    public WebElement twitterIcon;
+
+
 }

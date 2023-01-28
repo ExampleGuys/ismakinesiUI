@@ -10,6 +10,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.ArrayList;
+
 public class LoginStepDefs {
 
     LoginPage loginPage = new LoginPage();
@@ -49,5 +51,28 @@ public class LoginStepDefs {
 
     @Then("kullanici siteye giris yapar")
     public void kullaniciSiteyeGirisYapar() {
+    }
+
+
+    @When("kullanici Twitter iconuna tiklar")
+    public void kullanici_twitter_iconuna_tiklar() {
+        BrowserUtilities.clickWithJS(loginPage.twitterLink);
+
+    }
+
+    @Then("Twitter sayfasi acildigini dogrular")
+    public void twitter_sayfasi_acildigini_dogrular() {
+
+
+        //String currentTab = Driver.get().getWindowHandle();
+        ArrayList<String> tabs = new ArrayList<>(Driver.get().getWindowHandles());
+        Driver.get().switchTo().window(tabs.get(tabs.size() - 1));
+
+        BrowserUtilities.waitForVisibility(loginPage.twitterIcon,10);
+
+        Assert.assertTrue(Driver.get().getTitle().contains("Twitter"));
+
+
+
     }
 }
