@@ -47,4 +47,11 @@ public class HomeStepDef {
 
 
     }
+
+    @Then("Katagori  serch box a model yılı girer")
+    public void katagoriSerchBoxAModelYılıGirer() {
+        BrowserUtilities.waitFor(3);
+        homePage.searchİnput.sendKeys("2000");
+        BrowserUtilities.waitFor(1);
+    }
 }
