@@ -3,10 +3,14 @@ package com.ismakinesi.stepDefinitions;
 import com.ismakinesi.pages.FooterPage;
 import com.ismakinesi.utilities.BrowserUtilities;
 import com.ismakinesi.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.JavascriptExecutor;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HakkimizdaStepDef {
 
@@ -36,7 +40,26 @@ public class HakkimizdaStepDef {
        BrowserUtilities.waitFor(3);
        Assert.assertTrue(footerPage.HakkimizdaicYazitext.isDisplayed());
 
-
     }
 
+
+    @And("Kullanici Kariyer butonuna tiklar")
+    public void kullaniciKariyerButonunaTiklar() {
+       //footerPage.KariyerButton.click();
+        BrowserUtilities.clickWithJS(footerPage.KariyerButton);
+
+    }
+    @Then("{string} sayfasina gittigi dogrulanir")
+    public void sayfasinaGittigiDogrulanir(String arg0) {
+        List<String> windowList = new ArrayList<String>(Driver.get().getWindowHandles());
+        Driver.get().switchTo().window(windowList.get(1));
+        Assert.assertTrue(Driver.get().getCurrentUrl().contains(arg0));
+
+
+
+
+
+
+
+    }
 }
