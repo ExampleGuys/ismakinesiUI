@@ -37,8 +37,21 @@ public class HomeStepDef {
     public void başlığını_doğrular(String string) {
         WebElement element=Driver.get().findElement(By.xpath("//h3[.='Kategori']"));
         Assert.assertTrue("Kategori Yazısı Doğrulanmadı",homePage.category.isEnabled());
-        System.out.println(element.getText());
+
 
     }
 
+    @Then("Katagori  serch box doğrulanmalı")
+    public void katagoriSerchBoxDoğrulanmalı() {
+        Assert.assertTrue("Kategori Yazısı Doğrulanmadı",homePage.searchİnput.isEnabled());
+
+
+    }
+
+    @Then("Katagori  serch box a model yılı girer")
+    public void katagoriSerchBoxAModelYılıGirer() {
+        BrowserUtilities.waitFor(3);
+        homePage.searchİnput.sendKeys("2000");
+        BrowserUtilities.waitFor(1);
+    }
 }

@@ -12,3 +12,32 @@ Feature: Giris
     And kullanici valid sifre yazar
     And kullanici Giris Yap'a tiklar
     Then kullanici siteye giris yapar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @IS-353
+    Scenario: TC:IS-353 Ana Sayfa'dan Twitter Hesabina Gitme
+      When kullanici Twitter iconuna tiklar
+      Then Twitter sayfasi acildigini dogrular
+
+
+
+
+
+
+
+
+
+

@@ -1,3 +1,12 @@
+Feature:
+
+
+  @Scenario: IS-226 Alıcıyım kısmının tamamına erişebilmeli13
+
+    Given Kullanici https://ismakinesi.com/ gider
+    When Kullanici Yardım Merkezine Git buttonuna tıklar
+    And Kullanici  Alıcıyım buttonuna tıklar
+    Then Kullanici How do I arranged pickup? tıklar görür
 @hakkimizda
 Feature: ismakinasi.com hakkinda
 
@@ -11,9 +20,16 @@ Feature: ismakinasi.com hakkinda
     Then Kullanici acilan sayfada hakkimizda kisminin oldugunu dogrular
 
 
-    @IS-146
-    Scenario:
+  @IS-146
+  Scenario:
 
     And  Kullanici Kariyer butonuna tiklar
     Then "https://machinerymarket.zohorecruit.com/jobs/Careers" sayfasina gittigi dogrulanir
+
+  @IS-153
+  Scenario: IS-153 TC:IS-153 Kullanici sozlesmesi butonuna tiklandigi gorulebilmeli
+
+    And Kullanici Kullanici sozlesmesi butonuna tiklar
+    Then Acilan sayfada Mesafeli Satis Sozlesmesi oldugu dogrulanmali
+
 
