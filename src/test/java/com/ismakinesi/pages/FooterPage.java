@@ -55,6 +55,9 @@ public class FooterPage {
     @FindBy(xpath = "//a[contains(@href, '/help/1#99-73')]")
     public WebElement SikSorulanSorularButton;
 
+    @FindBy(xpath = "//h1[@class='container']")
+    public WebElement MesafeliSatsozlesmesiText;
+
 
 }
 
