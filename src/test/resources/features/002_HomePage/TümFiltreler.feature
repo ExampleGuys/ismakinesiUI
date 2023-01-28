@@ -7,6 +7,6 @@ Feature: All Filters
     And Tüm Filtreler e tıklar
 
 
-  @IS-41
-    Scenario:TC:IS-41 Kullanici Katagori  yazısı doğrulanmalı.
+  @IS-47
+    Scenario:TC:IS-47 Kullanici Katagori  yazısı doğrulanmalı.
      Then "Katagori" başlığını doğrular
