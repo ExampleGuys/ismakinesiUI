@@ -37,8 +37,14 @@ public class HomeStepDef {
     public void başlığını_doğrular(String string) {
         WebElement element=Driver.get().findElement(By.xpath("//h3[.='Kategori']"));
         Assert.assertTrue("Kategori Yazısı Doğrulanmadı",homePage.category.isEnabled());
-        System.out.println(element.getText());
+
 
     }
 
+    @Then("Katagori  serch box doğrulanmalı")
+    public void katagoriSerchBoxDoğrulanmalı() {
+        Assert.assertTrue("Kategori Yazısı Doğrulanmadı",homePage.searchİnput.isEnabled());
+
+
+    }
 }
