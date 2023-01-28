@@ -25,7 +25,7 @@ public class FooterPage {
     @FindBy(xpath = "//h1[@class='container']")
     public WebElement HakkimizdaicYazitext;
 
-    @FindBy(xpath = "//a[@href='https://machinerymarket.zohorecruit.com']")
+    @FindBy(xpath = "//a[contains(@href, 'machinerymarket')]")
     public WebElement KariyerButton;
 
     @FindBy(xpath = "//a[contains(@href, '/page/6/mesafeli-satis-sozlesmesi')]")
