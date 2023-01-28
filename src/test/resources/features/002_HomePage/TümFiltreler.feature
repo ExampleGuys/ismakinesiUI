@@ -10,3 +10,7 @@ Feature: All Filters
   @IS-47
     Scenario:TC:IS-47 Kullanici Katagori  yazısı doğrulanmalı.
      Then "Katagori" başlığını doğrular
+
+    @IS-48
+    Scenario:TC:IS-48 Katagori  serch box doğrulanmalı
+      Then Katagori  serch box doğrulanmalı
