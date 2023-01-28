@@ -20,3 +20,9 @@ Feature: Teklif haklari
   Scenario:TC:IS-99 Kullanici Teklif Haklarim sayfasindaki Aktif'e tiklayinca kullanilabilir teklif haklarini gorur
     And kullanici Aktif buttonuna tiklar
     Then kullanici  kullanilabilir durumdaki teklif haklarini gorur
+
+  @IS-101
+  Scenario:TC:IS-101 Kullanici Teklif Haklarim sayfasindaki Suresi Bitenlere tiklayinca, Odemede Kullanildi durumundaki teklif haklarini gorur
+    And kullanici Suresi bitenler'e tiklar
+    Then kullanici  suresi biten teklif haklarini gorur
+

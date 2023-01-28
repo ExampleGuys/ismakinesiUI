@@ -14,4 +14,16 @@ public class TeklifHakkiPage extends BasePage {
     @FindBy(xpath = "(//span[.='Kullanılabilir'])[1]")
     public WebElement kullanTek;
 
+    @FindBy(xpath = "//a[contains(text(),'Süresi Bitenler')]")
+    public WebElement suresiBitenler;
+
+    @FindBy(xpath = "//span[.='Ödemede Kullanıldı'][1]")
+    public WebElement odemedeKullanildi;
+
+    @FindBy(css="a[class='dataAddBox']")
+    public WebElement teklifHakkiAl;
+
+    @FindBy(css="h2[class='title-main']")
+    public WebElement tekHakPage;
+
 }
