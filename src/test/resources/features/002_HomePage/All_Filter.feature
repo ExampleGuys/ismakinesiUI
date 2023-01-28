@@ -1,15 +1,12 @@
-@Add_Filter
-  Feature: TümFiltreler
-    Scenario:
+@allFilters
+Feature: All Filters
 
-@100
-  Given
-
-
-
-      @101
+  Background:
+    Given Kullanici ismakinesi.com adresine gider
+    When Forkliftler'e tıklar
+    And Tüm Filtreler e tıklar
 
 
-
-
-
+  @IS-41
+    Scenario:TC:IS-41 Kullanici Katagori  yazısı doğrulanmalı.
+     Then "Katagori" başlığını doğrular

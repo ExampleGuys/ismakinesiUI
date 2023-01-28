@@ -16,7 +16,8 @@ import java.util.List;
 
 public class AldiklarimStepDef {
     AldiklarimPage aldiklarimPage = new AldiklarimPage();
-    LoginPage loginPage=new LoginPage();
+    LoginPage loginPage = new LoginPage();
+
     @When("kullanici uye olarak giris yapar")
     public void kullaniciUyeOlarakGirisYapar() {
         BrowserUtilities.waitForClickability(loginPage.loginOrBeMemberButton, 30);
@@ -30,7 +31,7 @@ public class AldiklarimStepDef {
 
     @When("kullanici Hesabim buttonuna tiklar")
     public void kullanici_hesabim_buttonuna_tiklar() {
-       loginPage.hesabimBtn.click();
+        loginPage.hesabimBtn.click();
         BrowserUtilities.waitFor(3);
 
     }
@@ -52,16 +53,27 @@ public class AldiklarimStepDef {
     public void aldiklarimTekliflerimTeklifHaklarimBasliklariVisibleOlur(DataTable dataTable) {
         List<String> labels = dataTable.column(0);
 
-        for (int i = 0; i < labels.size(); i++) {
-            WebElement element = Driver.get().findElement(By.xpath("//a[.='" + labels.get(i) + "']"));
+        for (String label : labels) {
+            WebElement element = Driver.get().findElement(By.xpath("//a[.='" + label + "']"));
 
             Assert.assertTrue(element.isDisplayed());
             System.out.println(element.getText());
 
         }
+
+
     }
 
+    @Then("kullanici onceden almis oldugu urunleri gorur")
+    public void kullaniciOncedenAlmisOlduguUrunleriGorur() {
+        try {
+            BrowserUtilities.doubleClick(aldiklarimPage.photosAl);
+            BrowserUtilities.waitFor(3);
+            String alMakine = aldiklarimPage.alinanArac.getText();
+            Assert.assertEquals("SATILDI", alMakine);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
-
-
+    }
 }

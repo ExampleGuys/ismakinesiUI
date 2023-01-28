@@ -23,6 +23,7 @@ import java.util.List;
 import java.util.Properties;
 
 public class BrowserUtilities {
+
     @Nullable
     public static void writeDataToIdsFile(String tip, String id) { // room=123123
         try (OutputStream output = new FileOutputStream("ids.properties")) {
