@@ -1,3 +1,12 @@
+Feature:
+
+
+  @Scenario: IS-226 Alıcıyım kısmının tamamına erişebilmeli13
+
+    Given Kullanici https://ismakinesi.com/ gider
+    When Kullanici Yardım Merkezine Git buttonuna tıklar
+    And Kullanici  Alıcıyım buttonuna tıklar
+    Then Kullanici How do I arranged pickup? tıklar görür
 @hakkimizda
 Feature: ismakinasi.com hakkinda
 
