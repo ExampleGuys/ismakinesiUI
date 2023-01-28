@@ -24,4 +24,49 @@ public class LoginPage extends BasePage {
 
     @FindBy(css=".loginAccountTitle:nth-child(1)")
     public WebElement hesabimBtn;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @FindBy(css = ".instagram.float-left")
+    public WebElement instagramLink;
+
+    @FindBy(xpath = "(//button[@type='button'])[1]")
+    public WebElement followButtonOnInstagramAccount;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

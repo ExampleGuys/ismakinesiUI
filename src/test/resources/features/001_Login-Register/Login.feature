@@ -12,3 +12,29 @@ Feature: Giris
     And kullanici valid sifre yazar
     And kullanici Giris Yap'a tiklar
     Then kullanici siteye giris yapar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @IS-354
+    Scenario: TC:IS-354 Ana Sayfadan Instagram Hesabina Gitme
+      When kullanici  instagram iconuna tiklar
+      Then Instagram sayfasi acildigini dogrular
