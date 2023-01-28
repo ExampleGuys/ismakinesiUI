@@ -1,4 +1,5 @@
-Feature:
+@teklifhakki
+Feature: Teklif haklari
 
   Background:
     Given Kullanici ismakinesi.com adresine gider
@@ -19,3 +20,5 @@ Feature:
   Scenario:TC:IS-99 Kullanici Teklif Haklarim sayfasindaki Aktif'e tiklayinca kullanilabilir teklif haklarini gorur
     And kullanici Aktif buttonuna tiklar
     Then kullanici  kullanilabilir durumdaki teklif haklarini gorur
+
+
