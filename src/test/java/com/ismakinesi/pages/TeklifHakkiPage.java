@@ -17,7 +17,7 @@ public class TeklifHakkiPage extends BasePage {
     @FindBy(xpath = "//a[contains(text(),'Süresi Bitenler')]")
     public WebElement suresiBitenler;
 
-    @FindBy(xpath = "(//span[.='Ödemede Kullanıldı'])[1]")
+    @FindBy(xpath = "//span[.='Ödemede Kullanıldı'][1]")
     public WebElement odemedeKullanildi;
 
     @FindBy(css="a[class='dataAddBox']")

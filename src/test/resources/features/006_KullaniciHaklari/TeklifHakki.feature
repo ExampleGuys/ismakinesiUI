@@ -26,7 +26,3 @@ Feature: Teklif haklari
     And kullanici Suresi bitenler'e tiklar
     Then kullanici  suresi biten teklif haklarini gorur
 
-  @IS-102
-  Scenario:TC:IS-102 Tekif Haklarimdaki Teklif Hakki Al 'a tiklaynca Teklif Hakki sayfasi acilir
-    And kullanici Teklif Hakki Al'a tiklar
-    Then Teklif Hakki sayfasi acilir

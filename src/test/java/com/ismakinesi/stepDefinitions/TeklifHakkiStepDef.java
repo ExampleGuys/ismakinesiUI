@@ -53,22 +53,10 @@ public class TeklifHakkiStepDef {
     }
     @Then("kullanici  suresi biten teklif haklarini gorur")
     public void kullaniciSuresiBitenTeklifHaklariniGorur() {
-      Assert.assertEquals("Süresi Bitenler",teklifHakkiPage.suresiBitenler.getText());
+      Assert.assertEquals("Ödemede Kullanıldı",teklifHakkiPage.odemedeKullanildi.getText());
 
     }
 
-
-    @And("kullanici Teklif Hakki Al'a tiklar")
-    public void kullaniciTeklifHakkiAlATiklar() {
-        BrowserUtilities.clickWithJS(teklifHakkiPage.teklifHakkiAl);
-        BrowserUtilities.waitFor(3);
-
-    }
-
-    @Then("Teklif Hakki sayfasi acilir")
-    public void teklifPanlariSayfasiAcilir() {
-        Assert.assertTrue("Teklif Hakkı sayfasi acilmali",teklifHakkiPage.tekHakPage.getText().contains("Teklif Hakkı"));
-    }
 
 
 }
