@@ -28,8 +28,8 @@ public class HomePage {
     @FindBy(xpath = "//*[text()='Dizel Forklift']")
     public WebElement radioDizelforklift;
 
-    @FindBy(xpath = "//*[text()='Cesab']")
-    public WebElement radioCesabMarka;
+    @FindBy(xpath = "//*[text()='Caterpillar']")
+    public WebElement radioCaterpillarMarka;
 
     @FindBy(xpath = "//span[contains(text(),'6 Aylık')]")
     public WebElement radioServicSelect;

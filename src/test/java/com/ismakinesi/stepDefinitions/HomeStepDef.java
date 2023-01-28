@@ -54,4 +54,11 @@ public class HomeStepDef {
         homePage.searchİnput.sendKeys("2000");
         BrowserUtilities.waitFor(1);
     }
+
+    @When("Katagori  serch box a model adı girer")
+    public void katagoriSerchBoxAModelAdıGirer() {
+        BrowserUtilities.waitFor(4);
+        homePage.searchİnput.sendKeys("Lastik Tekerlekli Yükleyici");
+        BrowserUtilities.waitFor(4);
+    }
 }
