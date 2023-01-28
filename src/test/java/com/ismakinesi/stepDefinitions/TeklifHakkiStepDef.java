@@ -4,6 +4,7 @@ import com.ismakinesi.pages.TeklifHakkiPage;
 import com.ismakinesi.utilities.BrowserUtilities;
 import com.ismakinesi.utilities.Driver;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -43,4 +44,19 @@ public class TeklifHakkiStepDef {
         Assert.assertEquals("Kullanılabilir",teklifHakkiPage.kullanTek.getText());
 
     }
+    @And("kullanici Suresi bitenler'e tiklar")
+    public void kullaniciSuresiBitenlerETiklar() {
+        BrowserUtilities.doubleClick(teklifHakkiPage.suresiBitenler);
+        BrowserUtilities.waitFor(3);
+
+
+    }
+    @Then("kullanici  suresi biten teklif haklarini gorur")
+    public void kullaniciSuresiBitenTeklifHaklariniGorur() {
+      Assert.assertEquals("Ödemede Kullanıldı",teklifHakkiPage.odemedeKullanildi.getText());
+
+    }
+
+
+
 }

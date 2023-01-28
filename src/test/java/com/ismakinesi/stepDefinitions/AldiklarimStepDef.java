@@ -39,7 +39,7 @@ public class AldiklarimStepDef {
     @When("kullanici Aldiklarima tiklar")
     public void kullanici_aldiklarima_tiklar() {
         BrowserUtilities.doubleClick(aldiklarimPage.aldiklarim);
-        BrowserUtilities.waitFor(3);
+        BrowserUtilities.waitFor(5);
 
     }
 
