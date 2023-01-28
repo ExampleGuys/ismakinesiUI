@@ -10,6 +10,8 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.ArrayList;
+
 public class LoginStepDefs {
 
     LoginPage loginPage = new LoginPage();
@@ -49,5 +51,29 @@ public class LoginStepDefs {
 
     @Then("kullanici siteye giris yapar")
     public void kullaniciSiteyeGirisYapar() {
+    }
+
+    @When("kullanici Youtube iconuna tiklar")
+    public void kullaniciYoutubeIconunaTiklar() {
+        BrowserUtilities.scrollToElement(loginPage.youtubeLink);
+        BrowserUtilities.waitFor(3);
+        BrowserUtilities.clickWithJS(loginPage.youtubeLink);
+        BrowserUtilities.waitFor(5);
+
+    }
+
+    @Then("Kullanici Youtube sayfasinin acildigini dogrular")
+    public void kullaniciYoutubeSayfasininAcildiginiDogrular() {
+
+        //BrowserUtilities.switchToWindow("https://www.youtube.com/channel/UC1aN6ko8RMCHyPnKtmuCtgw");
+        String currentTab = Driver.get().getWindowHandle();
+        ArrayList<String> tabs = new ArrayList<>(Driver.get().getWindowHandles());
+        Driver.get().switchTo().window(tabs.get(tabs.size() - 1));
+
+        BrowserUtilities.waitForVisibility(loginPage.youtubeIcon,20);
+        Assert.assertTrue( Driver.get().getTitle().contains("YouTube"));
+
+
+
     }
 }

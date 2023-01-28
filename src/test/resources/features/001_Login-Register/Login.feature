@@ -12,3 +12,8 @@ Feature: Giris
     And kullanici valid sifre yazar
     And kullanici Giris Yap'a tiklar
     Then kullanici siteye giris yapar
+
+  @IS-352
+    Scenario: TC:IS-352 Ana Sayfada'dan Youtube Hesabi Gitme
+    When kullanici Youtube iconuna tiklar
+    Then Kullanici Youtube sayfasinin acildigini dogrular

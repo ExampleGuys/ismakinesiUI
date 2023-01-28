@@ -24,4 +24,13 @@ public class LoginPage extends BasePage {
 
     @FindBy(css=".loginAccountTitle:nth-child(1)")
     public WebElement hesabimBtn;
+
+    @FindBy(css = ".youtube.float-left")
+    public WebElement youtubeLink;
+
+    @FindBy(xpath = "//*[@id='logo-icon'][1]")
+    public WebElement youtubeIcon;
+
+
+
 }
