@@ -31,3 +31,10 @@ Feature: Teklif haklari
     And kullanici Teklif Hakki Al'a tiklar
     Then Teklif Hakki sayfasi acilir
 
+  @IS-103
+  Scenario:TC:IS-103 Kullanici Baslangic yada Avantaj teklif haklarindan birini secer
+    And kullanici Teklif Hakki Al'a tiklar
+    Then Teklif Hakki sayfasi acilir
+    When kullanici Baslangic yada Avantaj teklif hakkini secer
+    And kullanici Teklif Hakki Al buttonuna tiklar
+    Then "Ödeme Yap" in gorunundugu sayfa acilir
