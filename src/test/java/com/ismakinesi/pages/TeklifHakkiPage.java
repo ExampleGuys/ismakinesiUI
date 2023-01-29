@@ -20,10 +20,16 @@ public class TeklifHakkiPage extends BasePage {
     @FindBy(xpath = "//span[.='Ödemede Kullanıldı'][1]")
     public WebElement odemedeKullanildi;
 
-    @FindBy(css="a[class='dataAddBox']")
+    @FindBy(css="a[href='/profile/payment/preview?type=1']")
     public WebElement teklifHakkiAl;
 
     @FindBy(css="h2[class='title-main']")
     public WebElement tekHakPage;
+
+    @FindBy(xpath = "(//p[text()='Avantaj'])[1]")
+    public WebElement avantajPacket;
+
+    @FindBy(css="a[href='/profile/payment/pay?type=1&duration=long&quantity=5']")
+    public WebElement tekAlButton;
 
 }

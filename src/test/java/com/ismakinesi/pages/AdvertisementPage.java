@@ -11,7 +11,9 @@ public class AdvertisementPage {
     public WebElement freeAdvertButton;
 
     // "Arac Seri No" metin kutusu
-    @FindBy(xpath = "//div[@class='ant-row ant-form-item'][1]")
+    //@FindBy(xpath = "//div[@class='ant-row ant-form-item'][1]")
+    @FindBy(id = "coordinated_serial_number")
+    //@FindBy(css = "#coordinated_serial_number")
     public WebElement serialNumberTextBox;
 
     // "Kategori Secin" butonu
