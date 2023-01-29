@@ -11,19 +11,19 @@ public class LoginPage extends BasePage {
         PageFactory.initElements(Driver.get(), this);
     }
     @FindBy(xpath ="//h3[text()='Üye Girişi']")
-    public WebElement uyeGirisi;
+    public WebElement uyeGirisi; //Uye Grisi texti
 
     @FindBy(css="[type='email']")
-    public WebElement emailUye;
+    public WebElement emailUye; //mail text box
 
     @FindBy(css="[type='password']")
-    public WebElement passwordUye;
+    public WebElement passwordUye; //password text box
 
     @FindBy(css="[type='submit']")
-    public WebElement submitBtn;
+    public WebElement submitBtn; // giris yap butonu
 
     @FindBy(css=".loginAccountTitle:nth-child(1)")
-    public WebElement hesabimBtn;
+    public WebElement hesabimBtn; // uye ol veya giris yap butonu
 
 
 
@@ -44,5 +44,12 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "(//a[@role='link'])[3]")
     public WebElement twitterIcon;
 
+
+
+
+
+
+    @FindBy(xpath = "//button[@class='BtnLogin']")
+    public WebElement uyeOlVeyaGirisYapButonu;
 
 }

@@ -36,17 +36,17 @@ public class LoginStepDefs {
 
     @When("kullanici valid email adresi yazar")
     public void kullaniciValidEmailAdresiYazar() {
-
+        loginPage.emailUye.sendKeys(ConfigurationReader.get("email"));
     }
 
     @And("kullanici valid sifre yazar")
     public void kullaniciValidSifreYazar() {
-
+        loginPage.passwordUye.sendKeys(ConfigurationReader.get("password"));
     }
 
     @And("kullanici Giris Yap'a tiklar")
     public void kullaniciGirisYapATiklar() {
-
+        loginPage.submitBtn.click();
     }
 
     @Then("kullanici siteye giris yapar")
@@ -73,6 +73,62 @@ public class LoginStepDefs {
         Assert.assertTrue(Driver.get().getTitle().contains("Twitter"));
 
 
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @When("kullanici Uye Ol Veya Giris Yap'a tiklar")
+    public void kullanici_uye_ol_veya_giris_yap_a_tiklar() {
+        loginPage.uyeOlVeyaGirisYapButonu.click();
+
+    }
+
+    @Then("kullanici siteye giris yaptigini dogrular")
+    public void kullanici_siteye_giris_yaptigini_dogrular() {
+        Assert.assertTrue(loginPage.hesabimBtn.isDisplayed());
 
     }
 }

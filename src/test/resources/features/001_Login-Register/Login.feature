@@ -32,7 +32,13 @@ Feature: Giris
       When kullanici Twitter iconuna tiklar
       Then Twitter sayfasi acildigini dogrular
 
-
+  @IS-356
+  Scenario: TC:IS-356 Valid Degerlerle Uye Girisi
+    When kullanici Uye Ol Veya Giris Yap'a tiklar
+    When kullanici valid email adresi yazar
+    And kullanici valid sifre yazar
+    And kullanici Giris Yap'a tiklar
+    Then kullanici siteye giris yaptigini dogrular
 
 
 
