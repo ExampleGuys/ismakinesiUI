@@ -37,16 +37,6 @@ public class LoginPage extends BasePage {
 
 
 
-
-
-
-
-
-
-
-
-
-
     @FindBy(css = ".instagram.float-left")
     public WebElement instagramLink;
 

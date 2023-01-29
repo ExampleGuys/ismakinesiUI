@@ -23,18 +23,7 @@ Feature: Giris
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    @IS-354
-    Scenario: TC:IS-354 Ana Sayfadan Instagram Hesabina Gitme
-      When kullanici  instagram iconuna tiklar
-      Then Instagram sayfasi acildigini dogrular
+  @IS-354
+  Scenario: TC:IS-354 Ana Sayfadan Instagram Hesabina Gitme
+    When kullanici  instagram iconuna tiklar
+    Then Instagram sayfasi acildigini dogrular

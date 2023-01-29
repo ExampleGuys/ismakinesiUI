@@ -73,6 +73,22 @@ public class LoginStepDefs {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @When("kullanici  instagram iconuna tiklar")
     public void kullanici_instagram_iconuna_tiklar() {
         BrowserUtilities.clickWithJS(loginPage.instagramLink);
@@ -87,7 +103,6 @@ public class LoginStepDefs {
         BrowserUtilities.waitForVisibility(loginPage.followButtonOnInstagramAccount,10);
         System.out.println(Driver.get().getTitle());
         Assert.assertTrue(Driver.get().getTitle().contains("Instagram"));
-
 
     }
 
