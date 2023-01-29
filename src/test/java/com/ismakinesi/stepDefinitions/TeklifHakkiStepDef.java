@@ -67,6 +67,25 @@ public class TeklifHakkiStepDef {
         Assert.assertTrue("Teklif Hakkı sayfasi acilmali",teklifHakkiPage.tekHakPage.getText().contains("Teklif Hakkı"));
     }
 
+    @When("kullanici Baslangic yada Avantaj teklif hakkini secer")
+    public void kullanici_baslangic_yada_avantaj_teklif_hakkini_secer() {
+        BrowserUtilities.waitFor(3);
+        teklifHakkiPage.avantajPacket.click();
+
+    }
+
+    @When("kullanici Teklif Hakki Al buttonuna tiklar")
+    public void kullanici_teklif_hakki_al_buttonuna_tiklar() {
+        teklifHakkiPage.tekAlButton.click();
+
+    }
+
+    @Then("{string} in gorunundugu sayfa acilir")
+    public void in_gorunundugu_sayfa_acilir(String string) {
+
+
+    }
+
 
 
 }

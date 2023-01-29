@@ -10,33 +10,27 @@ public class LoginPage extends BasePage {
     public LoginPage() {
         PageFactory.initElements(Driver.get(), this);
     }
-    @FindBy(xpath ="//h3[text()='Üye Girişi']")
-    public WebElement uyeGirisi;
 
-    @FindBy(css="[type='email']")
-    public WebElement emailUye;
+    @FindBy(xpath = "//h3[text()='Üye Girişi']")
+    public WebElement uyeGirisi; //Uye Grisi texti
 
-    @FindBy(css="[type='password']")
-    public WebElement passwordUye;
+    @FindBy(css = "[type='email']")
+    public WebElement emailUye; //mail text box
 
-    @FindBy(css="[type='submit']")
-    public WebElement submitBtn;
+    @FindBy(css = "[type='password']")
+    public WebElement passwordUye; //password text box
 
-    @FindBy(css=".loginAccountTitle:nth-child(1)")
-    public WebElement hesabimBtn;
+    @FindBy(css = "[type='submit']")
+    public WebElement submitBtn; // giris yap butonu
 
+    @FindBy(css = ".loginAccountTitle:nth-child(1)")
+    public WebElement hesabimBtn; // uye ol veya giris yap butonu
 
+    @FindBy(css = ".youtube.float-left")
+    public WebElement youtubeLink;
 
-
-
-
-
-
-
-
-
-
-
+    @FindBy(xpath = "//*[@id='logo-icon'][1]")
+    public WebElement youtubeIcon;
 
     @FindBy(css = ".twitter.float-left")
     public WebElement twitterLink;
@@ -50,5 +44,15 @@ public class LoginPage extends BasePage {
     public WebElement facebookIcon;
 
 
+    @FindBy(xpath = "//button[@class='BtnLogin']")
+    public WebElement uyeOlVeyaGirisYapButonu;
 
+    @FindBy(xpath = "//*[text()='Lütfen bu alanları doldurun: password']")
+    public WebElement passwordIcinUyariTexti;
+
+    @FindBy(css = ".instagram.float-left")
+    public WebElement instagramLink;
+
+    @FindBy(xpath = "(//button[@type='button'])[1]")
+    public WebElement followButtonOnInstagramAccount;
 }
