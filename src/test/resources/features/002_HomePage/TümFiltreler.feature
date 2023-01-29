@@ -23,3 +23,11 @@ Feature: All Filters
   Scenario: TC:IS-50 Katagori serch box a Model adı girerek Arama yapar
     When Katagori  serch box a model adı girer
 
+  @IS-53
+  Scenario: TC:IS-53 Arama başlıkları yazısı doğrulanmalı
+    Then Marka,Sınırlı Servis Garantisi,üretim Yılı,Çalışma Saati ve Fiyat başlığını kullanıcı doğrular
+      | Marka                    |
+      | Sınırlı Servis Garantisi |
+      | Üretim Yılı              |
+      | Çalışma Saati            |
+      | Fiyat                    |

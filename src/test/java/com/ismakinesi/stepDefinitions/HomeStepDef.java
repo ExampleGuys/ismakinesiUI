@@ -13,6 +13,7 @@ import org.junit.platform.commons.function.Try;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import java.util.List;
 
 
 public class HomeStepDef {
@@ -60,5 +61,19 @@ public class HomeStepDef {
         BrowserUtilities.waitFor(4);
         homePage.searchİnput.sendKeys("Lastik Tekerlekli Yükleyici");
         BrowserUtilities.waitFor(4);
+    }
+
+    @Then("Marka,Sınırlı Servis Garantisi,üretim Yılı,Çalışma Saati ve Fiyat başlığını kullanıcı doğrular")
+    public void markaSınırlıServisGarantisiÜretimYılıÇalışmaSaatiVeFiyatBaşlığınıKullanıcıDoğrular(DataTable dataTable) {
+
+        List<String> labels = dataTable.column(0);
+        for (String label : labels) {
+            WebElement element = Driver.get().findElement(By.xpath("//h3[.='" + label + "']"));
+
+            Assert.assertTrue(element.isDisplayed());
+            System.out.println(element.getText());
+
+        }
+
     }
 }
