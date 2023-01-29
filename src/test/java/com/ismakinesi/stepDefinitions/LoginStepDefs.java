@@ -36,43 +36,110 @@ public class LoginStepDefs {
 
     @When("kullanici valid email adresi yazar")
     public void kullaniciValidEmailAdresiYazar() {
-
+        loginPage.emailUye.sendKeys(ConfigurationReader.get("email"));
     }
 
     @And("kullanici valid sifre yazar")
     public void kullaniciValidSifreYazar() {
-
+        loginPage.passwordUye.sendKeys(ConfigurationReader.get("password"));
     }
 
     @And("kullanici Giris Yap'a tiklar")
     public void kullaniciGirisYapATiklar() {
-
+        loginPage.submitBtn.click();
     }
 
     @Then("kullanici siteye giris yapar")
     public void kullaniciSiteyeGirisYapar() {
     }
 
+    @When("kullanici Youtube iconuna tiklar")
+    public void kullaniciYoutubeIconunaTiklar() {
+        BrowserUtilities.scrollToElement(loginPage.youtubeLink);
+        BrowserUtilities.waitFor(3);
+        BrowserUtilities.clickWithJS(loginPage.youtubeLink);
+        BrowserUtilities.waitFor(5);
+    }
+
+    @When("kullanici  instagram iconuna tiklar")
+    public void kullanici_instagram_iconuna_tiklar() {
+        BrowserUtilities.clickWithJS(loginPage.instagramLink);
+
+    }
+
+    @Then("Instagram sayfasi acildigini dogrular")
+    public void instagram_sayfasi_acildigini_dogrular() {
+
+        ArrayList<String> tabs = new ArrayList<>(Driver.get().getWindowHandles());
+        Driver.get().switchTo().window(tabs.get(tabs.size() - 1));
+        BrowserUtilities.waitForVisibility(loginPage.followButtonOnInstagramAccount, 10);
+        System.out.println(Driver.get().getTitle());
+        Assert.assertTrue(Driver.get().getTitle().contains("Instagram"));
+    }
 
     @When("kullanici Twitter iconuna tiklar")
     public void kullanici_twitter_iconuna_tiklar() {
-        BrowserUtilities.clickWithJS(loginPage.twitterLink);
+
 
     }
 
     @Then("Twitter sayfasi acildigini dogrular")
     public void twitter_sayfasi_acildigini_dogrular() {
+    }
 
+    @Then("Kullanici Youtube sayfasinin acildigini dogrular")
+    public void kullaniciYoutubeSayfasininAcildiginiDogrular() {
 
-        //String currentTab = Driver.get().getWindowHandle();
+        String currentTab = Driver.get().getWindowHandle();
         ArrayList<String> tabs = new ArrayList<>(Driver.get().getWindowHandles());
         Driver.get().switchTo().window(tabs.get(tabs.size() - 1));
 
-        BrowserUtilities.waitForVisibility(loginPage.twitterIcon,10);
-
+        BrowserUtilities.waitForVisibility(loginPage.youtubeIcon, 20);
+        Assert.assertTrue(Driver.get().getTitle().contains("YouTube"));
+        BrowserUtilities.waitForVisibility(loginPage.twitterIcon, 10);
         Assert.assertTrue(Driver.get().getTitle().contains("Twitter"));
 
+    }
 
 
+    @When("kullanici Uye Ol Veya Giris Yap'a tiklar")
+    public void kullanici_uye_ol_veya_giris_yap_a_tiklar() {
+        loginPage.uyeOlVeyaGirisYapButonu.click();
+
+
+    }
+
+
+    @When("kullanici facebook iconuna tiklar")
+    public void kullanici_facebook_iconuna_tiklar() {
+        BrowserUtilities.clickWithJS(loginPage.facebookLink);
+
+    }
+
+    @Then("facebook sayfasi acildigini dogrular")
+    public void facebook_sayfasi_acildigini_dogrular() {
+        ArrayList<String> tabs = new ArrayList<>(Driver.get().getWindowHandles());
+        Driver.get().switchTo().window(tabs.get(tabs.size() - 1));
+        BrowserUtilities.waitFor(5);
+        Assert.assertTrue(Driver.get().getTitle().contains("Facebook"));
+
+    }
+
+    @Then("kullanici siteye giris yaptigini dogrular")
+    public void kullanici_siteye_giris_yaptigini_dogrular() {
+        Assert.assertTrue(loginPage.hesabimBtn.isDisplayed());
+
+    }
+
+    @Then("kullanici siteye giris yapamadigini dogrular")
+    public void kullaniciSiteyeGirisYapamadiginiDogrular() {
+        BrowserUtilities.waitForVisibility(loginPage.passwordIcinUyariTexti, 10);
+        Assert.assertTrue(loginPage.passwordIcinUyariTexti.isDisplayed());
+
+    }
+
+    @When("kullanici Twitter iconuna tiklar")
+    public void kullaniciTwitterIconunaTiklar() {
+        BrowserUtilities.clickWithJS(loginPage.twitterLink);
     }
 }
