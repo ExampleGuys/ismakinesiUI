@@ -37,3 +37,13 @@ Feature: All Filters
       And Kullanıcı kategori olarak Dizel Forklift Radio buttonunu secer
       And Kullanıcı Marka olarak Caterpillar Radio buttonunu secer.
       Then secilen ilanın filitrelendiğini dogrular.
+
+      @IS-63
+      Scenario: TC:IS-63 Kullanıcı Forkliftler ilanlarını tüm arama secereklerini kullanır.
+        And Kullanıcı kategori olarak Dizel Forklift Radio buttonunu secer
+        And Kullanıcı Marka olarak Caterpillar Radio buttonunu secer.
+        And Sınırlı Servis Garantisi secer
+        And Üretim yılı aralığı  girer
+        And çalışma saati aralığı girer
+        And fiyat aralığı girer
+        Then secilen ilanın filitrelendiğini dogrular.

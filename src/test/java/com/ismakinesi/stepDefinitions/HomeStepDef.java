@@ -96,4 +96,36 @@ public class HomeStepDef {
         homePage.bosaTıkla.click();
         BrowserUtilities.waitFor(5);
     }
+
+    @And("Sınırlı Servis Garantisi secer")
+    public void sınırlıServisGarantisiSecer() {
+        homePage.radioServicSelect.click();
+        BrowserUtilities.waitFor(4);
+        BrowserUtilities.scrollToElement(homePage.radioServicSelect);
+    }
+
+    @And("Üretim yılı aralığı  girer")
+    public void üretimYılıAralığıGirer() {
+        homePage.minYearOf.sendKeys("2008");
+        BrowserUtilities.waitFor(2);
+        homePage.maxYearOf.sendKeys("2020");
+        BrowserUtilities.waitFor(4);
+    }
+
+    @And("çalışma saati aralığı girer")
+    public void çalışmaSaatiAralığıGirer() {
+        homePage.minWorkingHour.sendKeys("100");
+        BrowserUtilities.waitFor(3);
+        homePage.maxWorkingHour.sendKeys("300");
+        BrowserUtilities.waitFor(4);
+    }
+
+    @And("fiyat aralığı girer")
+    public void fiyatAralığıGirer() {
+        homePage.minPrice.sendKeys("5000");
+        BrowserUtilities.waitFor(4);
+        homePage.maxPrice.sendKeys("50000");
+        BrowserUtilities.waitFor(4
+        );
+    }
 }
