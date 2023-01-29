@@ -53,86 +53,40 @@ public class LoginStepDefs {
     public void kullaniciSiteyeGirisYapar() {
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @When("kullanici Youtube iconuna tiklar")
+    public void kullaniciYoutubeIconunaTiklar() {
+        BrowserUtilities.scrollToElement(loginPage.youtubeLink);
+        BrowserUtilities.waitFor(3);
+        BrowserUtilities.clickWithJS(loginPage.youtubeLink);
+        BrowserUtilities.waitFor(5);
+    }
 
     @When("kullanici Twitter iconuna tiklar")
     public void kullanici_twitter_iconuna_tiklar() {
-        BrowserUtilities.clickWithJS(loginPage.twitterLink);
+
 
     }
+
     @Then("Twitter sayfasi acildigini dogrular")
     public void twitter_sayfasi_acildigini_dogrular() {
         //String currentTab = Driver.get().getWindowHandle();
+    }
+
+    @Then("Kullanici Youtube sayfasinin acildigini dogrular")
+    public void kullaniciYoutubeSayfasininAcildiginiDogrular() {
+
+        //BrowserUtilities.switchToWindow("https://www.youtube.com/channel/UC1aN6ko8RMCHyPnKtmuCtgw");
+        String currentTab = Driver.get().getWindowHandle();
         ArrayList<String> tabs = new ArrayList<>(Driver.get().getWindowHandles());
         Driver.get().switchTo().window(tabs.get(tabs.size() - 1));
+
+        BrowserUtilities.waitForVisibility(loginPage.youtubeIcon, 20);
+        Assert.assertTrue(Driver.get().getTitle().contains("YouTube"));
         BrowserUtilities.waitForVisibility(loginPage.twitterIcon, 10);
         Assert.assertTrue(Driver.get().getTitle().contains("Twitter"));
 
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     @When("kullanici Uye Ol Veya Giris Yap'a tiklar")
     public void kullanici_uye_ol_veya_giris_yap_a_tiklar() {
@@ -148,10 +102,14 @@ public class LoginStepDefs {
 
     @Then("kullanici siteye giris yapamadigini dogrular")
     public void kullaniciSiteyeGirisYapamadiginiDogrular() {
-        BrowserUtilities.waitForVisibility(loginPage.passwordIcinUyariTexti,10);
+        BrowserUtilities.waitForVisibility(loginPage.passwordIcinUyariTexti, 10);
         Assert.assertTrue(loginPage.passwordIcinUyariTexti.isDisplayed());
 
     }
 
 
+    @When("kullanici Twitter iconuna tiklar")
+    public void kullaniciTwitterIconunaTiklar() {
+        BrowserUtilities.clickWithJS(loginPage.twitterLink);
+    }
 }
