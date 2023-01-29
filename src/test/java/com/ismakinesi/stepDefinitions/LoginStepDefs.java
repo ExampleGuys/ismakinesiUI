@@ -72,7 +72,7 @@ public class LoginStepDefs {
 
         ArrayList<String> tabs = new ArrayList<>(Driver.get().getWindowHandles());
         Driver.get().switchTo().window(tabs.get(tabs.size() - 1));
-        BrowserUtilities.waitForVisibility(loginPage.followButtonOnInstagramAccount,10);
+        BrowserUtilities.waitForVisibility(loginPage.followButtonOnInstagramAccount, 10);
         System.out.println(Driver.get().getTitle());
         Assert.assertTrue(Driver.get().getTitle().contains("Instagram"));
     }
@@ -85,13 +85,11 @@ public class LoginStepDefs {
 
     @Then("Twitter sayfasi acildigini dogrular")
     public void twitter_sayfasi_acildigini_dogrular() {
-        //String currentTab = Driver.get().getWindowHandle();
     }
 
     @Then("Kullanici Youtube sayfasinin acildigini dogrular")
     public void kullaniciYoutubeSayfasininAcildiginiDogrular() {
 
-        //BrowserUtilities.switchToWindow("https://www.youtube.com/channel/UC1aN6ko8RMCHyPnKtmuCtgw");
         String currentTab = Driver.get().getWindowHandle();
         ArrayList<String> tabs = new ArrayList<>(Driver.get().getWindowHandles());
         Driver.get().switchTo().window(tabs.get(tabs.size() - 1));
@@ -103,41 +101,13 @@ public class LoginStepDefs {
 
     }
 
-    }
 
     @When("kullanici Uye Ol Veya Giris Yap'a tiklar")
     public void kullanici_uye_ol_veya_giris_yap_a_tiklar() {
         loginPage.uyeOlVeyaGirisYapButonu.click();
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }
 
 
     @When("kullanici facebook iconuna tiklar")
@@ -151,7 +121,6 @@ public class LoginStepDefs {
         ArrayList<String> tabs = new ArrayList<>(Driver.get().getWindowHandles());
         Driver.get().switchTo().window(tabs.get(tabs.size() - 1));
         BrowserUtilities.waitFor(5);
-        //System.out.println(Driver.get().getTitle());
         Assert.assertTrue(Driver.get().getTitle().contains("Facebook"));
 
     }
@@ -168,7 +137,6 @@ public class LoginStepDefs {
         Assert.assertTrue(loginPage.passwordIcinUyariTexti.isDisplayed());
 
     }
-
 
     @When("kullanici Twitter iconuna tiklar")
     public void kullaniciTwitterIconunaTiklar() {
