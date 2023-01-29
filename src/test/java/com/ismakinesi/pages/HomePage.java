@@ -16,6 +16,9 @@ public class HomePage {
     @FindBy(xpath = "//div[contains(@style, 'fd')]")
     public WebElement forklift;
 
+    @FindBy(xpath = "//*[text()='Ekskavatörler']")
+    public WebElement ekskavatörler;
+
     @FindBy(xpath = "//button[contains(@class, 'bottom')]")
     public WebElement allFilters;
 
@@ -76,7 +79,7 @@ public class HomePage {
     @FindBy(xpath = "//a[contains(text(),'Son görüntülenenler')]")
     public WebElement endViewed;
 
-    @FindBy(xpath = "//a[contains(text(),'Paletli Ekskavatör')]")
+    @FindBy(xpath = "//label[contains(text(),'Paletli Ekskavatör')]")
     public WebElement crawlerExcavator;
 
     //tek boşa tıklama için

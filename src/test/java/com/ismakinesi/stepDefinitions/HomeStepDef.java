@@ -128,4 +128,20 @@ public class HomeStepDef {
         BrowserUtilities.waitFor(4
         );
     }
+
+    @When("Ekskavatörler e tıklar")
+    public void ekskavatörlerETıklar() {
+        homePage.ekskavatörler.click();
+        BrowserUtilities.waitFor(4);
+
+    }
+
+    @And("Kullanıcı kategori olarak Paletli Ekskavatör Radio buttonunu secer")
+    public void kullanıcıKategoriOlarakPaletliEkskavatörRadioButtonunuSecer() {
+        BrowserUtilities.waitFor(3);
+        homePage.crawlerExcavator.click();
+        BrowserUtilities.waitFor(4);
+
+    }
+
 }
