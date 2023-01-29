@@ -18,19 +18,10 @@ Feature: Giris
 
 
 
-
-
-
-
-
-
-
-
-
-    @IS-353
-    Scenario: TC:IS-353 Ana Sayfa'dan Twitter Hesabina Gitme
-      When kullanici Twitter iconuna tiklar
-      Then Twitter sayfasi acildigini dogrular
+  @IS-353
+  Scenario: TC:IS-353 Ana Sayfa'dan Twitter Hesabina Gitme
+    When kullanici Twitter iconuna tiklar
+    Then Twitter sayfasi acildigini dogrular
 
   @IS-356
   Scenario: TC:IS-356 Valid Degerlerle Uye Girisi
