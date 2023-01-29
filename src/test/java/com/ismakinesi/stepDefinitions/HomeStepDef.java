@@ -13,7 +13,7 @@ import org.junit.platform.commons.function.Try;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-
+import java.util.List;
 public class HomeStepDef {
     HomePage homePage = new HomePage();
 
@@ -61,12 +61,69 @@ public class HomeStepDef {
         BrowserUtilities.waitFor(4);
     }
 
-    @When("Kullanıcı {string} kullanarak ürün secer")
-    public void kullanıcıKullanarakÜrünSecer(String string) {
-        BrowserUtilities.waitFor(4);
-        WebElement element = Driver.get().findElement(By.xpath("//*[text()='Dizel Forklift']"));
+    @Then("Marka,Sınırlı Servis Garantisi,üretim Yılı,Çalışma Saati ve Fiyat başlığını kullanıcı doğrular")
+    public void markaSınırlıServisGarantisiÜretimYılıÇalışmaSaatiVeFiyatBaşlığınıKullanıcıDoğrular(DataTable dataTable) {
+
+        List<String> labels = dataTable.column(0);
+        for (String label : labels) {
+            WebElement element = Driver.get().findElement(By.xpath("//h3[.='" + label + "']"));
+
+            Assert.assertTrue(element.isDisplayed());
+            System.out.println(element.getText());
+
+        }
+
+    }
+
+    @And("Kullanıcı kategori olarak Dizel Forklift Radio buttonunu secer")
+    public void kullanıcıKategoriOlarakDizelForkliftRadioButtonunuSecer() {
+        BrowserUtilities.waitFor(3);
         homePage.radioDizelforklift.click();
-        Assert.assertTrue("Radio Button seçilmedi", homePage.radioDizelforklift.isEnabled());
+        BrowserUtilities.waitFor(2);
+    }
+
+    @And("Kullanıcı Marka olarak Caterpillar Radio buttonunu secer.")
+    public void kullanıcıMarkaOlarakCaterpillarRadioButtonunuSecer() {
+        homePage.radioCaterpillarMarka.click();
+        BrowserUtilities.waitFor(3);
+
+    }
+
+    @Then("secilen ilanın filitrelendiğini dogrular.")
+    public void secilenIlanınFilitrelendiğiniDogrular() {
+        homePage.bosaTıkla.click();
+        BrowserUtilities.waitFor(5);
+    }
+
+    @And("Sınırlı Servis Garantisi secer")
+    public void sınırlıServisGarantisiSecer() {
+        homePage.radioServicSelect.click();
         BrowserUtilities.waitFor(4);
+        BrowserUtilities.scrollToElement(homePage.radioServicSelect);
+    }
+
+    @And("Üretim yılı aralığı  girer")
+    public void üretimYılıAralığıGirer() {
+        homePage.minYearOf.sendKeys("2008");
+        BrowserUtilities.waitFor(2);
+        homePage.maxYearOf.sendKeys("2020");
+        BrowserUtilities.waitFor(4);
+    }
+
+    @And("çalışma saati aralığı girer")
+    public void çalışmaSaatiAralığıGirer() {
+        homePage.minWorkingHour.sendKeys("100");
+        BrowserUtilities.waitFor(3);
+        homePage.maxWorkingHour.sendKeys("300");
+        BrowserUtilities.waitFor(4);
+    }
+
+    @And("fiyat aralığı girer")
+    public void fiyatAralığıGirer() {
+        homePage.minPrice.sendKeys("5000");
+        BrowserUtilities.waitFor(4);
+        homePage.maxPrice.sendKeys("50000");
+        BrowserUtilities.waitFor(4
+        );
     }
 }

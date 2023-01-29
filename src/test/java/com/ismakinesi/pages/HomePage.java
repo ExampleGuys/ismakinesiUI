@@ -13,7 +13,7 @@ public class HomePage {
 //***Locate başlama ****Engin Akgül tarafından hazırlanan "Tüm Filtreler ve Ana Sayfa" Locate leridir.
 
     //****Tüm Filitreler***
-    @FindBy(xpath = "//div[contains(@style, 'ef')]")
+    @FindBy(xpath = "//div[contains(@style, 'fd')]")
     public WebElement forklift;
 
     @FindBy(xpath = "//button[contains(@class, 'bottom')]")
@@ -34,22 +34,22 @@ public class HomePage {
     @FindBy(xpath = "//span[contains(text(),'6 Aylık')]")
     public WebElement radioServicSelect;
 
-    @FindBy(xpath = "//input[@fdprocessedid='67uoj']")
+    @FindBy(xpath = "(//input[@placeholder=\"Min.\"])[1]")
     public WebElement minYearOf;
 
-    @FindBy(xpath = "//input[@fdprocessedid='79rmwj']")
+    @FindBy(xpath = "(//input[@placeholder=\"Max.\"])[1]")
     public WebElement maxYearOf;
 
-    @FindBy(xpath = "//input[@fdprocessedid='2l5zxm']")
+    @FindBy(xpath = "(//input[@placeholder=\"Min.\"])[2]")
     public WebElement minWorkingHour;
 
-    @FindBy(xpath = "//input[@fdprocessedid='glkf1e']")
+    @FindBy(xpath = "(//input[@placeholder=\"Max.\"])[2]")
     public WebElement maxWorkingHour;
 
-    @FindBy(xpath = "//input[@fdprocessedid='juheoo']")
+    @FindBy(xpath = "(//input[@placeholder=\"Min.\"])[3]")
     public WebElement minPrice;
 
-    @FindBy(xpath = "//input[@fdprocessedid='m0qkvb']")
+    @FindBy(xpath = "(//input[@placeholder=\"Max.\"])[3]")
     public WebElement maxPrice;
 
 
@@ -79,6 +79,9 @@ public class HomePage {
     @FindBy(xpath = "//a[contains(text(),'Paletli Ekskavatör')]")
     public WebElement crawlerExcavator;
 
+    //tek boşa tıklama için
+    @FindBy(xpath = "//div[@class=\"ant-drawer-mask\"]")
+    public WebElement bosaTıkla;
 
     @FindBy(xpath = "//a[contains(text(),'Lastik Tekerlekli Yükleyici')]")
     public WebElement wheelLoader;
