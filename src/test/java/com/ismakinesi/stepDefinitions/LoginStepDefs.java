@@ -131,4 +131,13 @@ public class LoginStepDefs {
         Assert.assertTrue(loginPage.hesabimBtn.isDisplayed());
 
     }
+
+    @Then("kullanici siteye giris yapamadigini dogrular")
+    public void kullaniciSiteyeGirisYapamadiginiDogrular() {
+        BrowserUtilities.waitForVisibility(loginPage.passwordIcinUyariTexti,10);
+        Assert.assertTrue(loginPage.passwordIcinUyariTexti.isDisplayed());
+
+    }
+
+
 }

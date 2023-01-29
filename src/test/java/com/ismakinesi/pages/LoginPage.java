@@ -52,4 +52,9 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//button[@class='BtnLogin']")
     public WebElement uyeOlVeyaGirisYapButonu;
 
+    @FindBy(xpath = "//*[text()='Lütfen bu alanları doldurun: password']")
+    public WebElement passwordIcinUyariTexti;
+
+
+
 }

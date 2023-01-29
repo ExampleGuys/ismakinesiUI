@@ -42,6 +42,20 @@ Feature: Giris
 
 
 
+  @IS-357
+  Scenario: TC:IS-357 Bos Sifre Ile Uye Girisi
+    When kullanici Uye Ol Veya Giris Yap'a tiklar
+    When kullanici valid email adresi yazar
+    And kullanici Giris Yap'a tiklar
+    Then kullanici siteye giris yapamadigini dogrular
+
+
+
+
+
+
+
+
 
 
 
