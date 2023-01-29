@@ -14,7 +14,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 
-
 public class HomeStepDef {
     HomePage homePage = new HomePage();
 
@@ -35,15 +34,15 @@ public class HomeStepDef {
 
     @Then("{string} başlığını doğrular")
     public void başlığını_doğrular(String string) {
-        WebElement element=Driver.get().findElement(By.xpath("//h3[.='Kategori']"));
-        Assert.assertTrue("Kategori Yazısı Doğrulanmadı",homePage.category.isEnabled());
+        WebElement element = Driver.get().findElement(By.xpath("//h3[.='Kategori']"));
+        Assert.assertTrue("Kategori Yazısı Doğrulanmadı", homePage.category.isEnabled());
 
 
     }
 
     @Then("Katagori  serch box doğrulanmalı")
     public void katagoriSerchBoxDoğrulanmalı() {
-        Assert.assertTrue("Kategori Yazısı Doğrulanmadı",homePage.searchİnput.isEnabled());
+        Assert.assertTrue("Kategori Yazısı Doğrulanmadı", homePage.searchİnput.isEnabled());
 
 
     }
@@ -59,6 +58,15 @@ public class HomeStepDef {
     public void katagoriSerchBoxAModelAdıGirer() {
         BrowserUtilities.waitFor(4);
         homePage.searchİnput.sendKeys("Lastik Tekerlekli Yükleyici");
+        BrowserUtilities.waitFor(4);
+    }
+
+    @When("Kullanıcı {string} kullanarak ürün secer")
+    public void kullanıcıKullanarakÜrünSecer(String string) {
+        BrowserUtilities.waitFor(4);
+        WebElement element = Driver.get().findElement(By.xpath("//*[text()='Dizel Forklift']"));
+        homePage.radioDizelforklift.click();
+        Assert.assertTrue("Radio Button seçilmedi", homePage.radioDizelforklift.isEnabled());
         BrowserUtilities.waitFor(4);
     }
 }
