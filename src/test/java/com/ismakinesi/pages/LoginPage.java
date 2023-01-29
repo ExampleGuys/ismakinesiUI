@@ -31,13 +31,6 @@ public class LoginPage extends BasePage {
 
 
 
-
-
-
-
-
-
-
     @FindBy(css = ".twitter.float-left")
     public WebElement twitterLink;
 
