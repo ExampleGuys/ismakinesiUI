@@ -31,3 +31,9 @@ Feature: All Filters
       | Üretim Yılı              |
       | Çalışma Saati            |
       | Fiyat                    |
+
+    @IS-62
+    Scenario: TC:IS-62 Kullanıcı Forkliftleri  marka secerek arama yapar
+      And Kullanıcı kategori olarak Dizel Forklift Radio buttonunu secer
+      And Kullanıcı Marka olarak Caterpillar Radio buttonunu secer.
+      Then secilen ilanın filitrelendiğini dogrular.

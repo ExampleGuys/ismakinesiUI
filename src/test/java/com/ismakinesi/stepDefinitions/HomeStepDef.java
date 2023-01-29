@@ -36,15 +36,15 @@ public class HomeStepDef {
 
     @Then("{string} başlığını doğrular")
     public void başlığını_doğrular(String string) {
-        WebElement element=Driver.get().findElement(By.xpath("//h3[.='Kategori']"));
-        Assert.assertTrue("Kategori Yazısı Doğrulanmadı",homePage.category.isEnabled());
+        WebElement element = Driver.get().findElement(By.xpath("//h3[.='Kategori']"));
+        Assert.assertTrue("Kategori Yazısı Doğrulanmadı", homePage.category.isEnabled());
 
 
     }
 
     @Then("Katagori  serch box doğrulanmalı")
     public void katagoriSerchBoxDoğrulanmalı() {
-        Assert.assertTrue("Kategori Yazısı Doğrulanmadı",homePage.searchİnput.isEnabled());
+        Assert.assertTrue("Kategori Yazısı Doğrulanmadı", homePage.searchİnput.isEnabled());
 
 
     }
@@ -75,5 +75,25 @@ public class HomeStepDef {
 
         }
 
+    }
+
+    @And("Kullanıcı kategori olarak Dizel Forklift Radio buttonunu secer")
+    public void kullanıcıKategoriOlarakDizelForkliftRadioButtonunuSecer() {
+        BrowserUtilities.waitFor(3);
+        homePage.radioDizelforklift.click();
+        BrowserUtilities.waitFor(2);
+    }
+
+    @And("Kullanıcı Marka olarak Caterpillar Radio buttonunu secer.")
+    public void kullanıcıMarkaOlarakCaterpillarRadioButtonunuSecer() {
+        homePage.radioCaterpillarMarka.click();
+        BrowserUtilities.waitFor(3);
+
+    }
+
+    @Then("secilen ilanın filitrelendiğini dogrular.")
+    public void secilenIlanınFilitrelendiğiniDogrular() {
+        homePage.bosaTıkla.click();
+        BrowserUtilities.waitFor(5);
     }
 }

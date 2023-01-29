@@ -13,7 +13,7 @@ public class HomePage {
 //***Locate başlama ****Engin Akgül tarafından hazırlanan "Tüm Filtreler ve Ana Sayfa" Locate leridir.
 
     //****Tüm Filitreler***
-    @FindBy(xpath = "//div[contains(@style, 'ef')]")
+    @FindBy(xpath = "//div[contains(@style, 'fd')]")
     public WebElement forklift;
 
     @FindBy(xpath = "//button[contains(@class, 'bottom')]")
@@ -79,6 +79,9 @@ public class HomePage {
     @FindBy(xpath = "//a[contains(text(),'Paletli Ekskavatör')]")
     public WebElement crawlerExcavator;
 
+    //tek boşa tıklama için
+    @FindBy(xpath = "//div[@class=\"ant-drawer-mask\"]")
+    public WebElement bosaTıkla;
 
     @FindBy(xpath = "//a[contains(text(),'Lastik Tekerlekli Yükleyici')]")
     public WebElement wheelLoader;
