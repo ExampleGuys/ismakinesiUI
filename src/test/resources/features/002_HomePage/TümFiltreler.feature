@@ -23,3 +23,6 @@ Feature: All Filters
   Scenario: TC:IS-50 Katagori serch box a Model adı girerek Arama yapar
     When Katagori  serch box a model adı girer
 
+    @IS-51
+    Scenario: TC:IS-51 Kullanıcı arama sonucunda seçtiği ürünleri görür
+      When Kullanıcı "Radio Button" kullanarak ürün secer
