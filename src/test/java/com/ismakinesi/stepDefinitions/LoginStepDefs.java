@@ -61,6 +61,22 @@ public class LoginStepDefs {
         BrowserUtilities.waitFor(5);
     }
 
+    @When("kullanici  instagram iconuna tiklar")
+    public void kullanici_instagram_iconuna_tiklar() {
+        BrowserUtilities.clickWithJS(loginPage.instagramLink);
+
+    }
+
+    @Then("Instagram sayfasi acildigini dogrular")
+    public void instagram_sayfasi_acildigini_dogrular() {
+
+        ArrayList<String> tabs = new ArrayList<>(Driver.get().getWindowHandles());
+        Driver.get().switchTo().window(tabs.get(tabs.size() - 1));
+        BrowserUtilities.waitForVisibility(loginPage.followButtonOnInstagramAccount,10);
+        System.out.println(Driver.get().getTitle());
+        Assert.assertTrue(Driver.get().getTitle().contains("Instagram"));
+    }
+
     @When("kullanici Twitter iconuna tiklar")
     public void kullanici_twitter_iconuna_tiklar() {
 

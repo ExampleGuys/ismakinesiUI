@@ -44,5 +44,9 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//*[text()='Lütfen bu alanları doldurun: password']")
     public WebElement passwordIcinUyariTexti;
 
+    @FindBy(css = ".instagram.float-left")
+    public WebElement instagramLink;
 
+    @FindBy(xpath = "(//button[@type='button'])[1]")
+    public WebElement followButtonOnInstagramAccount;
 }

@@ -23,6 +23,11 @@ Feature: Giris
     When kullanici Twitter iconuna tiklar
     Then Twitter sayfasi acildigini dogrular
 
+  @IS-354
+  Scenario: TC:IS-354 Ana Sayfadan Instagram Hesabina Gitme
+    When kullanici  instagram iconuna tiklar
+    Then Instagram sayfasi acildigini dogrular
+
   @IS-356
   Scenario: TC:IS-356 Valid Degerlerle Uye Girisi
     When kullanici Uye Ol Veya Giris Yap'a tiklar
