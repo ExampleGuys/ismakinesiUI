@@ -14,7 +14,7 @@ Feature: Giris
     Then kullanici siteye giris yapar
 
   @IS-352
-    Scenario: TC:IS-352 Ana Sayfada'dan Youtube Hesabi Gitme
+  Scenario: TC:IS-352 Ana Sayfada'dan Youtube Hesabi Gitme
     When kullanici Youtube iconuna tiklar
     Then Kullanici Youtube sayfasinin acildigini dogrular
 
@@ -27,6 +27,11 @@ Feature: Giris
   Scenario: TC:IS-354 Ana Sayfadan Instagram Hesabina Gitme
     When kullanici  instagram iconuna tiklar
     Then Instagram sayfasi acildigini dogrular
+
+  @IS-355
+  Scenario: TC:IS-355 Ana Sayfadan Facebook Hesabina Gitme
+    When kullanici facebook iconuna tiklar
+    Then facebook sayfasi acildigini dogrular
 
   @IS-356
   Scenario: TC:IS-356 Valid Degerlerle Uye Girisi
