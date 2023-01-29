@@ -27,11 +27,10 @@ Feature: Giris
 
 
 
-    @IS-353
-    Scenario: TC:IS-353 Ana Sayfa'dan Twitter Hesabina Gitme
-      When kullanici Twitter iconuna tiklar
-      Then Twitter sayfasi acildigini dogrular
-
+    @IS-355
+    Scenario: TC:IS-355 Ana Sayfadan Facebook Hesabina Gitme
+      When kullanici facebook iconuna tiklar
+      Then facebook sayfasi acildigini dogrular
 
 
 

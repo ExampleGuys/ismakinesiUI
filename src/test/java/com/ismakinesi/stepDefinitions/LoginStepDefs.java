@@ -72,7 +72,53 @@ public class LoginStepDefs {
 
         Assert.assertTrue(Driver.get().getTitle().contains("Twitter"));
 
+    }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    @When("kullanici facebook iconuna tiklar")
+    public void kullanici_facebook_iconuna_tiklar() {
+        BrowserUtilities.clickWithJS(loginPage.facebookLink);
+
+    }
+
+    @Then("facebook sayfasi acildigini dogrular")
+    public void facebook_sayfasi_acildigini_dogrular() {
+        ArrayList<String> tabs = new ArrayList<>(Driver.get().getWindowHandles());
+        Driver.get().switchTo().window(tabs.get(tabs.size() - 1));
+        BrowserUtilities.waitFor(5);
+        //System.out.println(Driver.get().getTitle());
+        Assert.assertTrue(Driver.get().getTitle().contains("Facebook"));
 
     }
 }

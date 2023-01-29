@@ -43,6 +43,12 @@ public class LoginPage extends BasePage {
 
     @FindBy(xpath = "(//a[@role='link'])[3]")
     public WebElement twitterIcon;
+    @FindBy(css = ".facebook.float-left")
+    public WebElement facebookLink;
+
+    @FindBy(id = "ssrb_top_nav_start")
+    public WebElement facebookIcon;
+
 
 
 }
