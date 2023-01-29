@@ -14,55 +14,56 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
 import java.util.List;
+
 public class HomeStepDef {
     HomePage homePage = new HomePage();
 
 
-    @When("Forkliftler'e tıklar")
-    public void forkliftler_e_tıklar() {
+    @When("Forkliftler'e tiklar")
+    public void forkliftler_e_tiklar() {
         BrowserUtilities.hover(homePage.forklift);
         homePage.forklift.click();
 
     }
 
-    @When("Tüm Filtreler e tıklar")
-    public void tüm_filtreler_e_tıklar() {
+    @When("Tum Filtreler e tiklar")
+    public void tum_filtreler_e_tiklar() {
         BrowserUtilities.hover(homePage.allFilters);
         homePage.allFilters.click();
 
     }
 
-    @Then("{string} başlığını doğrular")
-    public void başlığını_doğrular(String string) {
+    @Then("{string} basligini dogrular")
+    public void basligini_dogrular(String string) {
         WebElement element = Driver.get().findElement(By.xpath("//h3[.='Kategori']"));
-        Assert.assertTrue("Kategori Yazısı Doğrulanmadı", homePage.category.isEnabled());
+        Assert.assertTrue("Kategori Yazisi Dogrulanmadi", homePage.category.isEnabled());
 
 
     }
 
-    @Then("Katagori  serch box doğrulanmalı")
-    public void katagoriSerchBoxDoğrulanmalı() {
-        Assert.assertTrue("Kategori Yazısı Doğrulanmadı", homePage.searchİnput.isEnabled());
+    @Then("Katagori  serch box dogrulanmali")
+    public void katagoriSerchBoxDogrulanmali() {
+        Assert.assertTrue("Kategori Yazisi Dogrulanmadi", homePage.searchInput.isEnabled());
 
 
     }
 
-    @Then("Katagori  serch box a model yılı girer")
-    public void katagoriSerchBoxAModelYılıGirer() {
+    @Then("Katagori  serch box a model yili girer")
+    public void katagoriSerchBoxAModelYiliGirer() {
         BrowserUtilities.waitFor(3);
-        homePage.searchİnput.sendKeys("2000");
+        homePage.searchInput.sendKeys("2000");
         BrowserUtilities.waitFor(1);
     }
 
-    @When("Katagori  serch box a model adı girer")
-    public void katagoriSerchBoxAModelAdıGirer() {
+    @When("Katagori  serch box a model adi girer")
+    public void katagoriSerchBoxAModelAdiGirer() {
         BrowserUtilities.waitFor(4);
-        homePage.searchİnput.sendKeys("Lastik Tekerlekli Yükleyici");
+        homePage.searchInput.sendKeys("Lastik Tekerlekli Yükleyici");
         BrowserUtilities.waitFor(4);
     }
 
-    @Then("Marka,Sınırlı Servis Garantisi,üretim Yılı,Çalışma Saati ve Fiyat başlığını kullanıcı doğrular")
-    public void markaSınırlıServisGarantisiÜretimYılıÇalışmaSaatiVeFiyatBaşlığınıKullanıcıDoğrular(DataTable dataTable) {
+    @Then("Marka,Sinirli Servis Garantisi,uretim Yili,Calisma Saati ve Fiyat basligini kullanici dogrular")
+    public void markaSinirliServisGarantisiUretimYiliCalismaSaatiVeFiyatBasliginiKullaniciDogrular(DataTable dataTable) {
 
         List<String> labels = dataTable.column(0);
         for (String label : labels) {
@@ -75,51 +76,51 @@ public class HomeStepDef {
 
     }
 
-    @And("Kullanıcı kategori olarak Dizel Forklift Radio buttonunu secer")
-    public void kullanıcıKategoriOlarakDizelForkliftRadioButtonunuSecer() {
+    @And("Kullanici kategori olarak Dizel Forklift Radio buttonunu secer")
+    public void kullaniciKategoriOlarakDizelForkliftRadioButtonunuSecer() {
         BrowserUtilities.waitFor(3);
         homePage.radioDizelforklift.click();
         BrowserUtilities.waitFor(2);
     }
 
-    @And("Kullanıcı Marka olarak Caterpillar Radio buttonunu secer.")
-    public void kullanıcıMarkaOlarakCaterpillarRadioButtonunuSecer() {
+    @And("Kullanici Marka olarak Caterpillar Radio buttonunu secer.")
+    public void kullaniciMarkaOlarakCaterpillarRadioButtonunuSecer() {
         homePage.radioCaterpillarMarka.click();
         BrowserUtilities.waitFor(3);
 
     }
 
-    @Then("secilen ilanın filitrelendiğini dogrular.")
-    public void secilenIlanınFilitrelendiğiniDogrular() {
-        homePage.bosaTıkla.click();
+    @Then("secilen ilanin filitrelendigini dogrular.")
+    public void secilenIlaninFilitrelendiginiDogrular() {
+        homePage.bosaTikla.click();
         BrowserUtilities.waitFor(5);
     }
 
-    @And("Sınırlı Servis Garantisi secer")
-    public void sınırlıServisGarantisiSecer() {
+    @And("Sinirli Servis Garantisi secer")
+    public void sinirliServisGarantisiSecer() {
         homePage.radioServicSelect.click();
         BrowserUtilities.waitFor(4);
         BrowserUtilities.scrollToElement(homePage.radioServicSelect);
     }
 
-    @And("Üretim yılı aralığı  girer")
-    public void üretimYılıAralığıGirer() {
+    @And("Uretim yili araligi  girer")
+    public void uretimYiliAraligiGirer() {
         homePage.minYearOf.sendKeys("2008");
         BrowserUtilities.waitFor(2);
         homePage.maxYearOf.sendKeys("2020");
         BrowserUtilities.waitFor(4);
     }
 
-    @And("çalışma saati aralığı girer")
-    public void çalışmaSaatiAralığıGirer() {
+    @And("calisma saati araligi girer")
+    public void calismaSaatiAraligiGirer() {
         homePage.minWorkingHour.sendKeys("100");
         BrowserUtilities.waitFor(3);
         homePage.maxWorkingHour.sendKeys("300");
         BrowserUtilities.waitFor(4);
     }
 
-    @And("fiyat aralığı girer")
-    public void fiyatAralığıGirer() {
+    @And("fiyat araligi girer")
+    public void fiyatAraligiGirer() {
         homePage.minPrice.sendKeys("5000");
         BrowserUtilities.waitFor(4);
         homePage.maxPrice.sendKeys("50000");
@@ -127,19 +128,25 @@ public class HomeStepDef {
         );
     }
 
-    @When("Ekskavatörler e tıklar")
-    public void ekskavatörlerETıklar() {
-        homePage.ekskavatörler.click();
+    @When("Ekskavatörler e tiklar")
+    public void ekskavatorlerETiklar() {
+        homePage.ekskavatorler.click();
         BrowserUtilities.waitFor(4);
 
     }
 
-    @And("Kullanıcı kategori olarak Paletli Ekskavatör Radio buttonunu secer")
-    public void kullanıcıKategoriOlarakPaletliEkskavatörRadioButtonunuSecer() {
+    @And("Kullanici kategori olarak Paletli Ekskavator Radio buttonunu secer")
+    public void kullaniciKategoriOlarakPaletliEkskavatorRadioButtonunuSecer() {
         BrowserUtilities.waitFor(3);
         homePage.crawlerExcavator.click();
         BrowserUtilities.waitFor(4);
 
     }
 
+    @When("Kullanici Radio Button kullanarak urun secer")
+    public void kullaniciRadioButtonKullanarakUrunSecer() {
+        homePage.radioDizelforklift.click();
+        BrowserUtilities.waitFor(4);
+        homePage.radioCaterpillarMarka.click();
+    }
 }

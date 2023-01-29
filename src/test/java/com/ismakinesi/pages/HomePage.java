@@ -17,7 +17,7 @@ public class HomePage {
     public WebElement forklift;
 
     @FindBy(xpath = "//*[text()='Ekskavatörler']")
-    public WebElement ekskavatörler;
+    public WebElement ekskavatorler;
 
     @FindBy(xpath = "//button[contains(@class, 'bottom')]")
     public WebElement allFilters;
@@ -26,7 +26,7 @@ public class HomePage {
     public WebElement category;
 
     @FindBy(xpath = "//*[@id='content']/div/div[1]/input")
-    public WebElement searchİnput;
+    public WebElement searchInput;
 
     @FindBy(xpath = "//*[text()='Dizel Forklift']")
     public WebElement radioDizelforklift;
@@ -84,7 +84,7 @@ public class HomePage {
 
     //tek boşa tıklama için
     @FindBy(xpath = "//div[@class=\"ant-drawer-mask\"]")
-    public WebElement bosaTıkla;
+    public WebElement bosaTikla;
 
     @FindBy(xpath = "//a[contains(text(),'Lastik Tekerlekli Yükleyici')]")
     public WebElement wheelLoader;
