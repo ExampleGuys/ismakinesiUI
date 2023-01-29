@@ -4,6 +4,7 @@ import com.ismakinesi.pages.TeklifHakkiPage;
 import com.ismakinesi.utilities.BrowserUtilities;
 import com.ismakinesi.utilities.Driver;
 import io.cucumber.datatable.DataTable;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -13,7 +14,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 
 public class TeklifHakkiStepDef {
-    TeklifHakkiPage teklifHakkiPage=new TeklifHakkiPage();
+    TeklifHakkiPage teklifHakkiPage = new TeklifHakkiPage();
 
     @When("kullanici bu sayfadaki Teklif Haklarim'a tiklar")
     public void kullaniciBuSayfadakiTeklifHaklarimATiklar() {
@@ -30,6 +31,8 @@ public class TeklifHakkiStepDef {
         }
 
     }
+
+
     @When("kullanici Aktif buttonuna tiklar")
     public void kullanici_aktif_buttonuna_tiklar() {
         BrowserUtilities.doubleClick(teklifHakkiPage.aktifBtn);
@@ -41,4 +44,29 @@ public class TeklifHakkiStepDef {
         Assert.assertEquals("Kullanılabilir",teklifHakkiPage.kullanTek.getText());
 
     }
+    @And("kullanici Suresi bitenler'e tiklar")
+    public void kullaniciSuresiBitenlerETiklar() {
+        BrowserUtilities.doubleClick(teklifHakkiPage.suresiBitenler);
+        BrowserUtilities.waitFor(3);
+
+
+    }
+    @Then("kullanici  suresi biten teklif haklarini gorur")
+    public void kullaniciSuresiBitenTeklifHaklariniGorur() {
+      Assert.assertEquals("Ödemede Kullanıldı",teklifHakkiPage.odemedeKullanildi.getText());
+
+    }
+    @And("kullanici Teklif Hakki Al'a tiklar")
+    public void kullaniciTeklifHakkiAlATiklar() {
+        BrowserUtilities.clickWithJS(teklifHakkiPage.teklifHakkiAl);
+        BrowserUtilities.waitFor(3);
+
+    }
+    @Then("Teklif Hakki sayfasi acilir")
+    public void teklifPanlariSayfasiAcilir() {
+        Assert.assertTrue("Teklif Hakkı sayfasi acilmali",teklifHakkiPage.tekHakPage.getText().contains("Teklif Hakkı"));
+    }
+
+
+
 }
