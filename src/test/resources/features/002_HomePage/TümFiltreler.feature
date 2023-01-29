@@ -25,7 +25,7 @@ Feature: All Filters
 
   @IS-53
   Scenario: TC:IS-53 Arama başlıkları yazısı doğrulanmalı
-    Then Marka,Sınırlı Servis Garantisi,üretim Yılı,Çalışma Saati ve Fiyat başlığını kullanıcı doğrular
+    Then Marka,Sinirli Servis Garantisi,üretim Yili,Calisma Saati ve Fiyat basligini kullanici dogrular
       | Marka                    |
       | Sınırlı Servis Garantisi |
       | Üretim Yılı              |
