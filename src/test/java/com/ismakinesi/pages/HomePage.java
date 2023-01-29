@@ -13,7 +13,7 @@ public class HomePage {
 //***Locate başlama ****Engin Akgül tarafından hazırlanan "Tüm Filtreler ve Ana Sayfa" Locate leridir.
 
     //****Tüm Filitreler***
-    @FindBy(xpath = "//div[contains(@style, 'eda')]")
+    @FindBy(xpath = "//div[contains(@style, 'ef')]")
     public WebElement forklift;
 
     @FindBy(xpath = "//button[contains(@class, 'bottom')]")
@@ -28,23 +28,23 @@ public class HomePage {
     @FindBy(xpath = "//*[text()='Dizel Forklift']")
     public WebElement radioDizelforklift;
 
-    @FindBy(xpath = "//*[text()='Cesab']")
-    public WebElement radioCesabmarka;
+    @FindBy(xpath = "//*[text()='Caterpillar']")
+    public WebElement radioCaterpillarMarka;
 
     @FindBy(xpath = "//span[contains(text(),'6 Aylık')]")
-    public WebElement radioServicselect;
+    public WebElement radioServicSelect;
 
     @FindBy(xpath = "//input[@fdprocessedid='67uoj']")
-    public WebElement minYearof;
+    public WebElement minYearOf;
 
     @FindBy(xpath = "//input[@fdprocessedid='79rmwj']")
-    public WebElement maxYearof;
+    public WebElement maxYearOf;
 
     @FindBy(xpath = "//input[@fdprocessedid='2l5zxm']")
-    public WebElement minWorkinghour;
+    public WebElement minWorkingHour;
 
     @FindBy(xpath = "//input[@fdprocessedid='glkf1e']")
-    public WebElement maxWorkinghour;
+    public WebElement maxWorkingHour;
 
     @FindBy(xpath = "//input[@fdprocessedid='juheoo']")
     public WebElement minPrice;
@@ -60,7 +60,7 @@ public class HomePage {
     public WebElement limitedService;
 
     @FindBy(xpath = "//h3[.='Üretim Yılı']")
-    public WebElement yearOfproduction;
+    public WebElement yearOfProduction;
 
     @FindBy(xpath = "//h3[.='Çalışma Saati']")
     public WebElement studyTime;

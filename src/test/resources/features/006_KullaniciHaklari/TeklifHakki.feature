@@ -20,3 +20,21 @@ Feature: Teklif haklari
   Scenario:TC:IS-99 Kullanici Teklif Haklarim sayfasindaki Aktif'e tiklayinca kullanilabilir teklif haklarini gorur
     And kullanici Aktif buttonuna tiklar
     Then kullanici  kullanilabilir durumdaki teklif haklarini gorur
+
+  @IS-101
+  Scenario:TC:IS-101 Kullanici Teklif Haklarim sayfasindaki Suresi Bitenlere tiklayinca, Odemede Kullanildi durumundaki teklif haklarini gorur
+    And kullanici Suresi bitenler'e tiklar
+    Then kullanici  suresi biten teklif haklarini gorur
+
+  @IS-102
+  Scenario:TC:IS-102 Tekif Haklarimdaki Teklif Hakki Al 'a tiklaynca Teklif Hakki sayfasi acilir
+    And kullanici Teklif Hakki Al'a tiklar
+    Then Teklif Hakki sayfasi acilir
+
+  @IS-103
+  Scenario:TC:IS-103 Kullanici Baslangic yada Avantaj teklif haklarindan birini secer
+    And kullanici Teklif Hakki Al'a tiklar
+    Then Teklif Hakki sayfasi acilir
+    When kullanici Baslangic yada Avantaj teklif hakkini secer
+    And kullanici Teklif Hakki Al buttonuna tiklar
+    Then "Ödeme Yap" in gorunundugu sayfa acilir
