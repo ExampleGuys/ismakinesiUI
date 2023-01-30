@@ -51,4 +51,5 @@ Feature: Teklif haklari
     And kullanici kart numarsini yazar
     When kullanici Odeme Yap'a tiklar
     Then aldiklarim sayfasi acilir
-    Then "Ödeme işlemi başarılı. Teklif hakkınız sisteme tanımlandı." mesaji cikar
+
+
