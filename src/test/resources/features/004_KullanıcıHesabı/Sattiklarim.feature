@@ -12,7 +12,7 @@ Feature: Sattıklarım
 
   @IS-322
   Scenario: TC:IS-322 Kullanici Sattiklarim sayfasinda Yayindaki İlanlar, Sattiklarim ve Yayinda Olmayanlar başlıklarını görür ve tıklar
-    Then Kullanici Yayindaki İlanlar, Sattiklarim ve Yayinda Olmayanlar başlıklarını görünürlüğünü ve tıklanabilirliğini doğrular
+    Then Kullanici Yayindaki İlanlar, Sattiklarim ve Yayinda Olmayanlar başlıklarının görünürlüğünü ve tıklanabilirliğini doğrular
       | Yayındaki İlanlar  |
       | Sattıklarım        |
       | Yayında Olmayanlar |

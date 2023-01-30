@@ -59,7 +59,7 @@ public class SattiklarimStepDef {
 
     }
 */
-    @Then("Kullanici Yayindaki İlanlar, Sattiklarim ve Yayinda Olmayanlar başlıklarını görünürlüğünü ve tıklanabilirliğini doğrular")
+    @Then("Kullanici Yayindaki İlanlar, Sattiklarim ve Yayinda Olmayanlar başlıklarının görünürlüğünü ve tıklanabilirliğini doğrular")
     public void kullaniciYayindakiIlanlarSattiklarimVeYayindaOlmayanlarBasliklariniGorunurluguVeTiklanabilirliginiDogrular(DataTable dataTable) {
         List<String> labels = dataTable.column(0);
 
