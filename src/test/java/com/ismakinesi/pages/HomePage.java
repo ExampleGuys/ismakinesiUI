@@ -96,6 +96,10 @@ public class HomePage {
     @FindBy(xpath = "//label[contains(text(),'Paletli Ekskavatör')]")
     public WebElement crawlerExcavator;
 
+    //Paletli Yükleyici
+    @FindBy(css = "input[value='41']")
+    public WebElement trackLoader;
+
     //tek boşa tıklama için
     @FindBy(xpath = "//div[@class=\"ant-drawer-mask\"]")
     public WebElement bosaTikla;
@@ -108,6 +112,10 @@ public class HomePage {
 
     @FindBy(xpath = "//div[contains(@style, 'da')]")
     public WebElement backhoeLoader;
+
+    //yükleyici
+    @FindBy(xpath = "//div[contains(@style, 'bf')]")
+    public WebElement loader;
 
     @FindBy(xpath = "//button[@aria-label='Close']")
     public  WebElement filterClose;

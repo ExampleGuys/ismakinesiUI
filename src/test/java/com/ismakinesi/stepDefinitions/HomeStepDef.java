@@ -195,4 +195,17 @@ public class HomeStepDef {
         homePage.radioNewHollnand.click();
         BrowserUtilities.waitFor(4);
     }
+
+    @When("Yükleyiciler e tiklar")
+    public void yükleyicilerETiklar() {
+        homePage.loader.click();
+        BrowserUtilities.waitFor(4);
+
+    }
+
+    @And("Kullanici kategori olarak Paletli Yükleyici Radio buttonunu secer")
+    public void kullaniciKategoriOlarakPaletliYükleyiciRadioButtonunuSecer() {
+        homePage.trackLoader.click();
+        BrowserUtilities.waitFor(4);
+    }
 }
