@@ -149,4 +149,19 @@ public class HomeStepDef {
         BrowserUtilities.waitFor(4);
         homePage.radioCaterpillarMarka.click();
     }
+
+
+    @And("Kullanici kategori olarak Lastik Tekerlekli Ekskavatör Radio buttonunu secer")
+    public void kullaniciKategoriOlarakLastikTekerlekliEkskavatörRadioButtonunuSecer() {
+        homePage.radioLastikTekerEkskavator.click();
+        BrowserUtilities.waitFor(4);
+
+    }
+
+    @And("Kullanici Marka olarak Volvo Radio buttonunu secer.")
+    public void kullaniciMarkaOlarakVolvoRadioButtonunuSecer() {
+        homePage.radioVolvoMarka.click();
+        BrowserUtilities.waitFor(4);
+
+    }
 }
