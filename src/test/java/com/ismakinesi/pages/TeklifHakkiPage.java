@@ -24,12 +24,27 @@ public class TeklifHakkiPage extends BasePage {
     public WebElement teklifHakkiAl;
 
     @FindBy(css="h2[class='title-main']")
-    public WebElement tekHakPage;
+    public WebElement teklifHakkiPage;
+
+    @FindBy(css="[name='card_holder_name']")
+    public WebElement kartSahipAd;
+
+    @FindBy(xpath = "//iframe[contains(@title, 'ödeme')]")
+    public WebElement kartNumarasi;
+
+    @FindBy(id="paymentBtn")
+    public WebElement odemeYapBtn;
 
     @FindBy(xpath = "(//p[text()='Avantaj'])[1]")
     public WebElement avantajPacket;
 
-    @FindBy(css="a[href='/profile/payment/pay?type=1&duration=long&quantity=5']")
+    @FindBy(xpath = "(//a[text()='Teklif Hakkı Al'])[1]")
     public WebElement tekAlButton;
+
+    @FindBy(xpath ="//h1[.='Aldıklarım']")
+    public WebElement aldiklarimPage;
+
+    @FindBy(css="ant-message-notice-content")
+    public WebElement tossMessage;
 
 }
