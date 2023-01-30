@@ -16,3 +16,7 @@ Feature: Sattıklarım
       | Yayındaki İlanlar  |
       | Sattıklarım        |
       | Yayında Olmayanlar |
+
+  @IS-323
+  Scenario: TC:IS-323 Tumu ve Teklif Gelenler basliklarina tiklar ve dogrular
+    Then Kullanici Tumu ve Teklif Gelenler basliklarina tiklar ve dogrular

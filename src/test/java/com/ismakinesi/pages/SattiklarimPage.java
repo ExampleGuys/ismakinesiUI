@@ -14,5 +14,9 @@ public class SattiklarimPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"__layout\"]//li/a[text()='Sattıklarım']")
     public WebElement sattiklarim;
 
+    @FindBy(xpath = "//*[@id=\"__layout\"]//li/a[text()='Tümü']")
+    public WebElement tumu;
 
+    @FindBy(xpath = "//*[@id=\"__layout\"]//li/a[text()='Teklif Gelenler']")
+    public WebElement teklifGelenler;
 }
