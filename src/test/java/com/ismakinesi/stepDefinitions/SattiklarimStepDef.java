@@ -10,8 +10,12 @@ import com.ismakinesi.utilities.ConfigurationReader;
 import com.ismakinesi.utilities.Driver;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import io.cucumber.datatable.DataTable;
+
+import java.util.List;
 
 public class SattiklarimStepDef {
 
@@ -37,12 +41,12 @@ public class SattiklarimStepDef {
 
     @And("Kullanici Sattiklarim butonuna tiklar")
     public void kullaniciSattiklarimButonunaTiklar() {
-        BrowserUtilities.hover(sattiklarimPage.sattiklarim);
-        BrowserUtilities.doubleClick(sattiklarimPage.sattiklarim);
+        BrowserUtilities.hover(sattiklarimPage.sattiklarimPage);
+        BrowserUtilities.doubleClick(sattiklarimPage.sattiklarimPage);
         BrowserUtilities.waitFor(5);
     }
 
-    @Then("kullanici Sattiklarim butonuna tiklandigini dogrular")
+    @Then("Kullanici Sattiklarim butonuna tiklandigini dogrular")
     public void kullaniciSattiklarimButonunaTiklandiginiDogrular() {
         BrowserUtilities.verifyElementClickable(sattiklarimPage.sattiklarim);
     }
@@ -55,6 +59,22 @@ public class SattiklarimStepDef {
 
     }
 */
+    @Then("Kullanici Yayindaki İlanlar, Sattiklarim ve Yayinda Olmayanlar başlıklarını görünürlüğünü ve tıklanabilirliğini doğrular")
+    public void kullaniciYayindakiIlanlarSattiklarimVeYayindaOlmayanlarBasliklariniGorunurluguVeTiklanabilirliginiDogrular(DataTable dataTable) {
+        List<String> labels = dataTable.column(0);
+
+        for (String label : labels) {
+            WebElement element = Driver.get().findElement(By.xpath("//a[.='" + label + "']"));
+
+            Assert.assertTrue(element.isDisplayed());
+            System.out.println(element.getText());
+            BrowserUtilities.hover(element);
+            BrowserUtilities.doubleClick(element);
+            BrowserUtilities.waitFor(5);
+            BrowserUtilities.verifyElementClickable(element);
+        }
+
+    }
 
 }
 

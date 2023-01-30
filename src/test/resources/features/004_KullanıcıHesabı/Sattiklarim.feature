@@ -8,6 +8,11 @@ Feature: Sattıklarım
 
   @IS-321
   Scenario: TC:IS-321 Kullanici Sattiklarim butonuna tiklar
-    Then kullanici Sattiklarim butonuna tiklandigini dogrular
+    Then Kullanici Sattiklarim butonuna tiklandigini dogrular
 
-
+  @IS-322
+  Scenario: TC:IS-322 Kullanici Sattiklarim sayfasinda Yayindaki İlanlar, Sattiklarim ve Yayinda Olmayanlar başlıklarını görür ve tıklar
+    Then Kullanici Yayindaki İlanlar, Sattiklarim ve Yayinda Olmayanlar başlıklarını görünürlüğünü ve tıklanabilirliğini doğrular
+      | Yayındaki İlanlar  |
+      | Sattıklarım        |
+      | Yayında Olmayanlar |
