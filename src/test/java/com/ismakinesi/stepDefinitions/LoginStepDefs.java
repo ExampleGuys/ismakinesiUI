@@ -137,4 +137,16 @@ public class LoginStepDefs {
     public void kullaniciTwitterIconunaTiklar() {
         BrowserUtilities.clickWithJS(loginPage.twitterLink);
     }
+
+
+    @And("kullanici <{string}> sifre yazar")
+    public void kullaniciSifreYazar(String invalid) {
+        loginPage.passwordUye.sendKeys(invalid);
+    }
+
+    @Then("kullanici invalid sifre ile siteye giris yapamadigini dogrular")
+    public void kullaniciInvalidSifreIleSiteyeGirisYapamadiginiDogrular() {
+        BrowserUtilities.waitForVisibility(loginPage.invalidPasswordIcinUyariTexti, 10);
+        Assert.assertTrue(loginPage.invalidPasswordIcinUyariTexti.isDisplayed());
+    }
 }
