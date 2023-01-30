@@ -52,3 +52,16 @@ Feature: Tüm Filitreler
       And Kullanici kategori olarak Paletli Yükleyici Radio buttonunu secer
       And Kullanici Marka olarak Caterpillar Radio buttonunu secer.
       Then secilen ilanin filitrelendigini dogrular.
+
+      @IS-69
+      Scenario:Kullanıcı "Yükleyiciler" ilanlarını marka secerek secebilmelidir
+        Given Kullanici ismakinesi.com adresine gider
+        When Yükleyici e tiklar
+        And Tum Filtreler e tiklar
+        And Kullanici kategori olarak Lastik Tekerlekli Yükleyici Radio buttonunu secer
+        And Kullanici Marka olarak New Holland Radio buttonunu secer.
+        And Sinirli Servis Garantisi secer
+        And Uretim yili araligi  girer
+        And calisma saati araligi girer
+        And fiyat araligi girer
+        Then secilen ilanin filitrelendigini dogrular.
