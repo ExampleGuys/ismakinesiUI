@@ -33,7 +33,7 @@ Feature: Tüm Filitreler
     Then secilen ilanin filitrelendigini dogrular.
 
   @IS-67
-  Scenario:TC:IS-67 Kullanici "Kazici Yükleyici" ilanlarini marka secerek secebilmelidir
+  Scenario: TC:IS-67 Kullanici "Kazici Yükleyici" ilanlarini marka secerek secebilmelidir
     Given Kullanici ismakinesi.com adresine gider
     When Kazici Yükleyici e tiklar
     And Tum Filtreler e tiklar
@@ -43,3 +43,12 @@ Feature: Tüm Filitreler
     And calisma saati araligi girer
     And fiyat araligi girer
     Then secilen ilanin filitrelendigini dogrular.
+
+    @IS-68
+    Scenario: TC:IS-68 Kullanici "Yükleyiciler" ilanlarını marka secerek secebilmelidir
+      Given Kullanici ismakinesi.com adresine gider
+      When Yükleyiciler e tiklar
+      And Tum Filtreler e tiklar
+      And Kullanici kategori olarak Paletli Yükleyici Radio buttonunu secer
+      And Kullanici Marka olarak Caterpillar Radio buttonunu secer.
+      Then secilen ilanin filitrelendigini dogrular.
