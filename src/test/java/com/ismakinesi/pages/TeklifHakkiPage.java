@@ -44,7 +44,9 @@ public class TeklifHakkiPage extends BasePage {
     @FindBy(xpath ="//h1[.='Aldıklarım']")
     public WebElement aldiklarimPage;
 
-    @FindBy(css="ant-message-notice-content")
-    public WebElement tossMessage;
+    @FindBy(xpath ="(//span[.='Kullanılabilir'])[1]")
+    public WebElement kullanilabilir;
+
+
 
 }
