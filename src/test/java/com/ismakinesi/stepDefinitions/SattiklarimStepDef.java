@@ -64,7 +64,21 @@ public class SattiklarimStepDef {
 
     }
 
+    @Then("Kullanici Tumu ve Teklif Gelenler basliklarina tiklar ve dogrular")
+    public void kullanici_tumu_ve_teklif_gelenler_basliklarina_tiklar_ve_dogrular() {
+
+        BrowserUtilities.hover(sattiklarimPage.tumu);
+        BrowserUtilities.doubleClick(sattiklarimPage.tumu);
+        BrowserUtilities.waitFor(3);
+        BrowserUtilities.verifyElementClickable(sattiklarimPage.tumu);
+
+        BrowserUtilities.waitFor(3);
+
+        BrowserUtilities.hover(sattiklarimPage.teklifGelenler);
+        BrowserUtilities.doubleClick(sattiklarimPage.teklifGelenler);
+        BrowserUtilities.waitFor(3);
+        BrowserUtilities.verifyElementClickable(sattiklarimPage.teklifGelenler);
+    }
+
+
 }
-
-
-
