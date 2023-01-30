@@ -31,9 +31,9 @@ Feature: All Filters
   Scenario: TC:IS-53 Arama basliklari yazisi dogrulanmali
     Then Marka,Sinirli Servis Garantisi,uretim Yili,Calisma Saati ve Fiyat basligini kullanici dogrular
       | Marka                    |
-      | Sinirlı Servis Garantisi |
+      | Sınırlı Servis Garantisi |
       | Üretim Yılı              |
-      | Çalısma Saati            |
+      | Çalışma Saati            |
       | Fiyat                    |
 
   @IS-62
