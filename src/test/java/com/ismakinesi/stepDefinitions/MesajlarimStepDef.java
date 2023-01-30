@@ -18,7 +18,7 @@ public class MesajlarimStepDef {
 
     LoginPage loginPage = new LoginPage();
 
-    @And("Kullanici Mesajlarim butonua tiklar")
+    @And("Kullanici Mesajlarim butonuna tiklar")
     public void kullaniciMesajlarimButonuaTiklar() {
         BrowserUtilities.hover(mesajlarimPage.mesajlarim);
         BrowserUtilities.doubleClick(mesajlarimPage.mesajlarim);
