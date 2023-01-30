@@ -29,7 +29,7 @@ public class SattiklarimStepDef {
         loginPage.submitBtn.click();
     }
 
-    @When("Kullanici Hesabim buttonuna tiklar")
+    @When("Kullanici Hesabim butonuna tiklar")
     public void kullanici_hesabim_buttonuna_tiklar() {
         loginPage.hesabimBtn.click();
         BrowserUtilities.waitFor(3);

@@ -11,3 +11,15 @@ Feature: Tüm Filitreler
     And Kullanici kategori olarak Paletli Ekskavator Radio buttonunu secer
     And Kullanici Marka olarak Caterpillar Radio buttonunu secer.
     Then secilen ilanin filitrelendigini dogrular.
+
+
+  @IS-65
+  Scenario: TC:IS-65 Kullanıcı "Ekskavatörler " ilanlarını marka secerek secebilmelidir
+
+    And Kullanici kategori olarak Lastik Tekerlekli Ekskavatör Radio buttonunu secer
+    And Kullanici Marka olarak Volvo Radio buttonunu secer.
+    And  Sinirli Servis Garantisi secer
+    And Uretim yili araligi  girer
+    And calisma saati araligi girer
+    And fiyat araligi girer
+    Then secilen ilanin filitrelendigini dogrular.
