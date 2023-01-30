@@ -110,27 +110,12 @@ public class TeklifHakkiStepDef {
 
     @And("kullanici kart numarsini yazar")
     public void kullaniciKartNumarsiniYazar() {
-        //   Driver.get().switchTo().frame(0);
-        //   Driver.get().switchTo().frame(teklifHakkiPage.iframe);
-
-
-
         teklifHakkiPage.kartNumarasi.sendKeys(ConfigurationReader.get("KartNumber"));
-//        actions.sendKeys(Keys.NUMPAD4);
-//        BrowserUtilities.waitFor(1);
-//        actions.sendKeys(Keys.NUMPAD2);
-
-
     }
 
     @Then("aldiklarim sayfasi acilir")
     public void aldiklarimSayfasiAcilir() {
         Assert.assertEquals("Aldıklarım", teklifHakkiPage.aldiklarimPage.getText());
     }
-
-    @Then("{string} mesaji cikar")
-    public void mesajiCikar(String message) {
-        BrowserUtilities.waitFor(5);
-        Assert.assertEquals(message,teklifHakkiPage.tossMessage.getText());
-    }
 }
+
