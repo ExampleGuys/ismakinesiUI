@@ -24,4 +24,23 @@ public class BilgilerimStepDef {
         Assert.assertEquals("Bilgilerim", bilgilerimPage.bilgilerimBasligi.getText());
         System.out.println(bilgilerimPage.bilgilerimBasligi.getText());
     }
+
+    @Then("Kullanici Mesajlar ve Bildirimler butonlarina tiklar")
+    public void kullaniciMesajlarVeBildirimlerButonlarinaTiklar() {
+
+    }
+
+    @Then("Kullanici Kullanıcı Kişisel Bilgilerim, Adreslerim, Firma Bilgilerim, Banka Bilgilerim, Şifre Değiştir butonlarına tıklar")
+    public void kullaniciKullanıcıKişiselBilgilerimAdreslerimFirmaBilgilerimBankaBilgilerimŞifreDeğiştirButonlarınaTıklar() {
+        bilgilerimPage.kisiselBilgilerim.click();
+        BrowserUtilities.waitFor(3);
+        bilgilerimPage.adreslerim.click();
+        BrowserUtilities.waitFor(3);
+        bilgilerimPage.firmaBilgilerim.click();
+        BrowserUtilities.waitFor(3);
+        bilgilerimPage.bankaBilgilerim.click();
+        BrowserUtilities.waitFor(3);
+        bilgilerimPage.sifreDegistir.click();
+        BrowserUtilities.waitFor(3);
+    }
 }
