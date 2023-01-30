@@ -56,7 +56,7 @@ public class HomePage {
     public WebElement maxPrice;
 
 
-    @FindBy(xpath = "//h3[.='Marka'']")
+    @FindBy(xpath = "//h3[.='Marka']")
     public WebElement brand;
 
     @FindBy(xpath = "//h3[.='Sınırlı Servis Garantisi']")
