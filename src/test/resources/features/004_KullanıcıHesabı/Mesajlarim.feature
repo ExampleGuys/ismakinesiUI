@@ -4,9 +4,10 @@ Feature: Mesajlarım
     Given Kullanici ismakinesi.com adresine gider
     When Kullanici uye olarak giris yapar
     And Kullanici Hesabim butonuna tiklar
+    And Kullanici Mesajlarim butonua tiklar
 
   @IS-324
-  Scenario: TC:IS-324 Kullanici Mesajlarim butonuna tiklar
+  Scenario: TC:IS-324 Kullanici Mesajlarim butonuna tiklandigini dogrular
     Then Kullanici Mesajlarim butonuna tiklandigini dogrular
 
   @IS-326

@@ -18,30 +18,31 @@ public class MesajlarimStepDef {
 
     LoginPage loginPage = new LoginPage();
 
-    @Then("Kullanici Mesajlarim butonuna tiklandigini dogrular")
-    public void KullaniciMesajlarimButonunaTiklandigiDogrular() {
+    @And("Kullanici Mesajlarim butonua tiklar")
+    public void kullaniciMesajlarimButonuaTiklar() {
         BrowserUtilities.hover(mesajlarimPage.mesajlarim);
-        BrowserUtilities.verifyElementDisplayed(mesajlarimPage.mesajlarim);
         BrowserUtilities.doubleClick(mesajlarimPage.mesajlarim);
         BrowserUtilities.waitFor(5);
     }
 
+    @Then("Kullanici Mesajlarim butonuna tiklandigini dogrular")
+    public void kullaniciMesajlarimButonunaTiklandiginiDogrular() {
+        Assert.assertEquals("Mesajlarım", mesajlarimPage.mesajlarimBasligi.getText());
+    }
+
     @Then("Kullanici Mesajlar ve Bildirimler butonlarinin calistigini dogrular ve tiklar")
     public void kullanici_mesajlar_ve_bildirimler_butonlarinin_calistigini_dogrular_ve_tiklar() {
-        BrowserUtilities.hover(mesajlarimPage.mesajlarim);
-        BrowserUtilities.doubleClick(mesajlarimPage.mesajlarim);
-        BrowserUtilities.waitFor(3);
 
         BrowserUtilities.hover(mesajlarimPage.mesajlar);
-        BrowserUtilities.verifyElementClickable(mesajlarimPage.mesajlar);
-        BrowserUtilities.doubleClick(mesajlarimPage.mesajlar);
+        mesajlarimPage.mesajlar.click();
         BrowserUtilities.waitFor(3);
 
         BrowserUtilities.hover(mesajlarimPage.bildirimler);
-        BrowserUtilities.verifyElementClickable(mesajlarimPage.bildirimler);
-        BrowserUtilities.doubleClick(mesajlarimPage.bildirimler);
+        mesajlarimPage.bildirimler.click();
         BrowserUtilities.waitFor(3);
+
     }
+
 
 }
 

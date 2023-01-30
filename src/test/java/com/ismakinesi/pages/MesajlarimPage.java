@@ -13,4 +13,7 @@ public class MesajlarimPage extends BasePage {
 
     @FindBy(xpath = "//ul/li//*[text()='Bildirimler']")
     public WebElement bildirimler;
+
+    @FindBy(xpath = "//h1[contains(text(),'Mesajlarım')]")
+    public WebElement mesajlarimBasligi;
 }
