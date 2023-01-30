@@ -16,6 +16,14 @@ public class DestekmerkeziPage extends BasePage{
      @FindBy(css="a[href='/help/111/#71']")
     public WebElement satinAlma;
 
+    @FindBy(xpath = "/html/body/div/div/div/div/div[2]/div[1]/div/a[2]/h3\n" )
+    public WebElement saticiyimBtn;
+
+    @FindBy(xpath = "//a[@href='/help/59/#72']\n" )
+    public WebElement hemenAl;
+
+    @FindBy(xpath = "//div[contains(@class, 'searchBox')]\n" )
+    public WebElement hemenAlic;
 
 
 
