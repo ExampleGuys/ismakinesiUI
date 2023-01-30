@@ -3,7 +3,7 @@ Feature: Sattıklarım
   Background:
     Given Kullanici ismakinesi.com adresine gider
     When Kullanici uye olarak giris yapar
-    And Kullanici Hesabim buttonuna tiklar
+    And Kullanici Hesabim butonuna tiklar
     And Kullanici Sattiklarim butonuna tiklar
 
   @IS-321
