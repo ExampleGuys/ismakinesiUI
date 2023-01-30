@@ -1,8 +1,5 @@
 package com.ismakinesi.stepDefinitions;
 
-
-import com.google.common.base.Verify;
-import com.google.common.base.VerifyException;
 import com.ismakinesi.pages.SattiklarimPage;
 import com.ismakinesi.pages.LoginPage;
 import com.ismakinesi.utilities.BrowserUtilities;
@@ -12,7 +9,6 @@ import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import io.cucumber.datatable.DataTable;
 
 import java.util.List;
@@ -51,14 +47,6 @@ public class SattiklarimStepDef {
         BrowserUtilities.verifyElementClickable(sattiklarimPage.sattiklarim);
     }
 
-    /*@Then("kullanici Sattiklarim butonuna tiklar")
-    public void kullanici_aldiklarima_tiklar() {
-        BrowserUtilities.hover(sattiklarimPage.sattiklarim);
-        BrowserUtilities.doubleClick(sattiklarimPage.sattiklarim);
-        BrowserUtilities.waitFor(5);
-
-    }
-*/
     @Then("Kullanici Yayindaki İlanlar, Sattiklarim ve Yayinda Olmayanlar başlıklarının görünürlüğünü ve tıklanabilirliğini doğrular")
     public void kullaniciYayindakiIlanlarSattiklarimVeYayindaOlmayanlarBasliklariniGorunurluguVeTiklanabilirliginiDogrular(DataTable dataTable) {
         List<String> labels = dataTable.column(0);

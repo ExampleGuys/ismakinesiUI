@@ -12,7 +12,7 @@ public class SattiklarimPage extends BasePage {
     @FindBy(xpath = "//ul/li//*[text()='Yayındaki İlanlar']")
     public WebElement yayindakiIlanlar;
 
-    @FindBy(xpath = "//*[@id=\"__layout\"]/div/div/div[1]/div/div[2]/div/div/div/div[2]/div[1]/div/div/ul/li[2]/a")
+    @FindBy(xpath = "//*[@id=\"__layout\"]//li/a[text()='Sattıklarım']")
     public WebElement sattiklarim;
 
 
