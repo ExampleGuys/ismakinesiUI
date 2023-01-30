@@ -22,6 +22,9 @@ public class HomePage {
     @FindBy(xpath = "//button[contains(@class, 'bottom')]")
     public WebElement allFilters;
 
+    @FindBy(xpath = "//a[@class=\"logo tr mobile-none nuxt-link-exact-active nuxt-link-active\"]/img[@class=\"main-header-logo tr\"]")
+    public WebElement logo;
+
     @FindBy(xpath = "//h3[.='Kategori']")
     public WebElement category;
 
@@ -36,6 +39,8 @@ public class HomePage {
 
     @FindBy(xpath = "//*[text()='Caterpillar']")
     public WebElement radioCaterpillarMarka;
+    @FindBy(xpath = "//*[text()='Case']")
+    public WebElement radioCase;
 
     @FindBy(xpath = "//*[text()='Volvo']")
     public WebElement radioVolvoMarka;
@@ -99,9 +104,11 @@ public class HomePage {
     @FindBy(xpath = "//a[contains(text(),'Akülü Forklift')]")
     public WebElement batteryForklift;
 
-    @FindBy(xpath = "//a[contains(text(),'Kazıcı Yükleyici')]")
+    @FindBy(xpath = "//div[contains(@style, 'da')]")
     public WebElement backhoeLoader;
 
+    @FindBy(xpath = "//button[@aria-label='Close']")
+    public  WebElement filterClose;
     @FindBy(xpath = "//a[contains(text(),'Mini Ekskavatör (<12t)')]")
     public WebElement miniExcavator;
 

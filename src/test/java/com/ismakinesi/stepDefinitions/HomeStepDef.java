@@ -164,4 +164,29 @@ public class HomeStepDef {
         BrowserUtilities.waitFor(4);
 
     }
+
+    @When("Kazici Yükleyici e tiklar")
+    public void kaziciYükleyiciETiklar() {
+        homePage.backhoeLoader.click();
+        BrowserUtilities.waitFor(4);
+    }
+
+    @And("Kullanici Marka olarak Case Radio buttonunu secer.")
+    public void kullaniciMarkaOlarakCaseRadioButtonunuSecer() {
+        homePage.radioCase.click();
+        BrowserUtilities.waitFor(4);
+    }
+
+    @When("Filter kapat")
+    public void filterKapat() {
+        homePage.filterClose.click();
+        BrowserUtilities.waitFor(2);
+
+    }
+
+    @And("logo tiklar")
+    public void logoTiklar() {
+        homePage.logo.click();
+        //BrowserUtilities.waitFor(4);
+    }
 }
