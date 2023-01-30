@@ -77,6 +77,7 @@ public class LoginStepDefs {
         Assert.assertTrue(Driver.get().getTitle().contains("Instagram"));
     }
 
+
     @Then("Twitter sayfasi acildigini dogrular")
     public void twitter_sayfasi_acildigini_dogrular() {
     }
