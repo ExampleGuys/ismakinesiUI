@@ -44,6 +44,8 @@ public class HomePage {
 
     @FindBy(xpath = "//*[text()='Volvo']")
     public WebElement radioVolvoMarka;
+    @FindBy(xpath = "//*[text()='New Holland']")
+    public WebElement radioNewHollnand;
 
 
     @FindBy(xpath = "//span[contains(text(),'6 Aylık')]")
