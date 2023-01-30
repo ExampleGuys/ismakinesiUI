@@ -32,4 +32,10 @@ public class AliciyimStepdef {
         Assert.assertTrue(destekmerkeziPage.satinAlma.isEnabled());
 
     }
+
+    @Then("kullanici Tumunu gor tiklanabilir oldugunu dogrular")
+    public void kullaniciTumunuGorTiklanabilirOldugunuDogrular() {
+        Assert.assertTrue(destekmerkeziPage.tumunuGor.isEnabled());
+    }
 }
+

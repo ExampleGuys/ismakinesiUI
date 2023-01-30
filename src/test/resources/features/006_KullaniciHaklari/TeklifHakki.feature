@@ -31,3 +31,24 @@ Feature: Teklif haklari
     And kullanici Teklif Hakki Al'a tiklar
     Then Teklif Hakki sayfasi acilir
 
+  @IS-103
+  Scenario:TC:IS-103 Kullanici Baslangic yada Avantaj teklif haklarindan birini secer
+    And kullanici Teklif Hakki Al'a tiklar
+    Then Teklif Hakki sayfasi acilir
+    When kullanici Baslangic yada Avantaj teklif hakkini secer
+    And kullanici Teklif Hakki Al buttonuna tiklar
+    Then "Ödeme Yap" in gorunundugu sayfa acilir
+
+  @IS-105
+  Scenario:TC:IS-105 Kullanici Fatura adresini secer, Kart sahibinin adini, Kart numarasini yazar Odeme yap'a tiklarsa Aldiklarim sayfasi acilir ve "Odeme islemi basari ile tamamlandi" mesaji cikar
+    And kullanici Teklif Hakki Al'a tiklar
+    Then Teklif Hakki sayfasi acilir
+    When kullanici Baslangic yada Avantaj teklif hakkini secer
+    And kullanici Teklif Hakki Al buttonuna tiklar
+    Then "Ödeme Yap" in gorunundugu sayfa acilir
+    When kullanici Odeme Yap'a tiklar
+    When kullanici kart sahibinin adini yazar
+    And kullanici kart numarsini yazar
+    When kullanici Odeme Yap'a tiklar
+    Then aldiklarim sayfasi acilir
+    Then "Ödeme işlemi başarılı. Teklif hakkınız sisteme tanımlandı." mesaji cikar

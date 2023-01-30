@@ -26,6 +26,8 @@ public class DestekmerkeziPage extends BasePage{
     public WebElement hemenAlic;
 
 
+    @FindBy(css = "a[href='/help/3']")
+    public WebElement tumunuGor;
 
     }
 
