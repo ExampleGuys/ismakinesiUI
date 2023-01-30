@@ -123,6 +123,13 @@ public class HomePage {
     @FindBy(xpath = "//input[contains(@value, '69')]")
     public WebElement batteryPoweredScissorLift;
 
+    //Dizel Makaslı Platform
+    @FindBy(xpath = "//input[contains(@value, '71')]")
+    public WebElement dieselScissorLift;
+
+    @FindBy(xpath = "//input[contains(@value, '65')]")
+    public WebElement skyjack;
+
     @FindBy(xpath = "//div[contains(@style, 'da')]")
     public WebElement backhoeLoader;
 

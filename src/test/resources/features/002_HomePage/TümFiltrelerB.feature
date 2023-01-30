@@ -54,7 +54,7 @@ Feature: Tüm Filitreler
       Then secilen ilanin filitrelendigini dogrular.
 
       @IS-69
-      Scenario:Kullanici "Yükleyiciler" ilanlarini marka secerek secebilmelidir
+      Scenario: TC:IS-69 Kullanici "Yükleyiciler" ilanlarini marka secerek secebilmelidir
         Given Kullanici ismakinesi.com adresine gider
         When Yükleyici e tiklar
         And Tum Filtreler e tiklar
@@ -67,10 +67,23 @@ Feature: Tüm Filitreler
         Then secilen ilanin filitrelendigini dogrular.
 
         @IS-70
-        Scenario: Kullanici "Personel Yükselticiler" ilanlarini marka secerek görebilmelidir.
+        Scenario: TC:IS 70 Kullanici "Personel Yükselticiler" ilanlarini marka secerek görebilmelidir.
           Given Kullanici ismakinesi.com adresine gider
           When Personel Yükselticiler e tiklar
           And Tum Filtreler e tiklar
           And Kullanici kategori olarak Akülü Makasli Platform Radio buttonunu secer
           And Kullanici Marka olarak Genie Radio buttonunu secer.
           Then secilen ilanin filitrelendigini dogrular.
+
+          @IS-71
+          Scenario: TC:IS 71 Kullanıcı "Personel Yükselticiler" ilanlarını marka secerek görebilmelidir.
+            Given Kullanici ismakinesi.com adresine gider
+            When Personel Yükselticiler e tiklar
+            And Tum Filtreler e tiklar
+            And Kullanici kategori olarak Dizel akulu platform Radio buttonunu secer
+            And Kullanici Marka olarak Skyjack Radio buttonunu secer.
+            And  Sinirli Servis Garantisi secer
+            And Uretim yili araligi  girer
+            And calisma saati araligi girer
+            And fiyat araligi girer
+            Then secilen ilanin filitrelendigini dogrular.
