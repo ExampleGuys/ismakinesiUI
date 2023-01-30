@@ -14,7 +14,7 @@ Feature: Tüm Filitreler
 
 
   @IS-65
-  Scenario: TC:IS-65 Kullanıcı "Ekskavatörler " ilanlarını marka secerek secebilmelidir
+  Scenario: TC:IS-65 Kullanici "Ekskavatörler " ilanlarini marka secerek secebilmelidir
 
     And Kullanici kategori olarak Lastik Tekerlekli Ekskavatör Radio buttonunu secer
     And Kullanici Marka olarak Volvo Radio buttonunu secer.
@@ -23,3 +23,11 @@ Feature: Tüm Filitreler
     And calisma saati araligi girer
     And fiyat araligi girer
     Then secilen ilanin filitrelendigini dogrular.
+
+    @IS-66
+    Scenario: TC:IS-66 Kullanici "Kazici Yükleyici" ilanlarini marka secerek secebilmelidir
+      Given Kullanici ismakinesi.com adresine gider
+      When Kazici Yükleyici e tiklar
+      And Tum Filtreler e tiklar
+      And Kullanici Marka olarak Case Radio buttonunu secer.
+      Then secilen ilanin filitrelendigini dogrular.
