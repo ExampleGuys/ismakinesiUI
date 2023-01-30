@@ -220,4 +220,22 @@ public class HomeStepDef {
         homePage.loader.click();
         BrowserUtilities.waitFor(4);
     }
+
+    @And("Kullanici Marka olarak Genie Radio buttonunu secer.")
+    public void kullaniciMarkaOlarakGenieRadioButtonunuSecer() {
+        homePage.genie.click();
+        BrowserUtilities.waitFor(4);
+    }
+
+    @And("Kullanici kategori olarak Akülü Makasli Platform Radio buttonunu secer")
+    public void kullaniciKategoriOlarakAkülüMakasliPlatformRadioButtonunuSecer() {
+        homePage.batteryPoweredScissorLift.click();
+        BrowserUtilities.waitFor(4);
+    }
+
+    @When("Personel Yükselticiler e tiklar")
+    public void personelYükselticilerETiklar() {
+        homePage.staffBoosters.click();
+        BrowserUtilities.waitFor(4);
+    }
 }

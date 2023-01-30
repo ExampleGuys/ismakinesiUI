@@ -34,6 +34,9 @@ public class HomePage {
     @FindBy(xpath = "//*[text()='Dizel Forklift']")
     public WebElement radioDizelforklift;
 
+    //Personel Yükselticiler
+    @FindBy(xpath = "(//div[@class='image-box'])[5]")
+    public WebElement staffBoosters;
     @FindBy(xpath = "//label[contains(text(),'Lastik Tekerlekli Ekskavatör')]")
     public WebElement radioLastikTekerEkskavator;
 
@@ -108,8 +111,17 @@ public class HomePage {
     @FindBy(css = "input[value='13']")
     public WebElement wheelLoader;
 
+    //Genie Markası
+    @FindBy(css ="input[value='8']" )
+    public WebElement genie;
+
+
     @FindBy(xpath = "//a[contains(text(),'Akülü Forklift')]")
     public WebElement batteryForklift;
+
+    //Akülü Makaslı Platform
+    @FindBy(xpath = "//input[contains(@value, '69')]")
+    public WebElement batteryPoweredScissorLift;
 
     @FindBy(xpath = "//div[contains(@style, 'da')]")
     public WebElement backhoeLoader;
