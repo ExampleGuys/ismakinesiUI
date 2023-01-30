@@ -104,7 +104,8 @@ public class HomePage {
     @FindBy(xpath = "//div[@class=\"ant-drawer-mask\"]")
     public WebElement bosaTikla;
 
-    @FindBy(xpath = "//a[contains(text(),'Lastik Tekerlekli Yükleyici')]")
+    //Lastik Tekerlekli Yükleyici
+    @FindBy(css = "input[value='13']")
     public WebElement wheelLoader;
 
     @FindBy(xpath = "//a[contains(text(),'Akülü Forklift')]")
@@ -118,7 +119,7 @@ public class HomePage {
     public WebElement loader;
 
     @FindBy(xpath = "//button[@aria-label='Close']")
-    public  WebElement filterClose;
+    public WebElement filterClose;
     @FindBy(xpath = "//a[contains(text(),'Mini Ekskavatör (<12t)')]")
     public WebElement miniExcavator;
 
