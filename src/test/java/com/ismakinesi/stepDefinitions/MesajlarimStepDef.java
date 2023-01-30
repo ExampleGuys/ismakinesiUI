@@ -10,18 +10,38 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class MesajlarimStepDef {
 
     MesajlarimPage mesajlarimPage = new MesajlarimPage();
 
     LoginPage loginPage = new LoginPage();
 
-    @Then("Kullanici Mesajlarim butonuna tiklar ve dogrular")
-    public void KullaniciMesajlarimButonunaTiklarVeDogrular() {
-        BrowserUtilities.hover(mesajlarimPage.mesajlarimPage);
-        BrowserUtilities.verifyElementDisplayed(mesajlarimPage.mesajlarimPage);
-        BrowserUtilities.doubleClick(mesajlarimPage.mesajlarimPage);
+    @Then("Kullanici Mesajlarim butonuna tiklandigini dogrular")
+    public void KullaniciMesajlarimButonunaTiklandigiDogrular() {
+        BrowserUtilities.hover(mesajlarimPage.mesajlarim);
+        BrowserUtilities.verifyElementDisplayed(mesajlarimPage.mesajlarim);
+        BrowserUtilities.doubleClick(mesajlarimPage.mesajlarim);
         BrowserUtilities.waitFor(5);
     }
+
+    @Then("Kullanici Mesajlar ve Bildirimler butonlarinin calistigini dogrular ve tiklar")
+    public void kullanici_mesajlar_ve_bildirimler_butonlarinin_calistigini_dogrular_ve_tiklar() {
+        BrowserUtilities.hover(mesajlarimPage.mesajlarim);
+        BrowserUtilities.doubleClick(mesajlarimPage.mesajlarim);
+        BrowserUtilities.waitFor(3);
+
+        BrowserUtilities.hover(mesajlarimPage.mesajlar);
+        BrowserUtilities.verifyElementClickable(mesajlarimPage.mesajlar);
+        BrowserUtilities.doubleClick(mesajlarimPage.mesajlar);
+        BrowserUtilities.waitFor(3);
+
+        BrowserUtilities.hover(mesajlarimPage.bildirimler);
+        BrowserUtilities.verifyElementClickable(mesajlarimPage.bildirimler);
+        BrowserUtilities.doubleClick(mesajlarimPage.bildirimler);
+        BrowserUtilities.waitFor(3);
+    }
+
 }
 
