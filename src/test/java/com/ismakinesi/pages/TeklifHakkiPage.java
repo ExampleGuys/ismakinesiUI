@@ -44,7 +44,8 @@ public class TeklifHakkiPage extends BasePage {
     @FindBy(xpath ="//h1[.='Aldıklarım']")
     public WebElement aldiklarimPage;
 
-
+    @FindBy(xpath ="(//span[.='Kullanılabilir'])[1]")
+    public WebElement kullanilabilir;
 
 
 

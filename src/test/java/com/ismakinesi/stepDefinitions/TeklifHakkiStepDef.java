@@ -110,12 +110,18 @@ public class TeklifHakkiStepDef {
 
     @And("kullanici kart numarsini yazar")
     public void kullaniciKartNumarsiniYazar() {
-        teklifHakkiPage.kartNumarasi.sendKeys(ConfigurationReader.get("KartNumber"));
-    }
 
+        teklifHakkiPage.kartNumarasi.sendKeys(ConfigurationReader.get("KartNumber"));
+
+    }
     @Then("aldiklarim sayfasi acilir")
     public void aldiklarimSayfasiAcilir() {
         Assert.assertEquals("Aldıklarım", teklifHakkiPage.aldiklarimPage.getText());
     }
-}
 
+
+    @Then("Telif Haklari kullanilabilir olarak gozukur")
+    public void telifHaklariKullanilabilirOlarakGozukur() {
+        Assert.assertEquals("Kullanılabilir",teklifHakkiPage.kullanilabilir.getText());
+    }
+}
