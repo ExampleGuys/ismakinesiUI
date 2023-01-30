@@ -208,4 +208,16 @@ public class HomeStepDef {
         homePage.trackLoader.click();
         BrowserUtilities.waitFor(4);
     }
+
+    @And("Kullanici kategori olarak Lastik Tekerlekli Yükleyici Radio buttonunu secer")
+    public void kullaniciKategoriOlarakLastikTekerlekliYükleyiciRadioButtonunuSecer() {
+        homePage.wheelLoader.click();
+        BrowserUtilities.waitFor(4);
+    }
+
+    @When("Yükleyici e tiklar")
+    public void yükleyiciETiklar() {
+        homePage.loader.click();
+        BrowserUtilities.waitFor(4);
+    }
 }
