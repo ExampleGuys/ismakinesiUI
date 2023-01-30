@@ -47,3 +47,25 @@ Feature: Giris
     When kullanici valid email adresi yazar
     And kullanici Giris Yap'a tiklar
     Then kullanici siteye giris yapamadigini dogrular
+
+  @IS-360
+  Scenario Outline:
+    When kullanici Uye Ol Veya Giris Yap'a tiklar
+    When kullanici valid email adresi yazar
+    And kullanici <"invalid"> sifre yazar
+    And kullanici Giris Yap'a tiklar
+    Then kullanici invalid sifre ile siteye giris yapamadigini dogrular
+    Examples:
+      | invalid |
+      | 111aaaa |
+      | asdfgha |
+      | #$%^&*  |
+      | 123456  |
+      | :-)     |
+      | 🙂🙂    |
+
+
+
+
+
+
