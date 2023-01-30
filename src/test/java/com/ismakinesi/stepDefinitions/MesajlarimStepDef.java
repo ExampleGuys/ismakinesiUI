@@ -10,18 +10,39 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
+import java.util.List;
+
 public class MesajlarimStepDef {
 
     MesajlarimPage mesajlarimPage = new MesajlarimPage();
 
     LoginPage loginPage = new LoginPage();
 
-    @Then("Kullanici Mesajlarim butonuna tiklar ve dogrular")
-    public void KullaniciMesajlarimButonunaTiklarVeDogrular() {
-        BrowserUtilities.hover(mesajlarimPage.mesajlarimPage);
-        BrowserUtilities.verifyElementDisplayed(mesajlarimPage.mesajlarimPage);
-        BrowserUtilities.doubleClick(mesajlarimPage.mesajlarimPage);
+    @And("Kullanici Mesajlarim butonua tiklar")
+    public void kullaniciMesajlarimButonuaTiklar() {
+        BrowserUtilities.hover(mesajlarimPage.mesajlarim);
+        BrowserUtilities.doubleClick(mesajlarimPage.mesajlarim);
         BrowserUtilities.waitFor(5);
     }
+
+    @Then("Kullanici Mesajlarim butonuna tiklandigini dogrular")
+    public void kullaniciMesajlarimButonunaTiklandiginiDogrular() {
+        Assert.assertEquals("Mesajlarım", mesajlarimPage.mesajlarimBasligi.getText());
+    }
+
+    @Then("Kullanici Mesajlar ve Bildirimler butonlarinin calistigini dogrular ve tiklar")
+    public void kullanici_mesajlar_ve_bildirimler_butonlarinin_calistigini_dogrular_ve_tiklar() {
+
+        BrowserUtilities.hover(mesajlarimPage.mesajlar);
+        mesajlarimPage.mesajlar.click();
+        BrowserUtilities.waitFor(3);
+
+        BrowserUtilities.hover(mesajlarimPage.bildirimler);
+        mesajlarimPage.bildirimler.click();
+        BrowserUtilities.waitFor(3);
+
+    }
+
+
 }
 
