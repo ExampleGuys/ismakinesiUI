@@ -238,4 +238,16 @@ public class HomeStepDef {
         homePage.staffBoosters.click();
         BrowserUtilities.waitFor(4);
     }
+
+    @And("Kullanici kategori olarak Dizel akulu platform Radio buttonunu secer")
+    public void kullaniciKategoriOlarakDizelAkuluPlatformRadioButtonunuSecer() {
+        homePage.dieselScissorLift.click();
+        BrowserUtilities.waitFor(4);
+    }
+
+    @And("Kullanici Marka olarak Skyjack Radio buttonunu secer.")
+    public void kullaniciMarkaOlarakSkyjackRadioButtonunuSecer() {
+        homePage.skyjack.click();
+        BrowserUtilities.waitFor(4);
+    }
 }
