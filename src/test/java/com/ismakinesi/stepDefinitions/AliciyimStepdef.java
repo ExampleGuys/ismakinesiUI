@@ -1,6 +1,5 @@
 package com.ismakinesi.stepDefinitions;
 
-import com.beust.ah.A;
 import com.ismakinesi.pages.DestekmerkeziPage;
 import com.ismakinesi.utilities.BrowserUtilities;
 import io.cucumber.java.en.Then;
@@ -34,10 +33,9 @@ public class AliciyimStepdef {
 
     }
 
-    @Then("kullanici Tümünü gör tiklanabilir oldugunu dogrular")
-    public void kullaniciTümünüGörTiklanabilirOldugunuDogrular() {
-
-        Assert.assertTrue(destekmerkeziPage.tümünüGör.isEnabled());
+    @Then("kullanici Tumunu gor tiklanabilir oldugunu dogrular")
+    public void kullaniciTumunuGorTiklanabilirOldugunuDogrular() {
+        Assert.assertTrue(destekmerkeziPage.tumunuGor.isEnabled());
     }
 }
 
