@@ -189,4 +189,10 @@ public class HomeStepDef {
         homePage.logo.click();
         //BrowserUtilities.waitFor(4);
     }
+
+    @And("Kullanici Marka olarak New Holland Radio buttonunu secer.")
+    public void kullaniciMarkaOlarakNewHollandRadioButtonunuSecer() {
+        homePage.radioNewHollnand.click();
+        BrowserUtilities.waitFor(4);
+    }
 }
