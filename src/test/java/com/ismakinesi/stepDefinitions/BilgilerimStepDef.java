@@ -25,13 +25,8 @@ public class BilgilerimStepDef {
         System.out.println(bilgilerimPage.bilgilerimBasligi.getText());
     }
 
-    @Then("Kullanici Mesajlar ve Bildirimler butonlarina tiklar")
-    public void kullaniciMesajlarVeBildirimlerButonlarinaTiklar() {
-
-    }
-
-    @Then("Kullanici Kullanıcı Kişisel Bilgilerim, Adreslerim, Firma Bilgilerim, Banka Bilgilerim, Şifre Değiştir butonlarına tıklar")
-    public void kullaniciKullanıcıKişiselBilgilerimAdreslerimFirmaBilgilerimBankaBilgilerimŞifreDeğiştirButonlarınaTıklar() {
+    @Then("Kullanici Kisisel Bilgilerim, Adreslerim, Firma Bilgilerim, Banka Bilgilerim, Sifre Degistir butonlarina tiklar")
+    public void kullaniciKisiselBilgilerimAdreslerimFirmaBilgilerimBankaBilgilerimSifreDegistirButonlarinaTiklar() {
         bilgilerimPage.kisiselBilgilerim.click();
         BrowserUtilities.waitFor(3);
         bilgilerimPage.adreslerim.click();
@@ -41,6 +36,68 @@ public class BilgilerimStepDef {
         bilgilerimPage.bankaBilgilerim.click();
         BrowserUtilities.waitFor(3);
         bilgilerimPage.sifreDegistir.click();
+        BrowserUtilities.waitFor(3);
+    }
+
+    @Then("Kullanici Adiniz, E-Postaniz, Telefon Numarasi metin kutularina tiklar karakter siler ve karakter girer")
+    public void kullaniciAdinizEPostanizTelefonNumarasiMetinKutularinaTiklarKarakterSilerVeKarakterGirer() {
+        bilgilerimPage.adiniz.click();
+        BrowserUtilities.cleanTextInBox(bilgilerimPage.adiniz);
+        bilgilerimPage.adiniz.sendKeys("softwareengineer");
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.ePosta.click();
+        BrowserUtilities.cleanTextInBox(bilgilerimPage.ePosta);
+        bilgilerimPage.ePosta.sendKeys("softwareengineer0090@gmail.com");
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.telefonNumarasi.click();
+        BrowserUtilities.cleanTextInBox(bilgilerimPage.telefonNumarasi);
+        bilgilerimPage.telefonNumarasi.sendKeys("552 660 69 22");
+        BrowserUtilities.waitFor(2);
+    }
+
+    @And("Kullanici Adreslerim butonuna tiklar")
+    public void kullaniciAdreslerimButonunaTiklar() {
+        bilgilerimPage.adreslerim.click();
+    }
+
+    @Then("Kullanici Adres Duzenle ve Yeni Adres butonlarina tiklar ve dogrular")
+    public void kullaniciAdresDuzenleVeYeniAdresButonlarinaTiklarVeDogrular() {
+        bilgilerimPage.adresDuzenle.click();
+        BrowserUtilities.waitFor(3);
+        Assert.assertTrue(bilgilerimPage.adresDuzenle.isDisplayed());
+        System.out.println("bilgilerimPage.adresDuzenle.isDisplayed() = " + bilgilerimPage.adresDuzenle.isDisplayed());
+        bilgilerimPage.kapat.click();
+        BrowserUtilities.waitFor(3);
+
+        bilgilerimPage.yeniAdres.click();
+        BrowserUtilities.waitFor(3);
+        Assert.assertTrue(bilgilerimPage.yeniAdres.isDisplayed());
+        System.out.println("bilgilerimPage.yeniAdres.isDisplayed() = " + bilgilerimPage.yeniAdres.isDisplayed());
+        bilgilerimPage.kapat.click();
+        BrowserUtilities.waitFor(3);
+    }
+
+    @And("Kullanici Firma Bilgilerim butonuna tiklar")
+    public void kullaniciFirmaBilgilerimButonunaTiklar() {
+        bilgilerimPage.firmaBilgilerim.click();
+    }
+
+    @Then("Kullanici Firma Duzenle ve Yeni Firma butonlarina tiklar ve dogrular")
+    public void kullaniciFirmaDuzenleVeYeniFirmaButonlarinaTiklarVeDogrular() {
+        bilgilerimPage.adresDuzenle.click();
+        BrowserUtilities.waitFor(3);
+        Assert.assertTrue(bilgilerimPage.adresDuzenle.isDisplayed());
+        System.out.println("bilgilerimPage.firmaDuzenle.isDisplayed() = " + bilgilerimPage.adresDuzenle.isDisplayed());
+        bilgilerimPage.kapat.click();
+        BrowserUtilities.waitFor(3);
+
+        bilgilerimPage.yeniAdres.click();
+        BrowserUtilities.waitFor(3);
+        Assert.assertTrue(bilgilerimPage.yeniAdres.isDisplayed());
+        System.out.println("bilgilerimPage.yeniFirma.isDisplayed() = " + bilgilerimPage.yeniAdres.isDisplayed());
+        bilgilerimPage.kapat.click();
         BrowserUtilities.waitFor(3);
     }
 }

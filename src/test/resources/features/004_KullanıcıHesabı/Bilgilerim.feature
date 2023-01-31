@@ -12,5 +12,19 @@ Feature: Bilgilerim
     Then Kullanici Bilgilerim butonuna tiklandigini dogrular
 
   @IS-328
-  Scenario: TC:IS-328 Kullanıcı Kişisel Bilgilerim, Adreslerim, Firma Bilgilerim, Banka Bilgilerim, Şifre Değiştir butonlarına tıklar
-    Then Kullanici Kullanıcı Kişisel Bilgilerim, Adreslerim, Firma Bilgilerim, Banka Bilgilerim, Şifre Değiştir butonlarına tıklar
+  Scenario: TC:IS-328 Kullanici Kisisel Bilgilerim, Adreslerim, Firma Bilgilerim, Banka Bilgilerim, Sifre Degistir butonlarina tiklar
+    Then Kullanici Kisisel Bilgilerim, Adreslerim, Firma Bilgilerim, Banka Bilgilerim, Sifre Degistir butonlarina tiklar
+
+  @IS-329
+  Scenario: TC:IS-329 Kullanici Adiniz, E-Postaniz, Telefon Numarasi metin kutularina tiklar, karakter siler ve karakter girer
+    Then Kullanici Adiniz, E-Postaniz, Telefon Numarasi metin kutularina tiklar karakter siler ve karakter girer
+
+  @IS-345
+  Scenario: TC:IS-345 Kullanici Adres Duzenle ve Yeni Adres butonlarina tiklar
+    And Kullanici Adreslerim butonuna tiklar
+    Then Kullanici Adres Duzenle ve Yeni Adres butonlarina tiklar ve dogrular
+
+  @IS-334
+  Scenario: TC:IS-334 Kullanici Firma Duzenle ve Yeni Firma butonlarina tiklar ve dogrular
+    And Kullanici Firma Bilgilerim butonuna tiklar
+    Then Kullanici Firma Duzenle ve Yeni Firma butonlarina tiklar ve dogrular

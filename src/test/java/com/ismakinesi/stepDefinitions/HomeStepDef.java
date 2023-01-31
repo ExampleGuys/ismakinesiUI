@@ -127,7 +127,7 @@ public class HomeStepDef{
         );
     }
 
-    @When("Ekskavatörler e tiklar")
+    @When("Ekskavatorler e tiklar")
     public void ekskavatorlerETiklar() {
         homePage.ekskavatorler.click();
         BrowserUtilities.waitFor(4);
@@ -181,12 +181,6 @@ public class HomeStepDef{
 
     }
 
-    @And("logo tiklar")
-    public void logoTiklar() {
-        homePage.logo.click();
-        //BrowserUtilities.waitFor(4);
-    }
-
     @And("Kullanici Marka olarak New Holland Radio buttonunu secer.")
     public void kullaniciMarkaOlarakNewHollandRadioButtonunuSecer() {
         homePage.radioNewHollnand.click();
@@ -199,6 +193,7 @@ public class HomeStepDef{
         BrowserUtilities.waitFor(4);
 
     }
+
 
 
     @And("Kullanici kategori olarak Lastik Tekerlekli Yukleyici Radio buttonunu secer")
