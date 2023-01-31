@@ -35,4 +35,13 @@ public class BilgilerimPage extends BasePage {
     @FindBy(xpath = "//*[@placeholder=\"Phone number\"]")
     public WebElement telefonNumarasi;
 
+    @FindBy(xpath = "//div[@class=\"address-edit\"]")
+    public WebElement adresDuzenle;
+
+    @FindBy(xpath = "//a[@class=\"dataAddBox right\"]")
+    public WebElement yeniAdres;
+
+    @FindBy(xpath = "//button[@aria-label=\"Close\"]")
+    public WebElement kapat;
+
 }
