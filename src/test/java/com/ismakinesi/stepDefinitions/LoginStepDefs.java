@@ -139,7 +139,7 @@ public class LoginStepDefs {
     }
 
 
-    @And("kullanici <{string}> sifre yazar")
+    @And("kullanici {string} sifre yazar")
     public void kullaniciSifreYazar(String invalid) {
         loginPage.passwordUye.sendKeys(invalid);
     }
@@ -150,7 +150,7 @@ public class LoginStepDefs {
         Assert.assertTrue(loginPage.invalidPasswordIcinUyariTexti.isDisplayed());
     }
 
-    @And("kullanici <{string}> mail yazar")
+    @When("kullanici {string} mail yazar")
     public void kullaniciMailYazar(String invalid) {
         loginPage.emailUye.sendKeys(invalid);
     }
@@ -161,4 +161,6 @@ public class LoginStepDefs {
         Assert.assertTrue(loginPage.invalidPasswordIcinUyariTexti.isDisplayed());
 
     }
+
+
 }

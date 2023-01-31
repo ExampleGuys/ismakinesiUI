@@ -1,4 +1,4 @@
-@login
+@login @smoke @regression
 Feature: Giris
 
   Background:
@@ -52,7 +52,7 @@ Feature: Giris
   Scenario Outline: TC:IS-360 Invalid Sifre Ile Login
     When kullanici Uye Ol Veya Giris Yap'a tiklar
     When kullanici valid email adresi yazar
-    And kullanici <"invalid"> sifre yazar
+    And kullanici "<invalid>" sifre yazar
     And kullanici Giris Yap'a tiklar
     Then kullanici invalid sifre ile siteye giris yapamadigini dogrular
     Examples:
@@ -67,17 +67,17 @@ Feature: Giris
   @IS-362
   Scenario Outline:  TC:IS-362 Invalid Mail Ile Login
     When kullanici Uye Ol Veya Giris Yap'a tiklar
-    When kullanici <"invalid"> mail yazar
+    When kullanici "<invalid>" mail yazar
     And kullanici valid sifre yazar
     And kullanici Giris Yap'a tiklar
     Then Kullanici invalid email giris yapamadigini dogrular
     Examples:
-      | invalid           |
-      | Software@test.com |
+      | invalid                           |
+      | Software@test.com                 |
       | softwareengineer00090@hotmail.com |
-      | softwareengineer0009@gmail.com |
-      | softwareengineer090@gmail.com |
-      | softwareengineer0000@gmail.com |
-      | softwareengineer00090@mail.com |
+      | softwareengineer0009@gmail.com    |
+      | softwareengineer090@gmail.com     |
+      | softwareengineer0000@gmail.com    |
+      | softwareengineer00090@mail.com    |
 
 
