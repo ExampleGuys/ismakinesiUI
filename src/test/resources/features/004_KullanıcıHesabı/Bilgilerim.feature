@@ -29,6 +29,11 @@ Feature: Bilgilerim
     And Kullanici Firma Bilgilerim butonuna tiklar
     Then Kullanici Firma Duzenle ve Yeni Firma butonlarina tiklar ve dogrular
 
+  @IS-338
+  Scenario: TC:IS-338 Kullanici Yeni Banka Bilgisi Ekle butonuna tiklar ve dogrular
+    And Kullanici Banka Bilgilerim butonuna tiklar
+    Then Kullanici Yeni Banka Bilgisi Ekle butonuna tiklar ve dogrular
+
   @IS-343
   Scenario: TC:IS-343 Kullanici Eski Sifre, Yeni Sifre ve Yeni Sifre (Tekrar) adli metin kutularina tiklar ve karakter girer
     And Kullanici Sifre Degistir butonuna tiklar
