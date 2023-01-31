@@ -100,19 +100,4 @@ public class BilgilerimStepDef {
         bilgilerimPage.kapat.click();
         BrowserUtilities.waitFor(3);
     }
-
-    @And("Kullanici Banka Bilgilerim butonuna tiklar")
-    public void kullaniciBankaBilgilerimButonunaTiklar() {
-        bilgilerimPage.bankaBilgilerim.click();
-    }
-
-    @Then("Kullanici Yeni Banka Bilgisi Ekle butonuna tiklar ve dogrular")
-    public void kullaniciYeniBankaBilgisiEkleButonunaTiklarVeDogrular() {
-        bilgilerimPage.yeniAdres.click();
-        BrowserUtilities.waitFor(3);
-        Assert.assertTrue(bilgilerimPage.yeniAdres.isDisplayed());
-        System.out.println("bilgilerimPage.yeniBankaBilgisi.isDisplayed() = " + bilgilerimPage.yeniAdres.isDisplayed());
-        bilgilerimPage.kapat.click();
-        BrowserUtilities.waitFor(3);
-    }
 }
