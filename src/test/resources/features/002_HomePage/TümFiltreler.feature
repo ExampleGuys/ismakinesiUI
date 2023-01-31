@@ -1,4 +1,4 @@
-@allFilters
+@allFilters @regression
 Feature: All Filters
 
   Background:

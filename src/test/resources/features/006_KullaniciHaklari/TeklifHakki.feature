@@ -1,4 +1,4 @@
-@teklifhakki
+@teklifhakki @regression
 Feature: Teklif haklari
 
   Background:

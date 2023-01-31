@@ -1,4 +1,4 @@
-@tümFilitreler
+@tümFilitreler @regression
 Feature: Tüm Filitreler
 
   Background:
