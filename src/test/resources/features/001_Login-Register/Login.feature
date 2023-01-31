@@ -1,4 +1,4 @@
-@login @regression
+@login @smoke @regression
 Feature: Giris
 
   Background:
