@@ -121,4 +121,13 @@ public class BilgilerimStepDef {
         bilgilerimPage.yeniSifreTekrar.sendKeys("testturkey0090");
         BrowserUtilities.waitFor(2);
     }
+
+    @And("Kullanici Banka Bilgilerim butonuna tiklar")
+    public void kullaniciBankaBilgilerimButonunaTiklar() {
+
+    }
+
+    @Then("Kullanici Yeni Banka Bilgisi Ekle butonuna tiklar ve dogrular")
+    public void kullaniciYeniBankaBilgisiEkleButonunaTiklarVeDogrular() {
+    }
 }
