@@ -14,3 +14,7 @@ Feature: Bilgilerim
   @IS-328
   Scenario: TC:IS-328 Kullanıcı Kişisel Bilgilerim, Adreslerim, Firma Bilgilerim, Banka Bilgilerim, Şifre Değiştir butonlarına tıklar
     Then Kullanici Kullanıcı Kişisel Bilgilerim, Adreslerim, Firma Bilgilerim, Banka Bilgilerim, Şifre Değiştir butonlarına tıklar
+
+  @IS-329
+  Scenario: TC:IS-329 Kullanıcı Adınız, E-Postanız, Telefon Numarası metin kutularına tıklar, karakter siler ve karakter girer
+    Then Kullanici Adiniz, E-Postaniz, Telefon Numarasi metin kutularına tiklar karakter siler ve karakter girer
