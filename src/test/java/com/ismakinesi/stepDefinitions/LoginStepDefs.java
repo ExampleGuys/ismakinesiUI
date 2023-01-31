@@ -149,4 +149,16 @@ public class LoginStepDefs {
         BrowserUtilities.waitForVisibility(loginPage.invalidPasswordIcinUyariTexti, 10);
         Assert.assertTrue(loginPage.invalidPasswordIcinUyariTexti.isDisplayed());
     }
+
+    @And("kullanici <{string}> mail yazar")
+    public void kullaniciMailYazar(String invalid) {
+        loginPage.emailUye.sendKeys(invalid);
+    }
+
+    @Then("Kullanici invalid email giris yapamadigini dogrular")
+    public void kullaniciInvalidEmailGirisYapamadiginiDogrular() {
+        BrowserUtilities.waitForVisibility(loginPage.invalidPasswordIcinUyariTexti, 10);
+        Assert.assertTrue(loginPage.invalidPasswordIcinUyariTexti.isDisplayed());
+
+    }
 }

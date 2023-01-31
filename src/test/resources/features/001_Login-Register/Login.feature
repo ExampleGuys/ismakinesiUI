@@ -49,7 +49,7 @@ Feature: Giris
     Then kullanici siteye giris yapamadigini dogrular
 
   @IS-360
-  Scenario Outline:
+  Scenario Outline: TC:IS-360 Invalid Sifre Ile Login
     When kullanici Uye Ol Veya Giris Yap'a tiklar
     When kullanici valid email adresi yazar
     And kullanici <"invalid"> sifre yazar
@@ -64,8 +64,20 @@ Feature: Giris
       | :-)     |
       | 🙂🙂    |
 
-
-
-
+  @IS-362
+  Scenario Outline:  TC:IS-362 Invalid Mail Ile Login
+    When kullanici Uye Ol Veya Giris Yap'a tiklar
+    When kullanici <"invalid"> mail yazar
+    And kullanici valid sifre yazar
+    And kullanici Giris Yap'a tiklar
+    Then Kullanici invalid email giris yapamadigini dogrular
+    Examples:
+      | invalid           |
+      | Software@test.com |
+      | softwareengineer00090@hotmail.com |
+      | softwareengineer0009@gmail.com |
+      | softwareengineer090@gmail.com |
+      | softwareengineer0000@gmail.com |
+      | softwareengineer00090@mail.com |
 
 

@@ -59,5 +59,4 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//*[text()='Geçersiz giriş.']")
     public WebElement invalidPasswordIcinUyariTexti;
 
-
 }
