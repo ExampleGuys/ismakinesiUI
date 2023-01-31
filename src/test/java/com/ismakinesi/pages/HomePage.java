@@ -22,7 +22,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//button[contains(@class, 'bottom')]")
     public WebElement allFilters;
 
-    @FindBy(xpath = "//a[@class=\"logo tr mobile-none nuxt-link-exact-active nuxt-link-active\"]/img[@class=\"main-header-logo tr\"]")
+    @FindBy(css=".main-header-logo tr")
     public WebElement logo;
 
     @FindBy(xpath = "//h3[.='Kategori']")

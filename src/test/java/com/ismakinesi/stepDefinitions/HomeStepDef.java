@@ -131,7 +131,6 @@ public class HomeStepDef{
     public void ekskavatorlerETiklar() {
         homePage.ekskavatorler.click();
         BrowserUtilities.waitFor(4);
-
     }
 
     @And("Kullanici kategori olarak Paletli Ekskavator Radio buttonunu secer")
@@ -139,7 +138,6 @@ public class HomeStepDef{
         BrowserUtilities.waitFor(3);
         homePage.crawlerExcavator.click();
         BrowserUtilities.waitFor(4);
-
     }
 
     @When("Kullanici Radio Button kullanarak urun secer")
@@ -196,11 +194,7 @@ public class HomeStepDef{
 
     }
 
-    @And("Kullanici kategori olarak Paletli Yukleyici Radio buttonunu secer.")
-    public void kullaniciKategoriOlarakPaletliYukleyiciRadioButtonunuSecer() {
-        homePage.trackLoader.click();
-        BrowserUtilities.waitFor(4);
-    }
+
 
     @And("Kullanici kategori olarak Lastik Tekerlekli Yukleyici Radio buttonunu secer")
     public void kullaniciKategoriOlarakLastikTekerlekliYukleyiciRadioButtonunuSecer() {
@@ -256,4 +250,15 @@ public class HomeStepDef{
         BrowserUtilities.waitFor(4);
     }
 
+    @And("Kullanici kategori olarak Paletli Yukleyici Radio buttonunu secer.")
+    public void kullaniciKategoriOlarakPaletliYukleyiciRadioButtonunuSecer() {
+        homePage.trackLoader.click();
+        BrowserUtilities.waitFor(4);
+    }
+
+    @Given("Logoya tiklar")
+    public void logoyaTiklar() {
+        homePage.logo.click();
+        BrowserUtilities.waitFor(4);
+    }
 }
