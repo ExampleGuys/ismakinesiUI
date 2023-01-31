@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class HomePage {
+public class HomePage extends BasePage {
 
     public HomePage() {
         PageFactory.initElements(Driver.get(), this);
@@ -137,6 +137,11 @@ public class HomePage {
     @FindBy(xpath = "//div[contains(@style, 'bf')]")
     public WebElement loader;
 
+    //    Teleskopik Yükleyici
+    @FindBy(css = "div[style*='fc']")
+    public WebElement telescopicLoader;
+    @FindBy(xpath = "//input[@value='82']")
+    public WebElement bobcat;
     @FindBy(xpath = "//button[@aria-label='Close']")
     public WebElement filterClose;
     @FindBy(xpath = "//a[contains(text(),'Mini Ekskavatör (<12t)')]")
