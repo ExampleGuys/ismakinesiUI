@@ -53,4 +53,7 @@ public class BilgilerimPage extends BasePage {
     @FindBy(xpath = "//*[@placeholder=\"Yeni Şifre (Tekrar)\"]")
     public WebElement yeniSifreTekrar;
 
+    @FindBy(xpath = "//*[@type=\"submit\"]")
+    public WebElement sifremiDegistir;
+
 }
