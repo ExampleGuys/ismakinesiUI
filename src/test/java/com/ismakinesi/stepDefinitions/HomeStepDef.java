@@ -250,7 +250,7 @@ public class HomeStepDef{
         BrowserUtilities.waitFor(4);
     }
 
-    @When("Teleskopik Yükleyici e tiklar")
+    @When("Teleskopik Yukleyici e tiklar")
     public void teleskopikYükleyiciETiklar() {
         homePage.telescopicLoader.click();
         BrowserUtilities.waitFor(4);
