@@ -50,6 +50,7 @@ public class TeklifHakkiPage extends BasePage {
     @FindBy(css=".float-end.text-center.totalAdCount")
     public WebElement tekHakSayisiIlk;
 
-
+   @FindBy(xpath = "(//i[@class='fal fa-plus-circle'])[2]")
+    public WebElement yeniFirmaBtn;
 
 }
