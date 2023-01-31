@@ -101,18 +101,24 @@ public class BilgilerimStepDef {
         BrowserUtilities.waitFor(3);
     }
 
-    @And("Kullanici Banka Bilgilerim butonuna tiklar")
-    public void kullaniciBankaBilgilerimButonunaTiklar() {
-        bilgilerimPage.bankaBilgilerim.click();
+    @And("Kullanici Sifre Degistir butonuna tiklar")
+    public void kullaniciSifreDegistirButonunaTiklar() {
+        bilgilerimPage.sifreDegistir.click();
+        BrowserUtilities.waitFor(2);
     }
 
-    @Then("Kullanici Yeni Banka Bilgisi Ekle butonuna tiklar ve dogrular")
-    public void kullaniciYeniBankaBilgisiEkleButonunaTiklarVeDogrular() {
-        bilgilerimPage.yeniAdres.click();
-        BrowserUtilities.waitFor(3);
-        Assert.assertTrue(bilgilerimPage.yeniAdres.isDisplayed());
-        System.out.println("bilgilerimPage.yeniBankaBilgisi.isDisplayed() = " + bilgilerimPage.yeniAdres.isDisplayed());
-        bilgilerimPage.kapat.click();
-        BrowserUtilities.waitFor(3);
+    @Then("Kullanici Eski Sifre, Yeni Sifre ve Yeni Sifre \\(Tekrar) adli metin kutularina tiklar ve karakter girer")
+    public void kullaniciEskiSifreYeniSifreVeYeniSifreTekrarAdliMetinKutularinaTiklarVeKarakterGirer() {
+        bilgilerimPage.eskiSifre.click();
+        bilgilerimPage.eskiSifre.sendKeys("turkey0090");
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.yeniSifre.click();
+        bilgilerimPage.yeniSifre.sendKeys("testturkey0090");
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.yeniSifreTekrar.click();
+        bilgilerimPage.yeniSifreTekrar.sendKeys("testturkey0090");
+        BrowserUtilities.waitFor(2);
     }
 }

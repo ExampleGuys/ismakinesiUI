@@ -44,4 +44,13 @@ public class BilgilerimPage extends BasePage {
     @FindBy(xpath = "//button[@aria-label=\"Close\"]")
     public WebElement kapat;
 
+    @FindBy(xpath = "//*[@placeholder=\"Eski Şifre\"]")
+    public WebElement eskiSifre;
+
+    @FindBy(xpath = "//*[@placeholder=\"Yeni Şifre\"]")
+    public WebElement yeniSifre;
+
+    @FindBy(xpath = "//*[@placeholder=\"Yeni Şifre (Tekrar)\"]")
+    public WebElement yeniSifreTekrar;
+
 }
