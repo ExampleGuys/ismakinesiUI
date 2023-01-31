@@ -1,8 +1,7 @@
 package com.ismakinesi.stepDefinitions;
-
 import com.ismakinesi.pages.AldiklarimPage;
 import com.ismakinesi.pages.HomePage;
-import com.ismakinesi.pages.LoginPage;
+import com.ismakinesi.pages.*;
 import com.ismakinesi.utilities.BrowserUtilities;
 import com.ismakinesi.utilities.ConfigurationReader;
 import com.ismakinesi.utilities.Driver;
@@ -15,7 +14,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class HomeStepDef {
+public class HomeStepDef{
     HomePage homePage = new HomePage();
 
 
@@ -233,8 +232,8 @@ public class HomeStepDef {
         BrowserUtilities.waitFor(4);
     }
 
-    @When("Personel Yükselticiler e tiklar")
-    public void personelYükselticilerETiklar() {
+    @When("Personel Yukselticiler e tiklar")
+    public void personelYukselticilerETiklar() {
         homePage.staffBoosters.click();
         BrowserUtilities.waitFor(4);
     }
@@ -250,4 +249,17 @@ public class HomeStepDef {
         homePage.skyjack.click();
         BrowserUtilities.waitFor(4);
     }
+
+    @When("Teleskopik Yükleyici e tiklar")
+    public void teleskopikYükleyiciETiklar() {
+        homePage.telescopicLoader.click();
+        BrowserUtilities.waitFor(4);
+    }
+
+    @And("Kullanici Marka olarak Bobcat Radio buttonunu secer.")
+    public void kullaniciMarkaOlarakBobcatRadioButtonunuSecer() {
+        homePage.bobcat.click();
+        BrowserUtilities.waitFor(4);
+    }
+
 }
