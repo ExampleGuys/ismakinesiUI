@@ -33,4 +33,7 @@ public class RegisterPage extends BasePage {
     @FindBy(xpath = "(//body/div/div/div/div/div/div)[5]")
     public WebElement telefonDogrulamaTexti;
 
+    @FindBy(xpath = "//*[text()='Şifre değeri en az 8 karakter uzunluğunda olmalıdır.']")
+    public WebElement eksikSifreUyariMesaji;
+
 }
