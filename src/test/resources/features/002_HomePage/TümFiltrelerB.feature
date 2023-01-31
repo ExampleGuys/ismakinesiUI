@@ -95,3 +95,15 @@ Feature: Tüm Filitreler
     And Tum Filtreler e tiklar
     And Kullanici Marka olarak Bobcat Radio buttonunu secer.
     Then secilen ilanin filitrelendigini dogrular.
+
+    @IS-73
+    Scenario: TC:IS-73 Kullanici "Teleskopik Yükleyici" ilanlarini Tüm arama  secereklerini kullanır.
+      Given Kullanici ismakinesi.com adresine gider
+      When Teleskopik Yukleyici e tiklar
+      And Tum Filtreler e tiklar
+      And Kullanici Marka olarak Bobcat Radio buttonunu secer.
+      And  Sinirli Servis Garantisi secer
+      And Uretim yili araligi  girer
+      And calisma saati araligi girer
+      And fiyat araligi girer
+      Then secilen ilanin filitrelendigini dogrular.
