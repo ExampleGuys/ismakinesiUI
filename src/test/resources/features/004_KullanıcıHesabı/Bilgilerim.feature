@@ -28,3 +28,8 @@ Feature: Bilgilerim
   Scenario: TC:IS-334 Kullanici Firma Duzenle ve Yeni Firma butonlarina tiklar ve dogrular
     And Kullanici Firma Bilgilerim butonuna tiklar
     Then Kullanici Firma Duzenle ve Yeni Firma butonlarina tiklar ve dogrular
+
+  @IS-338
+  Scenario: TC:IS-338 Kullanici Yeni Banka Bilgisi Ekle butonuna tiklar ve dogrular
+    And Kullanici Banka Bilgilerim butonuna tiklar
+    Then Kullanici Yeni Banka Bilgisi Ekle butonuna tiklar ve dogrular
