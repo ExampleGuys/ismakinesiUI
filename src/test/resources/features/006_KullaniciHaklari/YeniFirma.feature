@@ -18,3 +18,8 @@
     Scenario: TC:IS-364 Teklif Verme Hakki sayfasindaki Yeni Firma iconu gorulebilir ve tiklanabilir
     Then yeni firma iconu gorulebilir
     Then yeni firma iconuna tiklanabilir
+
+    @IS-107
+    Scenario: TC:IS-107 Teklif Verme Hakki sayfasindaki Yeni Firma iconuna tiklayinca Yeni Firma form'u acilir
+      When kullanici Yeni Firma iconuna tiklar
+      Then "Yeni Firma" form sayfasi acilir
