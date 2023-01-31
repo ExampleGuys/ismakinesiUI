@@ -43,4 +43,22 @@ public class BilgilerimStepDef {
         bilgilerimPage.sifreDegistir.click();
         BrowserUtilities.waitFor(3);
     }
+
+    @Then("Kullanici Adiniz, E-Postaniz, Telefon Numarasi metin kutularına tiklar karakter siler ve karakter girer")
+    public void kullaniciAdinizEPostanizTelefonNumarasiMetinKutularınaTiklarKarakterSilerVeKarakterGirer() {
+        bilgilerimPage.adiniz.click();
+        BrowserUtilities.cleanTextInBox(bilgilerimPage.adiniz);
+        bilgilerimPage.adiniz.sendKeys("softwareengineer");
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.ePosta.click();
+        BrowserUtilities.cleanTextInBox(bilgilerimPage.ePosta);
+        bilgilerimPage.ePosta.sendKeys("softwareengineer0090@gmail.com");
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.telefonNumarasi.click();
+        BrowserUtilities.cleanTextInBox(bilgilerimPage.telefonNumarasi);
+        bilgilerimPage.telefonNumarasi.sendKeys("552 660 69 22");
+        BrowserUtilities.waitFor(2);
+    }
 }
