@@ -66,3 +66,19 @@ Feature: Teklif haklari
     When kullanici Odeme Yap'a tiklar
     Then aldiklarim sayfasi acilir
     Then Telif Haklari kullanilabilir olarak gozukur
+
+  @IS-358
+  Scenario:TC:IS-358
+    And Toplam teklif hakki sayfanin ust kosesinde yazilidir
+    And kullanici Teklif Hakki Al'a tiklar
+    Then Teklif Hakki sayfasi acilir
+    When kullanici Baslangic yada Avantaj teklif hakkini secer
+    And kullanici Teklif Hakki Al buttonuna tiklar
+    Then "Ödeme Yap" in gorunundugu sayfa acilir
+    When kullanici Odeme Yap'a tiklar
+    When kullanici kart sahibinin adini yazar
+    And kullanici kart numarsini yazar
+    When kullanici Odeme Yap'a tiklar
+    Then aldiklarim sayfasi acilir
+    Then Telif Haklari kullanilabilir olarak gozukur
+    Then kullanici Teklif Verme Hakkinin dogru sayida oldugunu dogrular

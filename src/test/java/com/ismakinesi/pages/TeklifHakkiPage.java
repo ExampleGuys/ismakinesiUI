@@ -47,6 +47,9 @@ public class TeklifHakkiPage extends BasePage {
     @FindBy(xpath ="(//span[.='Kullanılabilir'])[1]")
     public WebElement kullanilabilir;
 
+    @FindBy(css=".float-end.text-center.totalAdCount")
+    public WebElement tekHakSayisiIlk;
+
 
 
 }
