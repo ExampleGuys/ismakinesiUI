@@ -79,4 +79,25 @@ public class BilgilerimStepDef {
         BrowserUtilities.waitFor(3);
     }
 
+    @And("Kullanici Firma Bilgilerim butonuna tiklar")
+    public void kullaniciFirmaBilgilerimButonunaTiklar() {
+        bilgilerimPage.firmaBilgilerim.click();
+    }
+
+    @Then("Kullanici Firma Duzenle ve Yeni Firma butonlarina tiklar ve dogrular")
+    public void kullaniciFirmaDuzenleVeYeniFirmaButonlarinaTiklarVeDogrular() {
+        bilgilerimPage.adresDuzenle.click();
+        BrowserUtilities.waitFor(3);
+        Assert.assertTrue(bilgilerimPage.adresDuzenle.isDisplayed());
+        System.out.println("bilgilerimPage.firmaDuzenle.isDisplayed() = " + bilgilerimPage.adresDuzenle.isDisplayed());
+        bilgilerimPage.kapat.click();
+        BrowserUtilities.waitFor(3);
+
+        bilgilerimPage.yeniAdres.click();
+        BrowserUtilities.waitFor(3);
+        Assert.assertTrue(bilgilerimPage.yeniAdres.isDisplayed());
+        System.out.println("bilgilerimPage.yeniFirma.isDisplayed() = " + bilgilerimPage.yeniAdres.isDisplayed());
+        bilgilerimPage.kapat.click();
+        BrowserUtilities.waitFor(3);
+    }
 }
