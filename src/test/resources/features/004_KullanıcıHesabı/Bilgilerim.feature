@@ -23,3 +23,8 @@ Feature: Bilgilerim
   Scenario: TC:IS-345 Kullanici Adres Duzenle ve Yeni Adres butonlarina tiklar
     And Kullanici Adreslerim butonuna tiklar
     Then Kullanici Adres Duzenle ve Yeni Adres butonlarina tiklar ve dogrular
+
+  @IS-334
+  Scenario: TC:IS-334 Kullanici Firma Duzenle ve Yeni Firma butonlarina tiklar ve dogrular
+    And Kullanici Firma Bilgilerim butonuna tiklar
+    Then Kullanici Firma Duzenle ve Yeni Firma butonlarina tiklar ve dogrular
