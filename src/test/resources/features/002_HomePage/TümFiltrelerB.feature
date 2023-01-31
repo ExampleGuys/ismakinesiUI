@@ -3,7 +3,7 @@ Feature: Tüm Filitreler
 
   Background:
     Given Kullanici ismakinesi.com adresine gider
-    When Ekskavatörler e tiklar
+    When Ekskavatorler e tiklar
     And Tum Filtreler e tiklar
 
   @IS-64
