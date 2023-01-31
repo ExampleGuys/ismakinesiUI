@@ -148,7 +148,7 @@ public class TeklifHakkiStepDef {
         BrowserUtilities.waitFor(3);
         // Assert.assertTrue("Fark alinan teklif hakki kadardir", ikinciSayi==ilkSayi+5);
         Assert.assertTrue("ikinci teklif hakki birinciden buyuktur", ikinciSayi > ilkSayi);
-        BrowserUtilities.waitFor(30);
+        BrowserUtilities.waitFor(3);
 
 
     }
