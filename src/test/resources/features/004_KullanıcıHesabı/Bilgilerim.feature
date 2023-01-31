@@ -28,3 +28,8 @@ Feature: Bilgilerim
   Scenario: TC:IS-334 Kullanici Firma Duzenle ve Yeni Firma butonlarina tiklar ve dogrular
     And Kullanici Firma Bilgilerim butonuna tiklar
     Then Kullanici Firma Duzenle ve Yeni Firma butonlarina tiklar ve dogrular
+
+  @IS-343
+  Scenario: TC:IS-343 Kullanici Eski Sifre, Yeni Sifre ve Yeni Sifre (Tekrar) adli metin kutularina tiklar ve karakter girer
+    And Kullanici Sifre Degistir butonuna tiklar
+    Then Kullanici Eski Sifre, Yeni Sifre ve Yeni Sifre (Tekrar) adli metin kutularina tiklar ve karakter girer
