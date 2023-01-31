@@ -260,4 +260,10 @@ public class HomeStepDef{
         homePage.trackLoader.click();
         BrowserUtilities.waitFor(4);
     }
+
+    @Given("Logoya tiklar")
+    public void logoyaTiklar() {
+        homePage.logo.click();
+        BrowserUtilities.waitFor(4);
+    }
 }
