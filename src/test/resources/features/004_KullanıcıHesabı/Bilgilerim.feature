@@ -38,3 +38,8 @@ Feature: Bilgilerim
   Scenario: TC:IS-343 Kullanici Eski Sifre, Yeni Sifre ve Yeni Sifre (Tekrar) adli metin kutularina tiklar ve karakter girer
     And Kullanici Sifre Degistir butonuna tiklar
     Then Kullanici Eski Sifre, Yeni Sifre ve Yeni Sifre (Tekrar) adli metin kutularina tiklar ve karakter girer
+
+  @IS-344
+  Scenario: TC:IS-344 Kullanici Sifremi Degistir butonunu tiklar ve dogrular
+    And Kullanici Sifre Degistir butonuna tiklar
+    Then Kullanici Sifremi Degistir butonunu tiklar ve dogrular

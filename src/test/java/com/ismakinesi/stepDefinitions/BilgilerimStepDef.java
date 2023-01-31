@@ -136,4 +136,10 @@ public class BilgilerimStepDef {
         bilgilerimPage.yeniSifreTekrar.sendKeys("testturkey0090");
         BrowserUtilities.waitFor(2);
     }
+
+    @Then("Kullanici Sifremi Degistir butonunu tiklar ve dogrular")
+    public void kullaniciSifremiDegistirButonunuTiklarVeDogrular() {
+        bilgilerimPage.sifremiDegistir.click();
+        BrowserUtilities.waitFor(3);
+    }
 }
