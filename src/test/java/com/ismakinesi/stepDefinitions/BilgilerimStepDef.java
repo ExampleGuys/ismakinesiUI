@@ -25,13 +25,8 @@ public class BilgilerimStepDef {
         System.out.println(bilgilerimPage.bilgilerimBasligi.getText());
     }
 
-    @Then("Kullanici Mesajlar ve Bildirimler butonlarina tiklar")
-    public void kullaniciMesajlarVeBildirimlerButonlarinaTiklar() {
-
-    }
-
-    @Then("Kullanici Kullanıcı Kişisel Bilgilerim, Adreslerim, Firma Bilgilerim, Banka Bilgilerim, Şifre Değiştir butonlarına tıklar")
-    public void kullaniciKullanıcıKişiselBilgilerimAdreslerimFirmaBilgilerimBankaBilgilerimŞifreDeğiştirButonlarınaTıklar() {
+    @Then("Kullanici Kisisel Bilgilerim, Adreslerim, Firma Bilgilerim, Banka Bilgilerim, Sifre Degistir butonlarina tiklar")
+    public void kullaniciKisiselBilgilerimAdreslerimFirmaBilgilerimBankaBilgilerimSifreDegistirButonlarinaTiklar() {
         bilgilerimPage.kisiselBilgilerim.click();
         BrowserUtilities.waitFor(3);
         bilgilerimPage.adreslerim.click();
@@ -44,8 +39,8 @@ public class BilgilerimStepDef {
         BrowserUtilities.waitFor(3);
     }
 
-    @Then("Kullanici Adiniz, E-Postaniz, Telefon Numarasi metin kutularına tiklar karakter siler ve karakter girer")
-    public void kullaniciAdinizEPostanizTelefonNumarasiMetinKutularınaTiklarKarakterSilerVeKarakterGirer() {
+    @Then("Kullanici Adiniz, E-Postaniz, Telefon Numarasi metin kutularina tiklar karakter siler ve karakter girer")
+    public void kullaniciAdinizEPostanizTelefonNumarasiMetinKutularinaTiklarKarakterSilerVeKarakterGirer() {
         bilgilerimPage.adiniz.click();
         BrowserUtilities.cleanTextInBox(bilgilerimPage.adiniz);
         bilgilerimPage.adiniz.sendKeys("softwareengineer");
@@ -61,4 +56,27 @@ public class BilgilerimStepDef {
         bilgilerimPage.telefonNumarasi.sendKeys("552 660 69 22");
         BrowserUtilities.waitFor(2);
     }
+
+    @And("Kullanici Adreslerim butonuna tiklar")
+    public void kullaniciAdreslerimButonunaTiklar() {
+        bilgilerimPage.adreslerim.click();
+    }
+
+    @Then("Kullanici Adres Duzenle ve Yeni Adres butonlarina tiklar ve dogrular")
+    public void kullaniciAdresDuzenleVeYeniAdresButonlarinaTiklarVeDogrular() {
+        bilgilerimPage.adresDuzenle.click();
+        BrowserUtilities.waitFor(3);
+        Assert.assertTrue(bilgilerimPage.adresDuzenle.isDisplayed());
+        System.out.println("bilgilerimPage.adresDuzenle.isDisplayed() = " + bilgilerimPage.adresDuzenle.isDisplayed());
+        bilgilerimPage.kapat.click();
+        BrowserUtilities.waitFor(3);
+
+        bilgilerimPage.yeniAdres.click();
+        BrowserUtilities.waitFor(3);
+        Assert.assertTrue(bilgilerimPage.yeniAdres.isDisplayed());
+        System.out.println("bilgilerimPage.yeniAdres.isDisplayed() = " + bilgilerimPage.yeniAdres.isDisplayed());
+        bilgilerimPage.kapat.click();
+        BrowserUtilities.waitFor(3);
+    }
+
 }
