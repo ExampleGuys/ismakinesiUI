@@ -35,6 +35,4 @@ public class BilgilerimPage extends BasePage {
     @FindBy(xpath = "//*[@placeholder=\"Phone number\"]")
     public WebElement telefonNumarasi;
 
-    @FindBy(xpath = "")
-    public WebElement eMailAdresiniOnayla;
 }
