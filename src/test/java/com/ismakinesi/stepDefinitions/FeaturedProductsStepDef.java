@@ -130,4 +130,9 @@ public class FeaturedProductsStepDef {
         BrowserUtilities.waitFor(5);
         featuredProductsPage.personelYukselticiBox.click();
     }
+    @And("Anasayfadaki Teleskopik Yuklelticiler boxina tiklar")
+    public void anasayfadakiTeleskopikYuklelticilerBoxinaTiklar() {
+        BrowserUtilities.waitFor(5);
+        featuredProductsPage.teleskopikYukselticiBox.click();
+    }
 }

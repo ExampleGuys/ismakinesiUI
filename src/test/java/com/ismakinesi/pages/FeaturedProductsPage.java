@@ -75,6 +75,9 @@ public class FeaturedProductsPage extends BasePage {
     @FindBy(xpath = "(//*[@class='wt-horizontal-center'])[5]")
     public WebElement personelYukselticiBox;
 
+    @FindBy(xpath = "(//*[@class='wt-horizontal-center'])[6]")
+    public WebElement teleskopikYukselticiBox;
+
     public static String bidConverter(String highestBidParameter, int topParams) {
         //sondaki USD ifadesini siler
         highestBidParameter = highestBidParameter.replace(" USD", "");
