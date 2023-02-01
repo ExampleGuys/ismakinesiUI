@@ -113,4 +113,9 @@ public class FeaturedProductsStepDef {
         featuredProductsPage.ekskavatorlerBox.click();
     }
 
+    @And("Anasayfadaki Kazici Yukleyici boxina tiklar")
+    public void anasayfadakiKaziciYukleyiciBoxinaTiklar() {
+        BrowserUtilities.waitFor(5);
+        featuredProductsPage.kaziciYukleyiciBox.click();
+    }
 }
