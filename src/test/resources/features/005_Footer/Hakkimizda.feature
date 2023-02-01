@@ -27,3 +27,16 @@ Feature: ismakinasi.com hakkinda
   Scenario:IS-154 TC:IS-154 Gizlilik sozlesmesi butonuna tiklandigi gorulebilmeli
     And Kullanici Gizlilik Merkezi butonuna tiklar
     Then acilan sayfada Gizlilik Sözleşmesi oldugu dogrulanir
+
+  @TicaretNasilGerceklesiyor
+
+  @IS-159
+  Scenario: IS-159 TC:IS-159 Teklif sistemi butonuna tiklandigi gorulebilmeli
+
+    And Kullanici Teklif sistemi butonuna tiklar
+    Then acilan sayfada Teklif Hakki Planlari  sayfasinin oldugu dogrulanir
+
+  @IS-160
+  Scenario: IS-160 TC:IS-160 Sinirli Servis Garantisi butonuna tiklandigi dogrulanmali
+    And Kullanici Sinirli Servis Garantisi butonuna tiklar
+    Then acilan sayfada Sinirli Servis Garantili is ve tarim makinelerini ismakinesi.com dan satin alin sayfasinin oldugu dogrulanir

@@ -40,7 +40,7 @@ public class FooterPage {
     @FindBy(xpath = "//a[contains(@href, 'alirim')]")
     public WebElement NasilAlirim;
 
-    @FindBy(xpath = "//a[contains(@href, 'teklif')]")
+    @FindBy(xpath = "//a[contains(@href, '/profile/payment/preview?type=1')]")
     public WebElement TeklifSistemiButton;
 
     @FindBy(xpath = "//a[contains(@href, '/page/39/sinirli-servis-garantisi')]")
@@ -61,7 +61,14 @@ public class FooterPage {
     @FindBy(xpath = "//h1[@class='container']")
     public WebElement GizlilikZleMesiickisim;
 
+    @FindBy(xpath = "//a[contains(@href, 'preview')]")
+    public WebElement TeklifSistemidegistir;
 
 
+
+    
+    
+    
+    
 }
 

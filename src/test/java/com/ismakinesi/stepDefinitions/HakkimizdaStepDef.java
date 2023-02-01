@@ -87,5 +87,29 @@ public class HakkimizdaStepDef {
 
 
     }
+
+    @And("Kullanici Teklif sistemi butonuna tiklar")
+    public void kullaniciTeklifSistemiButonunaTiklar() {
+    BrowserUtilities.clickWithJS(footerPage.TeklifSistemiButton);
+    BrowserUtilities.waitFor(2);
+
+    }
+
+
+
+    @Then("acilan sayfada Teklif Hakki Planlari  sayfasinin oldugu dogrulanir")
+    public void acilanSayfadaTeklifHakkiPlanlariSayfasininOlduguDogrulanir() {
+        Assert.assertTrue(footerPage.TeklifSistemidegistir.isDisplayed());
+
+
+    }
+
+    @And("Kullanici Sinirli Servis Garantisi butonuna tiklar")
+    public void kullaniciSinirliServisGarantisiButonunaTiklar() {
+    }
+
+    @Then("acilan sayfada Sinirli Servis Garantili is ve tarim makinelerini ismakinesi.com dan satin alin sayfasinin oldugu dogrulanir")
+    public void acilanSayfadaSinirliServisGarantiliIsVeTarimMakineleriniIsmakinesiComDanSatinAlinSayfasininOlduguDogrulanir() {
+    }
 }
 
