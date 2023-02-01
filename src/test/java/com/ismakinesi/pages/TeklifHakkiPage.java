@@ -20,19 +20,19 @@ public class TeklifHakkiPage extends BasePage {
     @FindBy(xpath = "//span[.='Ödemede Kullanıldı'][1]")
     public WebElement odemedeKullanildi;
 
-    @FindBy(css="a[href='/profile/payment/preview?type=1']")
+    @FindBy(css = "a[href='/profile/payment/preview?type=1']")
     public WebElement teklifHakkiAl;
 
-    @FindBy(css="h2[class='title-main']")
+    @FindBy(css = "h2[class='title-main']")
     public WebElement teklifHakkiPage;
 
-    @FindBy(css="[name='card_holder_name']")
+    @FindBy(css = "[name='card_holder_name']")
     public WebElement kartSahipAd;
 
     @FindBy(xpath = "//iframe[contains(@title, 'ödeme')]")
     public WebElement kartNumarasi;
 
-    @FindBy(id="paymentBtn")
+    @FindBy(id = "paymentBtn")
     public WebElement odemeYapBtn;
 
     @FindBy(xpath = "(//p[text()='Avantaj'])[1]")
@@ -41,12 +41,20 @@ public class TeklifHakkiPage extends BasePage {
     @FindBy(xpath = "(//a[text()='Teklif Hakkı Al'])[1]")
     public WebElement tekAlButton;
 
-    @FindBy(xpath ="//h1[.='Aldıklarım']")
+    @FindBy(xpath = "//h1[.='Aldıklarım']")
     public WebElement aldiklarimPage;
 
-    @FindBy(xpath ="(//span[.='Kullanılabilir'])[1]")
+    @FindBy(xpath = "(//span[.='Kullanılabilir'])[1]")
     public WebElement kullanilabilir;
 
+    @FindBy(css = ".float-end.text-center.totalAdCount")
+    public WebElement tekHakSayisiIlk;
+
+    @FindBy(xpath = "(//i[@class='fal fa-plus-circle'])[2]")
+    public WebElement yeniFirmaBtn;
+
+    @FindBy(xpath = "//div[@class='ant-drawer-title']")
+    public WebElement yenifirmaSayfasi;
 
 
 }

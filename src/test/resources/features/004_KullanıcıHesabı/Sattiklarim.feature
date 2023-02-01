@@ -1,3 +1,4 @@
+@regression
 Feature: Sattıklarım
 
   Background:

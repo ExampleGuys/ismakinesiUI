@@ -1,4 +1,4 @@
-@Aliciyim
+@Aliciyim @regression
 Feature: Aliciyim butonu
 
     Background:

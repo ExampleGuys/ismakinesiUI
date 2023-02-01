@@ -1,13 +1,5 @@
-Feature:
 
-
-  @Scenario: IS-226 Alıcıyım kısmının tamamına erişebilmeli13
-
-    Given Kullanici https://ismakinesi.com/ gider
-    When Kullanici Yardım Merkezine Git buttonuna tıklar
-    And Kullanici  Alıcıyım buttonuna tıklar
-    Then Kullanici How do I arranged pickup? tıklar görür
-@hakkimizda
+@hakkimizda @regression
 Feature: ismakinasi.com hakkinda
 
   Background:
@@ -18,7 +10,6 @@ Feature: ismakinasi.com hakkinda
   Scenario: TC:IS-148 Kullanici Hakkimizda basligi altindaki "ismakinesi.com Hakkında""butonuna tiklandigi gorulebilmeli
     And  Kullanici ismakinesi.com Hakkinda yazisina tiklar
     Then Kullanici acilan sayfada hakkimizda kisminin oldugunu dogrular
-
 
   @IS-146
   Scenario:
@@ -31,5 +22,4 @@ Feature: ismakinasi.com hakkinda
 
     And Kullanici Kullanici sozlesmesi butonuna tiklar
     Then Acilan sayfada Mesafeli Satis Sozlesmesi oldugu dogrulanmali
-
 

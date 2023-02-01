@@ -137,4 +137,30 @@ public class LoginStepDefs {
     public void kullaniciTwitterIconunaTiklar() {
         BrowserUtilities.clickWithJS(loginPage.twitterLink);
     }
+
+
+    @And("kullanici {string} sifre yazar")
+    public void kullaniciSifreYazar(String invalid) {
+        loginPage.passwordUye.sendKeys(invalid);
+    }
+
+    @Then("kullanici invalid sifre ile siteye giris yapamadigini dogrular")
+    public void kullaniciInvalidSifreIleSiteyeGirisYapamadiginiDogrular() {
+        BrowserUtilities.waitForVisibility(loginPage.invalidPasswordIcinUyariTexti, 10);
+        Assert.assertTrue(loginPage.invalidPasswordIcinUyariTexti.isDisplayed());
+    }
+
+    @When("kullanici {string} mail yazar")
+    public void kullaniciMailYazar(String invalid) {
+        loginPage.emailUye.sendKeys(invalid);
+    }
+
+    @Then("Kullanici invalid email giris yapamadigini dogrular")
+    public void kullaniciInvalidEmailGirisYapamadiginiDogrular() {
+        BrowserUtilities.waitForVisibility(loginPage.invalidPasswordIcinUyariTexti, 10);
+        Assert.assertTrue(loginPage.invalidPasswordIcinUyariTexti.isDisplayed());
+
+    }
+
+
 }

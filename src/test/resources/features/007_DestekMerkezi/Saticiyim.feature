@@ -1,5 +1,5 @@
 
-@Saticiyim
+@Saticiyim @regression
 Feature: Saticiyim
   Background:
     Given Kullanici ismakinesi.com adresine gider

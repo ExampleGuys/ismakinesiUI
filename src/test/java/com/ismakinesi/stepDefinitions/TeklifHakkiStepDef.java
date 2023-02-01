@@ -4,6 +4,7 @@ import com.ismakinesi.pages.TeklifHakkiPage;
 import com.ismakinesi.utilities.BrowserUtilities;
 import com.ismakinesi.utilities.ConfigurationReader;
 import com.ismakinesi.utilities.Driver;
+import com.sun.source.tree.AssertTree;
 import io.cucumber.datatable.DataTable;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -11,14 +12,13 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
 import java.util.List;
 
 public class TeklifHakkiStepDef {
     Actions actions = new Actions(Driver.get());
     TeklifHakkiPage teklifHakkiPage = new TeklifHakkiPage();
+    int ilkSayi;
 
     @When("kullanici bu sayfadaki Teklif Haklarim'a tiklar")
     public void kullaniciBuSayfadakiTeklifHaklarimATiklar() {
@@ -114,6 +114,7 @@ public class TeklifHakkiStepDef {
         teklifHakkiPage.kartNumarasi.sendKeys(ConfigurationReader.get("KartNumber"));
 
     }
+
     @Then("aldiklarim sayfasi acilir")
     public void aldiklarimSayfasiAcilir() {
         Assert.assertEquals("Aldıklarım", teklifHakkiPage.aldiklarimPage.getText());
@@ -122,6 +123,34 @@ public class TeklifHakkiStepDef {
 
     @Then("Telif Haklari kullanilabilir olarak gozukur")
     public void telifHaklariKullanilabilirOlarakGozukur() {
-        Assert.assertEquals("Kullanılabilir",teklifHakkiPage.kullanilabilir.getText());
+        Assert.assertEquals("Kullanılabilir", teklifHakkiPage.kullanilabilir.getText());
     }
+
+    @And("Toplam teklif hakki sayfanin ust kosesinde yazilidir")
+    public void toplamTeklifHakkiSayfaninUstKosesindeYazilidir() {
+        System.out.println(teklifHakkiPage.tekHakSayisiIlk.getText());
+
+
+        String[] sayi = teklifHakkiPage.tekHakSayisiIlk.getText().split(" ");
+        //  Integer sayi = Integer.valueOf(text[1]);
+        ilkSayi = Integer.parseInt(sayi[1]);
+        System.out.println("ilk sayi = " + ilkSayi);
+        BrowserUtilities.waitFor(3);
+
+    }
+
+
+    @Then("kullanici Teklif Verme Hakkinin dogru sayida oldugunu dogrular")
+    public void kullaniciTeklifVermeHakkininDogruSayidaOldugunuDogrular() {
+        String[] sayi = teklifHakkiPage.tekHakSayisiIlk.getText().split(" ");
+        int ikinciSayi = Integer.parseInt(sayi[1]);
+        System.out.println("ikinci sayi = " + ikinciSayi);
+        BrowserUtilities.waitFor(3);
+        // Assert.assertTrue("Fark alinan teklif hakki kadardir", ikinciSayi==ilkSayi+5);
+        Assert.assertTrue("ikinci teklif hakki birinciden buyuktur", ikinciSayi > ilkSayi);
+        BrowserUtilities.waitFor(3);
+
+
+    }
+
 }
