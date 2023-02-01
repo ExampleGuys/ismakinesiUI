@@ -124,4 +124,10 @@ public class FeaturedProductsStepDef {
         BrowserUtilities.waitFor(7);
         featuredProductsPage.yukleyicilerBox.click();
     }
+
+    @And("Anasayfadaki Personel Yuklelticiler boxina tiklar")
+    public void anasayfadakiPersonelYuklelticilerBoxinaTiklar() {
+        BrowserUtilities.waitFor(5);
+        featuredProductsPage.personelYukselticiBox.click();
+    }
 }
