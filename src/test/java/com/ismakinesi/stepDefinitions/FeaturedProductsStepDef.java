@@ -118,4 +118,10 @@ public class FeaturedProductsStepDef {
         BrowserUtilities.waitFor(5);
         featuredProductsPage.kaziciYukleyiciBox.click();
     }
+
+    @And("Anasayfadaki Yukleyiciler boxina tiklar")
+    public void anasayfadakiYukleyicilerBoxinaTiklar() {
+        BrowserUtilities.waitFor(7);
+        featuredProductsPage.yukleyicilerBox.click();
+    }
 }
