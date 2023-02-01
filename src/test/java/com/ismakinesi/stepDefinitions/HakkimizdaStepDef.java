@@ -73,5 +73,19 @@ public class HakkimizdaStepDef {
         }
     }
 
+    @And("Kullanici Gizlilik Merkezi butonuna tiklar")
+    public void kullaniciGizlilikMerkeziButonunaTiklar() {
+        BrowserUtilities.clickWithJS(footerPage.GizlilikMerkeziButton);
+
+    }
+
+    @Then("acilan sayfada Gizlilik Sözleşmesi oldugu dogrulanir")
+    public void acilanSayfadaGizlilikSözleşmesiOlduguDogrulanir() {
+
+        Assert.assertTrue(footerPage.GizlilikZleMesiickisim.isDisplayed());
+
+
+
+    }
 }
 
