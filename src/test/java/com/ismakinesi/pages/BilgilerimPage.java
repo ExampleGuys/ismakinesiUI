@@ -26,4 +26,34 @@ public class BilgilerimPage extends BasePage {
     @FindBy(xpath = "//ul/li//*[text()='Şifre Değiştir']")
     public WebElement sifreDegistir;
 
+    @FindBy(xpath = "//*[@placeholder=\"Adınız Soyadınız\"]")
+    public WebElement adiniz;
+
+    @FindBy(xpath = "//*[@placeholder=\"E-Mail Adresiniz\"]")
+    public WebElement ePosta;
+
+    @FindBy(xpath = "//*[@placeholder=\"Phone number\"]")
+    public WebElement telefonNumarasi;
+
+    @FindBy(xpath = "//div[@class=\"address-edit\"]")
+    public WebElement adresDuzenle;
+
+    @FindBy(xpath = "//a[@class=\"dataAddBox right\"]")
+    public WebElement yeniAdres;
+
+    @FindBy(xpath = "//button[@aria-label=\"Close\"]")
+    public WebElement kapat;
+
+    @FindBy(xpath = "//*[@placeholder=\"Eski Şifre\"]")
+    public WebElement eskiSifre;
+
+    @FindBy(xpath = "//*[@placeholder=\"Yeni Şifre\"]")
+    public WebElement yeniSifre;
+
+    @FindBy(xpath = "//*[@placeholder=\"Yeni Şifre (Tekrar)\"]")
+    public WebElement yeniSifreTekrar;
+
+    @FindBy(xpath = "//*[@type=\"submit\"]")
+    public WebElement sifremiDegistir;
+
 }

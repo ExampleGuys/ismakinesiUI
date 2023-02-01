@@ -1,8 +1,7 @@
 package com.ismakinesi.stepDefinitions;
-
 import com.ismakinesi.pages.AldiklarimPage;
 import com.ismakinesi.pages.HomePage;
-import com.ismakinesi.pages.LoginPage;
+import com.ismakinesi.pages.*;
 import com.ismakinesi.utilities.BrowserUtilities;
 import com.ismakinesi.utilities.ConfigurationReader;
 import com.ismakinesi.utilities.Driver;
@@ -15,7 +14,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-public class HomeStepDef {
+public class HomeStepDef{
     HomePage homePage = new HomePage();
 
 
@@ -128,11 +127,10 @@ public class HomeStepDef {
         );
     }
 
-    @When("Ekskavatörler e tiklar")
+    @When("Ekskavatorler e tiklar")
     public void ekskavatorlerETiklar() {
         homePage.ekskavatorler.click();
         BrowserUtilities.waitFor(4);
-
     }
 
     @And("Kullanici kategori olarak Paletli Ekskavator Radio buttonunu secer")
@@ -140,7 +138,6 @@ public class HomeStepDef {
         BrowserUtilities.waitFor(3);
         homePage.crawlerExcavator.click();
         BrowserUtilities.waitFor(4);
-
     }
 
     @When("Kullanici Radio Button kullanarak urun secer")
@@ -151,8 +148,8 @@ public class HomeStepDef {
     }
 
 
-    @And("Kullanici kategori olarak Lastik Tekerlekli Ekskavatör Radio buttonunu secer")
-    public void kullaniciKategoriOlarakLastikTekerlekliEkskavatörRadioButtonunuSecer() {
+    @And("Kullanici kategori olarak Lastik Tekerlekli Ekskavator Radio buttonunu secer")
+    public void kullaniciKategoriOlarakLastikTekerlekliEkskavatorRadioButtonunuSecer() {
         homePage.radioLastikTekerEkskavator.click();
         BrowserUtilities.waitFor(4);
 
@@ -165,8 +162,8 @@ public class HomeStepDef {
 
     }
 
-    @When("Kazici Yükleyici e tiklar")
-    public void kaziciYükleyiciETiklar() {
+    @When("Kazici Yukleyici e tiklar")
+    public void kaziciYukleyiciETiklar() {
         homePage.backhoeLoader.click();
         BrowserUtilities.waitFor(4);
     }
@@ -184,39 +181,29 @@ public class HomeStepDef {
 
     }
 
-    @And("logo tiklar")
-    public void logoTiklar() {
-        homePage.logo.click();
-        //BrowserUtilities.waitFor(4);
-    }
-
     @And("Kullanici Marka olarak New Holland Radio buttonunu secer.")
     public void kullaniciMarkaOlarakNewHollandRadioButtonunuSecer() {
         homePage.radioNewHollnand.click();
         BrowserUtilities.waitFor(4);
     }
 
-    @When("Yükleyiciler e tiklar")
-    public void yükleyicilerETiklar() {
+    @When("Yukleyiciler e tiklar")
+    public void yukleyicilerETiklar() {
         homePage.loader.click();
         BrowserUtilities.waitFor(4);
 
     }
 
-    @And("Kullanici kategori olarak Paletli Yükleyici Radio buttonunu secer")
-    public void kullaniciKategoriOlarakPaletliYükleyiciRadioButtonunuSecer() {
-        homePage.trackLoader.click();
-        BrowserUtilities.waitFor(4);
-    }
 
-    @And("Kullanici kategori olarak Lastik Tekerlekli Yükleyici Radio buttonunu secer")
-    public void kullaniciKategoriOlarakLastikTekerlekliYükleyiciRadioButtonunuSecer() {
+
+    @And("Kullanici kategori olarak Lastik Tekerlekli Yukleyici Radio buttonunu secer")
+    public void kullaniciKategoriOlarakLastikTekerlekliYukleyiciRadioButtonunuSecer() {
         homePage.wheelLoader.click();
         BrowserUtilities.waitFor(4);
     }
 
-    @When("Yükleyici e tiklar")
-    public void yükleyiciETiklar() {
+    @When("Yukleyici e tiklar")
+    public void yukleyiciETiklar() {
         homePage.loader.click();
         BrowserUtilities.waitFor(4);
     }
@@ -227,14 +214,14 @@ public class HomeStepDef {
         BrowserUtilities.waitFor(4);
     }
 
-    @And("Kullanici kategori olarak Akülü Makasli Platform Radio buttonunu secer")
-    public void kullaniciKategoriOlarakAkülüMakasliPlatformRadioButtonunuSecer() {
+    @And("Kullanici kategori olarak Akulu Makasli Platform Radio buttonunu secer")
+    public void kullaniciKategoriOlarakAkuluMakasliPlatformRadioButtonunuSecer() {
         homePage.batteryPoweredScissorLift.click();
         BrowserUtilities.waitFor(4);
     }
 
-    @When("Personel Yükselticiler e tiklar")
-    public void personelYükselticilerETiklar() {
+    @When("Personel Yukselticiler e tiklar")
+    public void personelYukselticilerETiklar() {
         homePage.staffBoosters.click();
         BrowserUtilities.waitFor(4);
     }
@@ -248,6 +235,30 @@ public class HomeStepDef {
     @And("Kullanici Marka olarak Skyjack Radio buttonunu secer.")
     public void kullaniciMarkaOlarakSkyjackRadioButtonunuSecer() {
         homePage.skyjack.click();
+        BrowserUtilities.waitFor(4);
+    }
+
+    @When("Teleskopik Yukleyici e tiklar")
+    public void teleskopikYukleyiciETiklar() {
+        homePage.telescopicLoader.click();
+        BrowserUtilities.waitFor(4);
+    }
+
+    @And("Kullanici Marka olarak Bobcat Radio buttonunu secer.")
+    public void kullaniciMarkaOlarakBobcatRadioButtonunuSecer() {
+        homePage.bobcat.click();
+        BrowserUtilities.waitFor(4);
+    }
+
+    @And("Kullanici kategori olarak Paletli Yukleyici Radio buttonunu secer.")
+    public void kullaniciKategoriOlarakPaletliYukleyiciRadioButtonunuSecer() {
+        homePage.trackLoader.click();
+        BrowserUtilities.waitFor(4);
+    }
+
+    @Given("Logoya tiklar")
+    public void logoyaTiklar() {
+        homePage.logo.click();
         BrowserUtilities.waitFor(4);
     }
 }
