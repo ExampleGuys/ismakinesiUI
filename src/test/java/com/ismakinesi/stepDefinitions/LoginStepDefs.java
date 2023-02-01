@@ -26,7 +26,7 @@ public class LoginStepDefs {
     public void kullaniciUyeOlVeyaGirisYapaTiklar() {
         BrowserUtilities.waitForClickability(loginPage.loginOrBeMemberButton, 30);
         loginPage.loginOrBeMemberButton.click();
-        BrowserUtilities.waitFor(5);
+//        BrowserUtilities.waitFor(5);
     }
 
     @Then("Uye Girisi sayfasi acilir")
