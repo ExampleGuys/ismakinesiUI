@@ -23,3 +23,7 @@ Feature: ismakinasi.com hakkinda
     And Kullanici Kullanici sozlesmesi butonuna tiklar
     Then Acilan sayfada Mesafeli Satis Sozlesmesi oldugu dogrulanmali
 
+  @IS-154
+  Scenario:IS-154 TC:IS-154 Gizlilik sozlesmesi butonuna tiklandigi gorulebilmeli
+    And Kullanici Gizlilik Merkezi butonuna tiklar
+    Then acilan sayfada Gizlilik Sözleşmesi oldugu dogrulanir

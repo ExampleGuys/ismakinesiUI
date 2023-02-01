@@ -58,6 +58,10 @@ public class FooterPage {
     @FindBy(xpath = "//h1[@class='container']")
     public WebElement MesafeliSatsozlesmesiText;
 
+    @FindBy(xpath = "//h1[@class='container']")
+    public WebElement GizlilikZleMesiickisim;
+
+
 
 }
 
