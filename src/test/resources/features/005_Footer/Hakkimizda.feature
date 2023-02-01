@@ -40,3 +40,38 @@ Feature: ismakinasi.com hakkinda
   Scenario: IS-160 TC:IS-160 Sinirli Servis Garantisi butonuna tiklandigi dogrulanmali
     And Kullanici Sinirli Servis Garantisi butonuna tiklar
     Then acilan sayfada Sinirli Servis Garantili is ve tarim makinelerini ismakinesi.com dan satin alin sayfasinin oldugu dogrulanir
+
+  @IS-161
+
+  Scenario: IS-161 TC: IS-161 Nasil Satarim butonuna tiklandigi gorulebilmeli
+    And Kullanici Nasil Satarim butonuna tiklar
+    Then acilan sayfada Nasil Satarim  sayfasinin oldugu dogrulanir
+
+  @IS-162
+  Scenario: IS-162 TC:IS-162 Nasil Alirıim butonuna tiklandigi gorulebilmeli
+    And Kullanici Nasil Alirim butonuna tiklar
+    Then acilan sayfada Nasil Alirim sayfasinin oldugu dogrulanir
+
+  @Destek
+
+  @IS-164
+  Scenario: IS-164 TC:IS-164 Sik sorulan sorular butonuna tiklandigi gorulebilmeli
+    And Kullanici Sik sorulan sorular butonuna tiklar
+    Then acilan sayfada Cozum Merkezi sayfasinin oldugu dogrulanir
+
+  @IS-165
+  Scenario: IS-165 TC:IS-165 Destek Merkezi butonuna tiklandigi gorulebilmeli
+    And Kullanici Destek merkezi butonuna tiklar
+    Then acilan sayfada Destek merkezi sayfasinin oldugu dogrulanir
+
+  @IS165
+  Scenario:IS-165
+
+    And Kullanici Bize Ulasin butonuna tiklar
+    And acilan sayfada Adiniz Soyadiniz kismi doldurulur
+    And  acilan sayfada E-Mail kismi doldurulur
+    And  acilan sayfada Telefon numaraniz kismi doldurulur
+    And  acilan sayfada Firma adi kismi doldurulur
+    And  acilan sayfada Ulke kismi doldurulur
+    And  acilan sayfada Mesajiniz kismi doldurulur
+    Then Gonder butonuna tiklanir
