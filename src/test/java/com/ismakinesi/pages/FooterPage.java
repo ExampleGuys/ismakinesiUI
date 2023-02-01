@@ -61,7 +61,14 @@ public class FooterPage {
     @FindBy(xpath = "//h1[@class='container']")
     public WebElement GizlilikZleMesiickisim;
 
+    @FindBy(xpath = "//a[contains(@href, 'preview')]")
+    public WebElement TeklifSistemidegistir;
 
 
+
+    
+    
+    
+    
 }
 
