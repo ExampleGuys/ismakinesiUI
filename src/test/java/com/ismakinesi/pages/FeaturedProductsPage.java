@@ -66,6 +66,9 @@ public class FeaturedProductsPage extends BasePage {
     @FindBy(xpath = "(//*[@class='wt-horizontal-center'])[2]")
     public WebElement ekskavatorlerBox;
 
+    @FindBy(xpath = "(//*[@class='wt-horizontal-center'])[3]")
+    public WebElement kaziciYukleyiciBox;
+
     public static String bidConverter(String highestBidParameter, int topParams) {
         //sondaki USD ifadesini siler
         highestBidParameter = highestBidParameter.replace(" USD", "");
