@@ -5,7 +5,7 @@ import com.ismakinesi.pages.ForkliftsPage;
 import com.ismakinesi.utilities.BrowserUtilities;
 import io.cucumber.java.en.And;
 
-public class TeklifVerme extends BasePage {
+public class TeklifVermeStepDefs extends BasePage {
     ForkliftsPage forkliftsPage = new ForkliftsPage();
 
     @And("forkliftlere gider")
@@ -37,9 +37,8 @@ public class TeklifVerme extends BasePage {
     @And("yeni bir teklif verir")
     public void yeniBirTeklifVerir() {
         String highestBid = forkliftsPage.highestBid.getText();
-        System.out.println("highestBid = " + highestBid);
-
-        forkliftsPage.inputTeklif.sendKeys(forkliftsPage.bidConverter(highestBid));
+        String lastBid = forkliftsPage.bidConverter(highestBid, 150);
+        forkliftsPage.inputTeklif.sendKeys(lastBid);
 
         BrowserUtilities.waitFor(2);
         forkliftsPage.buttonDevam.click();

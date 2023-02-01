@@ -32,28 +32,37 @@ public class ForkliftsPage extends BasePage {
     @FindBy(css = ".btnStyle_1.p-left")
     public WebElement buttonTeklifiGonder;
 
-    public WebElement setLinkVehicle() {
-        Random rn = new Random();
-        int number = rn.nextInt(12) + 4;
-        String xpath = "(//div[@class='item']//a)[" + number + "]";
-        //BrowserUtilities.scrollToElement((WebElement) By.xpath(xpath));
-        return Driver.get().findElement(By.xpath(xpath));
-    }
 
-    public String bidConverter(String highestBidParameter) {
-
+    /**
+     * Ham teklif ücreti strin olarak alır @topParams kadar ekleme yapar ve string olarak @return eder.
+     * @param highestBidParameter
+     * @param topParams
+     * @return
+     */
+    public String bidConverter(String highestBidParameter, int topParams) {
+        //sondaki USD ifadesini siler
         highestBidParameter = highestBidParameter.replace(" USD", "");
+        //sondaki EUR ifadesini siler
         highestBidParameter = highestBidParameter.replace(" EUR", "");
+        //sayıları arasındaki virgülü siler
         highestBidParameter = highestBidParameter.replace(",", "");
-        System.out.println("highestBidParameter = " + highestBidParameter);
-        int newBid = stringToInteger(highestBidParameter);
+
+        int newBid = stringToInteger(highestBidParameter,topParams);
+
+        // Int ifadeyi stringe çevirir.
         String newBidString = String.valueOf(newBid);
 
         return newBidString;
     }
 
-    public int stringToInteger(String parameter) {
-        int i = Integer.parseInt(parameter) + 100;
+    /**
+     * string bir ifadayi integer e çevirir ve @params kadar ekleme yaparak @return eder.
+     * @param parameter
+     * @param params
+     * @return
+     */
+    public int stringToInteger(String parameter, int params) {
+        int i = Integer.parseInt(parameter) + params;
         return i;
     }
 }
