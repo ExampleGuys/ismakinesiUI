@@ -64,6 +64,45 @@ public class FooterPage {
     @FindBy(xpath = "//a[contains(@href, 'preview')]")
     public WebElement TeklifSistemidegistir;
 
+    @FindBy(xpath = "//img[contains(@src, 'servis')]")
+    public WebElement SiniliservisIckisim;
+
+    @FindBy(xpath = "//div[contains(@class, 'col-lg-12')]")
+    public WebElement NasilsatarimIckisime;
+
+    @FindBy(xpath = "//div[contains(@class, 'col-lg-12')]")
+    public WebElement NasilalirimIckisime;
+
+    @FindBy(xpath = "//h1")
+    public WebElement SikSorulansorularIcKisim;
+
+    @FindBy(xpath = "//h1[contains(@style, '0px;')]")
+    public WebElement DestekMerkeziIc;
+
+    @FindBy(css = "input[id*='name']")
+    public WebElement AdinizSoyadiniz;
+
+    @FindBy(css = "input[id*='email']")
+    public WebElement Email;
+
+    @FindBy(css = "input[id*='number']")
+    public WebElement TelNumber;
+
+    @FindBy(css = "input[id*='company']")
+    public WebElement Company;
+
+    @FindBy(css = "input[id='coordinated_country']")
+    public WebElement Country;
+
+    @FindBy(css = "textarea[id*='message']")
+    public WebElement Message;
+
+    @FindBy(css = "button[type='submit']")
+    public WebElement Gonder;
+    
+    
+
+
 
 
     
