@@ -107,5 +107,10 @@ public class FeaturedProductsStepDef {
 
     }
 
+    @And("Anasayfadaki Ekskavatorler boxina tiklar")
+    public void anasayfadakiEkskavatorlerBoxinaTiklar() {
+        BrowserUtilities.waitFor(5);
+        featuredProductsPage.ekskavatorlerBox.click();
+    }
 
 }
