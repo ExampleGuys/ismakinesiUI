@@ -8,7 +8,7 @@ Feature: All Filters
 
 
   @IS-47
-  Scenario: TC:IS-47 Kullanici Katagori  yazisi doğrulanmali.
+  Scenario: TC:IS-47 Kullanici Katagori  yazisi dogrulanmali.
     Then "Katagori" basligini dogrular
 
   @IS-48
@@ -24,7 +24,7 @@ Feature: All Filters
     When Katagori  serch box a model adi girer
 
   @IS-52
-  Scenario: TC:IS-51 Kullanici arama sonucunda seçtigi urunleri görur
+  Scenario: TC:IS-52 Kullanici arama sonucunda sectigi urunleri görur
     When Kullanici Radio Button kullanarak urun secer
 
   @IS-53

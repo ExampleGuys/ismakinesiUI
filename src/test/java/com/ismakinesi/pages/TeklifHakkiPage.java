@@ -10,7 +10,7 @@ public class TeklifHakkiPage extends BasePage {
     @FindBy(xpath = "//a[contains(text(),'Teklif Haklarım')]")
     public WebElement teklifHaklarim;
 
-    @FindBy(xpath = "//a[contains(text(),'Aktif')]")
+    @FindBy(xpath = "//a[text()='Aktif']")
     public WebElement aktifBtn;
 
     @FindBy(xpath = "(//span[.='Kullanılabilir'])[1]")

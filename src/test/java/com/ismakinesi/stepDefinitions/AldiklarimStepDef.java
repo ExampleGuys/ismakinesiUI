@@ -31,6 +31,7 @@ public class AldiklarimStepDef {
 
     @When("kullanici Hesabim buttonuna tiklar")
     public void kullanici_hesabim_buttonuna_tiklar() {
+        BrowserUtilities.hover(loginPage.hesabimBtn);
         loginPage.hesabimBtn.click();
         BrowserUtilities.waitFor(3);
 
