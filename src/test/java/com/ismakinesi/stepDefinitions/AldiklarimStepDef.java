@@ -66,7 +66,7 @@ public class AldiklarimStepDef {
     public void kullaniciOncedenAlmisOlduguUrunleriGorur() {
         try {
             BrowserUtilities.doubleClick(aldiklarimPage.photosAl);
-            BrowserUtilities.waitFor(3);
+            BrowserUtilities.waitForVisibility(aldiklarimPage.alinanArac,5);
             String alMakine = aldiklarimPage.alinanArac.getText();
             Assert.assertEquals("SATILDI", alMakine);
         } catch (Exception e) {
