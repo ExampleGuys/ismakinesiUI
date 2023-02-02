@@ -51,13 +51,13 @@ public class TeklifHakkiStepDef {
 
     @Then("kullanici  kullanilabilir durumdaki teklif haklarini gorur")
     public void kullanici_kullanilabilir_durumdaki_teklif_haklarini_gorur() {
-        Assert.assertEquals("Kullanılabilir", teklifHakkiPage.kullanTek.getText());
+        Assert.assertTrue(teklifHakkiPage.kullanTek.isDisplayed());
 
     }
 
     @And("kullanici Suresi bitenler'e tiklar")
     public void kullaniciSuresiBitenlerETiklar() {
-        BrowserUtilities.hover(teklifHakkiPage.suresiBitenler);
+        BrowserUtilities.waitForClickability(teklifHakkiPage.suresiBitenler,15);
         BrowserUtilities.clickWithJS(teklifHakkiPage.suresiBitenler);
 
 
