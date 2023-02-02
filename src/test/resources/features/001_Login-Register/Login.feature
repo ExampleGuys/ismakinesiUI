@@ -56,13 +56,13 @@ Feature: Giris
     And kullanici Giris Yap'a tiklar
     Then kullanici invalid sifre ile siteye giris yapamadigini dogrular
     Examples:
-      | invalid |
-      | 111aaaa |
-      | asdfgha |
-      | #$%^&*  |
-      | 123456  |
-      | :-)     |
-      | 🙂🙂    |
+      | invalid      |
+      | 111aaaa      |
+      | asdfgha      |
+      | #$%^&*       |
+      | 123456       |
+      | :-)          |
+      | !@#$$%09bacs |
 
   @IS-362
   Scenario Outline:  TC:IS-362 Invalid Mail Ile Login
