@@ -7,14 +7,14 @@ Feature: Tüm Filitreler
     And Tum Filtreler e tiklar
 
   @IS-64
-  Scenario: TC:IS-64 Kullanici "Ekskavatörler" ilanlarini marka secerek secebilmelidir
+  Scenario: TC:IS-64 Kullanici "Ekskavatorler" ilanlarini marka secerek secebilmelidir
     And Kullanici kategori olarak Paletli Ekskavator Radio buttonunu secer
     And Kullanici Marka olarak Caterpillar Radio buttonunu secer.
     Then secilen ilanin filitrelendigini dogrular.
 
 
   @IS-65
-  Scenario: TC:IS-65 Kullanici "Ekskavatörler " ilanlarini marka secerek secebilmelidir
+  Scenario: TC:IS-65 Kullanici "Ekskavatorler " ilanlarini marka secerek secebilmelidir
 
     And Kullanici kategori olarak Lastik Tekerlekli Ekskavator Radio buttonunu secer
     And Kullanici Marka olarak Volvo Radio buttonunu secer.
@@ -25,7 +25,7 @@ Feature: Tüm Filitreler
     Then secilen ilanin filitrelendigini dogrular.
 
   @IS-66
-  Scenario: TC:IS-66 Kullanici "Kazici Yükleyici" ilanlarini marka secerek secebilmelidir
+  Scenario: TC:IS-66 Kullanici "Kazici Yukleyici" ilanlarini marka secerek secebilmelidir
     Given Kullanici ismakinesi.com adresine gider
     When Kazici Yukleyici e tiklar
     And Tum Filtreler e tiklar
