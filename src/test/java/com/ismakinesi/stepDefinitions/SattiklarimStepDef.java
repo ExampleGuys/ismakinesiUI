@@ -45,6 +45,7 @@ public class SattiklarimStepDef {
     @Then("Kullanici Sattiklarim butonuna tiklandigini dogrular")
     public void kullaniciSattiklarimButonunaTiklandiginiDogrular() {
         BrowserUtilities.verifyElementClickable(sattiklarimPage.sattiklarim);
+        System.out.println("sattiklarimPage.sattiklarim.isDisplayed() = " + sattiklarimPage.sattiklarim.isDisplayed());
     }
 
     @Then("Kullanici Yayindaki İlanlar, Sattiklarim ve Yayinda Olmayanlar başlıklarının görünürlüğünü ve tıklanabilirliğini doğrular")
