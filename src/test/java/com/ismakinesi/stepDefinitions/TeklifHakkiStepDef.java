@@ -59,7 +59,7 @@ public class TeklifHakkiStepDef {
     @And("kullanici Teklif Hakki Al'a tiklar")
     public void kullaniciTeklifHakkiAlATiklar() {
         BrowserUtilities.clickWithJS(teklifHakkiPage.teklifHakkiAl);
-        BrowserUtilities.waitFor(3);
+        BrowserUtilities.waitForVisibility(teklifHakkiPage.tekHakPage,3);
 
     }
     @Then("Teklif Hakki sayfasi acilir")
