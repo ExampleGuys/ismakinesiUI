@@ -26,11 +26,12 @@ public class TeklifHakkiStepDef {
     public void kullaniciBuSayfadakiTeklifHaklarimATiklar() {
         BrowserUtilities.hover(teklifHakkiPage.teklifHaklarim);
         BrowserUtilities.doubleClick(teklifHakkiPage.teklifHaklarim);
-        BrowserUtilities.waitFor(2);
+
     }
 
     @Then("kullanici  Aktif, Suresi Bitenler, Teklif Hakki Satin Al basliklarini gorur")
     public void kullaniciAktifSuresiBitenlerTeklifHakkiSatinAlBasliklariniGorur(DataTable dataTable) {
+        BrowserUtilities.waitForVisibility(teklifHakkiPage.aldiklarimPage,20);
         List<String> labels = dataTable.column(0);
         for (String label : labels) {
             WebElement element = Driver.get().findElement(By.xpath("//a[contains(text(),'" + label + "')]"));
