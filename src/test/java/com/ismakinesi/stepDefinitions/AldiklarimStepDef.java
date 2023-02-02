@@ -31,20 +31,21 @@ public class AldiklarimStepDef {
     @When("kullanici Hesabim buttonuna tiklar")
     public void kullanici_hesabim_buttonuna_tiklar() {
        loginPage.hesabimBtn.click();
-        BrowserUtilities.waitFor(3);
+
 
     }
 
     @When("kullanici Aldiklarima tiklar")
     public void kullanici_aldiklarima_tiklar() {
+        BrowserUtilities.waitForVisibility(aldiklarimPage.aldiklarim,5);
         BrowserUtilities.doubleClick(aldiklarimPage.aldiklarim);
-        BrowserUtilities.waitFor(3);
+
 
     }
 
     @Then("Aldiklarim sayfasi acilir")
     public void aldiklarim_sayfasi_acilir() {
-
+       BrowserUtilities.waitFor(2);
         Assert.assertEquals("Aldıklarım", Driver.get().getTitle());
     }
 
