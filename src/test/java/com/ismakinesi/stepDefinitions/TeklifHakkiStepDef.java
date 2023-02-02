@@ -19,7 +19,7 @@ import java.util.List;
 public class TeklifHakkiStepDef {
     Actions actions = new Actions(Driver.get());
     TeklifHakkiPage teklifHakkiPage = new TeklifHakkiPage();
-    AldiklarimPage aldiklarimPage=new AldiklarimPage();
+    AldiklarimPage aldiklarimPage = new AldiklarimPage();
     int ilkSayi;
 
     @When("kullanici bu sayfadaki Teklif Haklarim'a tiklar")
@@ -31,7 +31,7 @@ public class TeklifHakkiStepDef {
 
     @Then("kullanici  Aktif, Suresi Bitenler, Teklif Hakki Satin Al basliklarini gorur")
     public void kullaniciAktifSuresiBitenlerTeklifHakkiSatinAlBasliklariniGorur(DataTable dataTable) {
-        BrowserUtilities.waitForVisibility(teklifHakkiPage.aldiklarimPage,20);
+        BrowserUtilities.waitForVisibility(teklifHakkiPage.aldiklarimPage, 20);
         List<String> labels = dataTable.column(0);
         for (String label : labels) {
             WebElement element = Driver.get().findElement(By.xpath("//a[contains(text(),'" + label + "')]"));
@@ -57,7 +57,7 @@ public class TeklifHakkiStepDef {
 
     @And("kullanici Suresi bitenler'e tiklar")
     public void kullaniciSuresiBitenlerETiklar() {
-        BrowserUtilities.waitForClickability(teklifHakkiPage.suresiBitenler,15);
+        BrowserUtilities.waitForClickability(teklifHakkiPage.suresiBitenler, 15);
         BrowserUtilities.clickWithJS(teklifHakkiPage.suresiBitenler);
 
 
@@ -65,7 +65,7 @@ public class TeklifHakkiStepDef {
 
     @Then("kullanici  suresi biten teklif haklarini gorur")
     public void kullaniciSuresiBitenTeklifHaklariniGorur() {
-        BrowserUtilities.waitForVisibility(teklifHakkiPage.odemedeKullanildi,15);
+        BrowserUtilities.waitForVisibility(teklifHakkiPage.odemedeKullanildi, 15);
         Assert.assertEquals("Ödemede Kullanıldı", teklifHakkiPage.odemedeKullanildi.getText());
 
     }
@@ -85,7 +85,7 @@ public class TeklifHakkiStepDef {
 
     @When("kullanici Baslangic yada Avantaj teklif hakkini secer")
     public void kullanici_baslangic_yada_avantaj_teklif_hakkini_secer() {
-        BrowserUtilities.waitFor(3);
+        BrowserUtilities.waitForClickability(teklifHakkiPage.avantajPacket, 15);
         teklifHakkiPage.avantajPacket.click();
 
     }
@@ -99,15 +99,17 @@ public class TeklifHakkiStepDef {
 
     @Then("{string} in gorunundugu sayfa acilir")
     public void in_gorunundugu_sayfa_acilir(String odemeYap) {
-        BrowserUtilities.waitForVisibility(teklifHakkiPage.odemeYapBtn,10);
+        BrowserUtilities.waitForVisibility(teklifHakkiPage.odemeYapBtn, 10);
         Assert.assertEquals(odemeYap, teklifHakkiPage.odemeYapBtn.getText());
 
     }
+
     @When("kullanici Fatura adresini secer")
     public void kullaniciFaturaAdresiniSecer() {
         BrowserUtilities.clickWithJS(teklifHakkiPage.firmaAdi);
 
     }
+
     @When("kullanici Odeme Yap'a tiklar")
     public void kullaniciOdemeYapATiklar() {
         teklifHakkiPage.odemeYapBtn.click();
@@ -127,11 +129,12 @@ public class TeklifHakkiStepDef {
 
     }
 
-    @Then("aldiklarim sayfasi acilir")
+        @Then("aldiklarim sayfasi acilir")
     public void aldiklarimSayfasiAcilir() {
-        BrowserUtilities.waitForVisibility(aldiklarimPage.aldikPage,30);
+        BrowserUtilities.waitForVisibility(teklifHakkiPage.kullanilabilir,30);
         Assert.assertEquals("Aldıklarım", teklifHakkiPage.aldiklarimPage.getText());
-    }
+      }
+
 
 
     @Then("Telif Haklari kullanilabilir olarak gozukur")
