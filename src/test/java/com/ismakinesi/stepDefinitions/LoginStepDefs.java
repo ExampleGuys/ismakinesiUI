@@ -91,8 +91,8 @@ public class LoginStepDefs {
 
         BrowserUtilities.waitForVisibility(loginPage.youtubeIcon, 20);
         Assert.assertTrue(Driver.get().getTitle().contains("YouTube"));
-//        BrowserUtilities.waitForVisibility(loginPage.twitterIcon, 10); //
-//        Assert.assertTrue(Driver.get().getTitle().contains("Twitter")); //
+//        BrowserUtilities.waitForVisibility(loginPage.twitterIcon, 10); ////
+//        Assert.assertTrue(Driver.get().getTitle().contains("Twitter")); ////
 
     }
 
