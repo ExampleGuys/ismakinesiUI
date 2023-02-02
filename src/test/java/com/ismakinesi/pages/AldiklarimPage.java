@@ -14,6 +14,8 @@ public class AldiklarimPage extends BasePage {
     @FindBy(css="div.sold.text-center:nth-child(1)")
     public WebElement alinanArac;
 
+    @FindBy(xpath = "//h1[.='Aldıklarım']")
+    public WebElement aldikPage;
 
 
 

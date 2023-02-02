@@ -46,6 +46,7 @@ Feature: Teklif haklari
     When kullanici Baslangic yada Avantaj teklif hakkini secer
     And kullanici Teklif Hakki Al buttonuna tiklar
     Then "Ödeme Yap" in gorunundugu sayfa acilir
+    When kullanici Fatura adresini secer
     When kullanici Odeme Yap'a tiklar
     When kullanici kart sahibinin adini yazar
     And kullanici kart numarsini yazar
@@ -60,6 +61,7 @@ Feature: Teklif haklari
     When kullanici Baslangic yada Avantaj teklif hakkini secer
     And kullanici Teklif Hakki Al buttonuna tiklar
     Then "Ödeme Yap" in gorunundugu sayfa acilir
+    When kullanici Fatura adresini secer
     When kullanici Odeme Yap'a tiklar
     When kullanici kart sahibinin adini yazar
     And kullanici kart numarsini yazar
@@ -75,6 +77,7 @@ Feature: Teklif haklari
     When kullanici Baslangic yada Avantaj teklif hakkini secer
     And kullanici Teklif Hakki Al buttonuna tiklar
     Then "Ödeme Yap" in gorunundugu sayfa acilir
+    When kullanici Fatura adresini secer
     When kullanici Odeme Yap'a tiklar
     When kullanici kart sahibinin adini yazar
     And kullanici kart numarsini yazar
