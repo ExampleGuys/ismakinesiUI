@@ -38,14 +38,15 @@ public class AldiklarimStepDef {
 
     @When("kullanici Aldiklarima tiklar")
     public void kullanici_aldiklarima_tiklar() {
+        BrowserUtilities.hover(aldiklarimPage.aldiklarim);
         BrowserUtilities.doubleClick(aldiklarimPage.aldiklarim);
-        BrowserUtilities.waitFor(5);
+
 
     }
 
     @Then("Aldiklarim sayfasi acilir")
     public void aldiklarim_sayfasi_acilir() {
-
+        BrowserUtilities.waitForVisibility(aldiklarimPage.aldikPage,30);
         Assert.assertEquals("Aldıklarım", Driver.get().getTitle());
     }
 

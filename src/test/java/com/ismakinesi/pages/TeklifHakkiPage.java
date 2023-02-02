@@ -3,6 +3,8 @@ package com.ismakinesi.pages;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import java.util.List;
+
 public class TeklifHakkiPage extends BasePage {
 
     @FindBy(xpath = "//a[contains(text(),'Teklif Haklarım')]")
@@ -14,7 +16,7 @@ public class TeklifHakkiPage extends BasePage {
     @FindBy(xpath = "(//span[.='Kullanılabilir'])[1]")
     public WebElement kullanTek;
 
-    @FindBy(xpath = "//a[contains(text(),'Süresi Bitenler')]")
+    @FindBy(xpath = "//a[text()='Süresi Bitenler']")
     public WebElement suresiBitenler;
 
     @FindBy(xpath = "//span[.='Ödemede Kullanıldı'][1]")
@@ -50,5 +52,7 @@ public class TeklifHakkiPage extends BasePage {
     @FindBy(css = ".float-end.text-center.totalAdCount")
     public WebElement tekHakSayisiIlk;
 
+    @FindBy(xpath = "//p[contains(text(),'Berk')]")
+   public WebElement firmaAdi;
 
 }

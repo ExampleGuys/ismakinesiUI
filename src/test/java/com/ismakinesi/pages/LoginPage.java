@@ -23,7 +23,7 @@ public class LoginPage extends BasePage {
     @FindBy(css = "[type='submit']")
     public WebElement submitBtn; // giris yap butonu
 
-    @FindBy(css = ".loginAccountTitle:nth-child(1)")
+    @FindBy(xpath = "//span[text()='Hesabım']")
     public WebElement hesabimBtn; // uye ol veya giris yap butonu
 
     @FindBy(css = ".youtube.float-left")

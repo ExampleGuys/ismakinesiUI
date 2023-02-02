@@ -1,5 +1,6 @@
 package com.ismakinesi.stepDefinitions;
 
+import com.ismakinesi.pages.AldiklarimPage;
 import com.ismakinesi.pages.TeklifHakkiPage;
 import com.ismakinesi.utilities.BrowserUtilities;
 import com.ismakinesi.utilities.ConfigurationReader;
@@ -18,11 +19,14 @@ import java.util.List;
 public class TeklifHakkiStepDef {
     Actions actions = new Actions(Driver.get());
     TeklifHakkiPage teklifHakkiPage = new TeklifHakkiPage();
+    AldiklarimPage aldiklarimPage=new AldiklarimPage();
     int ilkSayi;
 
     @When("kullanici bu sayfadaki Teklif Haklarim'a tiklar")
     public void kullaniciBuSayfadakiTeklifHaklarimATiklar() {
+        BrowserUtilities.hover(teklifHakkiPage.teklifHaklarim);
         BrowserUtilities.doubleClick(teklifHakkiPage.teklifHaklarim);
+        BrowserUtilities.waitFor(2);
     }
 
     @Then("kullanici  Aktif, Suresi Bitenler, Teklif Hakki Satin Al basliklarini gorur")
@@ -39,7 +43,8 @@ public class TeklifHakkiStepDef {
 
     @When("kullanici Aktif buttonuna tiklar")
     public void kullanici_aktif_buttonuna_tiklar() {
-        BrowserUtilities.doubleClick(teklifHakkiPage.aktifBtn);
+        BrowserUtilities.hover(teklifHakkiPage.aktifBtn);
+        BrowserUtilities.clickWithJS(teklifHakkiPage.aktifBtn);
         BrowserUtilities.waitFor(3);
     }
 
@@ -51,14 +56,15 @@ public class TeklifHakkiStepDef {
 
     @And("kullanici Suresi bitenler'e tiklar")
     public void kullaniciSuresiBitenlerETiklar() {
-        BrowserUtilities.doubleClick(teklifHakkiPage.suresiBitenler);
-        BrowserUtilities.waitFor(3);
+        BrowserUtilities.hover(teklifHakkiPage.suresiBitenler);
+        BrowserUtilities.clickWithJS(teklifHakkiPage.suresiBitenler);
 
 
     }
 
     @Then("kullanici  suresi biten teklif haklarini gorur")
     public void kullaniciSuresiBitenTeklifHaklariniGorur() {
+        BrowserUtilities.waitForVisibility(teklifHakkiPage.odemedeKullanildi,15);
         Assert.assertEquals("Ödemede Kullanıldı", teklifHakkiPage.odemedeKullanildi.getText());
 
     }
@@ -92,14 +98,19 @@ public class TeklifHakkiStepDef {
 
     @Then("{string} in gorunundugu sayfa acilir")
     public void in_gorunundugu_sayfa_acilir(String odemeYap) {
+        BrowserUtilities.waitForVisibility(teklifHakkiPage.odemeYapBtn,10);
         Assert.assertEquals(odemeYap, teklifHakkiPage.odemeYapBtn.getText());
 
     }
+    @When("kullanici Fatura adresini secer")
+    public void kullaniciFaturaAdresiniSecer() {
+        BrowserUtilities.clickWithJS(teklifHakkiPage.firmaAdi);
 
+    }
     @When("kullanici Odeme Yap'a tiklar")
     public void kullaniciOdemeYapATiklar() {
         teklifHakkiPage.odemeYapBtn.click();
-        BrowserUtilities.waitFor(3);
+
     }
 
     @When("kullanici kart sahibinin adini yazar")
@@ -117,6 +128,7 @@ public class TeklifHakkiStepDef {
 
     @Then("aldiklarim sayfasi acilir")
     public void aldiklarimSayfasiAcilir() {
+        BrowserUtilities.waitForVisibility(aldiklarimPage.aldikPage,30);
         Assert.assertEquals("Aldıklarım", teklifHakkiPage.aldiklarimPage.getText());
     }
 
@@ -152,5 +164,6 @@ public class TeklifHakkiStepDef {
 
 
     }
+
 
 }
