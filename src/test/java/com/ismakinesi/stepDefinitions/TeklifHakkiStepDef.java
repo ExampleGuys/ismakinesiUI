@@ -33,7 +33,7 @@ public class TeklifHakkiStepDef {
     @When("kullanici Aktif buttonuna tiklar")
     public void kullanici_aktif_buttonuna_tiklar() {
         BrowserUtilities.doubleClick(teklifHakkiPage.aktifBtn);
-        BrowserUtilities.waitFor(3);
+        BrowserUtilities.waitForVisibility(teklifHakkiPage.kullanTek,3);
     }
 
     @Then("kullanici  kullanilabilir durumdaki teklif haklarini gorur")
