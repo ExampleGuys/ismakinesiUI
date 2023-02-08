@@ -142,4 +142,10 @@ public class BilgilerimStepDef {
         bilgilerimPage.sifremiDegistir.click();
         BrowserUtilities.waitFor(3);
     }
+
+    @Then("Kullanici E-mail Adresini Onayla butonuna tiklar")
+    public void kullaniciEMailAdresiniOnaylaButonunaTiklar() {
+        bilgilerimPage.eMailAdresiniOnayla.click();
+        BrowserUtilities.waitFor(3);
+    }
 }
