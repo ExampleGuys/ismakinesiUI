@@ -47,3 +47,8 @@ Feature: Bilgilerim
   @IS-330
   Scenario: TC:IS-330 Kullanici E-mail Adresini Onayla butonuna tiklar
     Then Kullanici E-mail Adresini Onayla butonuna tiklar
+
+  @IS-331
+  Scenario: TC:IS-331 Kullanici Adres Adi, Ulke Adi, Sehir Adi, İlce Adi Adres ve Telefon Numarasi metin kutularina tiklar ve karakter girer
+    And Kullanici Adreslerim butonuna tiklar
+    Then Kullanici Adres Adi, Ulke Adi, Sehir Adi, İlce Adi Adres ve Telefon Numarasi metin kutularina tiklar ve karakter girer

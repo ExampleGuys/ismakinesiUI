@@ -59,4 +59,10 @@ public class BilgilerimPage extends BasePage {
     @FindBy(xpath = "//span/a[@href='javascript:void(0)']")
     public WebElement eMailAdresiniOnayla;
 
+    @FindBy(xpath = "//input[@placeholder=\"Adres Adı\"]")
+    public WebElement adresAdi;
+
+    @FindBy(xpath = "//input[@placeholder=\"Adres\"]")
+    public WebElement adres;
+
 }
