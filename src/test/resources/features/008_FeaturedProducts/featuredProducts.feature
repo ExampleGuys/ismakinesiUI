@@ -1,4 +1,4 @@
-@FeaturedProducts
+@FeaturedProducts @smoke @regression
 Feature: FeaturedProducts
   Background:
     Given Kullanici ismakinesi.com adresine gider

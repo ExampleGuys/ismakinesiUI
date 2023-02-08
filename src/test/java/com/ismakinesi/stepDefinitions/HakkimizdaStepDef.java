@@ -12,10 +12,14 @@ import org.openqa.selenium.JavascriptExecutor;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 public class HakkimizdaStepDef {
 
     FooterPage footerPage = new FooterPage();
+    Random random=new Random();
+
+
 
     @When("Kullanici hakkimizda yazisinin oldugu gorulur")
     public void kullanici_hakkimizda_yazisinin_oldugu_gorulur() {
@@ -80,14 +84,7 @@ public class HakkimizdaStepDef {
 
     }
 
-    @Then("acilan sayfada Gizlilik Sözleşmesi oldugu dogrulanir")
-    public void acilanSayfadaGizlilikSözleşmesiOlduguDogrulanir() {
 
-        Assert.assertTrue(footerPage.GizlilikZleMesiickisim.isDisplayed());
-
-
-
-    }
 
     @And("Kullanici Teklif sistemi butonuna tiklar")
     public void kullaniciTeklifSistemiButonunaTiklar() {
@@ -214,6 +211,14 @@ public class HakkimizdaStepDef {
     public void gonderButonunaTiklanir() {
         BrowserUtilities.clickWithJS(footerPage.Gonder);
         BrowserUtilities.waitFor(2);
+
+
+    }
+
+    @Then("acilan sayfada Gizlilik Sozlesmesi oldugu dogrulanir")
+    public void acilanSayfadaGizlilikSozlesmesiOlduguDogrulanir() {
+        Assert.assertTrue(footerPage.GizlilikZleMesiickisim.isDisplayed());
+
     }
 }
 
