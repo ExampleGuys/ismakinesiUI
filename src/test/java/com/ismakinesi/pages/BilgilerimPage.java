@@ -65,4 +65,13 @@ public class BilgilerimPage extends BasePage {
     @FindBy(xpath = "//input[@placeholder=\"Adres\"]")
     public WebElement adres;
 
+    @FindBy(xpath = "//a[@class=\"dataRemoveBtn\"]")
+    public WebElement kaliciOlarakSil;
+
+    @FindBy(xpath = "//button[@class=\"ant-btn ant-btn-buttonStyle1\"]")
+    public WebElement kaydet;
+
+    @FindBy(xpath = "//*[@class=\"ant-btn\"]")
+    public WebElement iptal;
+
 }

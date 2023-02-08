@@ -166,4 +166,24 @@ public class BilgilerimStepDef {
         BrowserUtilities.cleanTextInBox(bilgilerimPage.telefonNumarasi);
         bilgilerimPage.telefonNumarasi.sendKeys("49 801 3897485747");
     }
+
+    @Then("Kullanici Kalici Olarak Sil butonu gorunmeli ve tiklanmalidir")
+    public void kullaniciKaliciOlarakSilButonuGorunmeliVeTiklanmalidir() {
+        bilgilerimPage.adresDuzenle.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.kaliciOlarakSil.click();
+        BrowserUtilities.waitFor(2);
+        bilgilerimPage.iptal.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.kaydet.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.adresDuzenle.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.kapat.click();
+        BrowserUtilities.waitFor(2);
+    }
 }

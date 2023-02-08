@@ -52,3 +52,8 @@ Feature: Bilgilerim
   Scenario: TC:IS-331 Kullanici Adres Adi, Ulke Adi, Sehir Adi, İlce Adi Adres ve Telefon Numarasi metin kutularina tiklar ve karakter girer
     And Kullanici Adreslerim butonuna tiklar
     Then Kullanici Adres Adi, Ulke Adi, Sehir Adi, İlce Adi Adres ve Telefon Numarasi metin kutularina tiklar ve karakter girer
+
+  @IS-332
+  Scenario: TC:IS-332 Kullanici Kalici Olarak Sil butonu gorunmeli ve tiklanmalidir
+    And Kullanici Adreslerim butonuna tiklar
+    Then Kullanici Kalici Olarak Sil butonu gorunmeli ve tiklanmalidir
