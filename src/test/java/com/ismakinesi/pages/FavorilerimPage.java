@@ -15,6 +15,6 @@ public class FavorilerimPage extends BasePage {
     public WebElement favoriUrununSayfasi;
 
     @FindBy(xpath = "//a/div[@class='content']")
-    public WebElement favoriUrunIkı;
+    public WebElement favoriUrunIki;
 
 }
