@@ -43,3 +43,7 @@ Feature: Bilgilerim
   Scenario: TC:IS-344 Kullanici Sifremi Degistir butonunu tiklar ve dogrular
     And Kullanici Sifre Degistir butonuna tiklar
     Then Kullanici Sifremi Degistir butonunu tiklar ve dogrular
+
+  @IS-330
+  Scenario: TC:IS-330 Kullanici E-mail Adresini Onayla butonuna tiklar
+    Then Kullanici E-mail Adresini Onayla butonuna tiklar
