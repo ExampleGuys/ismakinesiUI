@@ -148,4 +148,22 @@ public class BilgilerimStepDef {
         bilgilerimPage.eMailAdresiniOnayla.click();
         BrowserUtilities.waitFor(3);
     }
+
+    @Then("Kullanici Adres Adi, Ulke Adi, Sehir Adi, İlce Adi Adres ve Telefon Numarasi metin kutularina tiklar ve karakter girer")
+    public void kullaniciAdresAdiUlkeAdiSehirAdiİlceAdiAdresVeTelefonNumarasiMetinKutularinaTiklarVeKarakterGirer() {
+        bilgilerimPage.adresDuzenle.click();
+        BrowserUtilities.waitFor(3);
+
+        bilgilerimPage.adresAdi.click();
+        BrowserUtilities.cleanTextInBox(bilgilerimPage.adresAdi);
+        bilgilerimPage.adresAdi.sendKeys("Miller Leffler");
+
+        bilgilerimPage.adres.click();
+        BrowserUtilities.cleanTextInBox(bilgilerimPage.adres);
+        bilgilerimPage.adres.sendKeys("753 Loria Rest, Lake Lee, SD 79461");
+
+        bilgilerimPage.telefonNumarasi.click();
+        BrowserUtilities.cleanTextInBox(bilgilerimPage.telefonNumarasi);
+        bilgilerimPage.telefonNumarasi.sendKeys("49 801 3897485747");
+    }
 }
