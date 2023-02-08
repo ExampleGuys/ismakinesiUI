@@ -26,4 +26,9 @@ public class FavorilerimStepDef {
     public void kullaniciUrunBilgileriSayfasinaGider() {
         System.out.println("favorilerimPage.favoriUrununSayfasi.getText() = " + favorilerimPage.favoriUrununSayfasi.getText());
     }
+
+    @Then("Kullanici Favori olarak secilen urunleri gorur")
+    public void kullaniciFavoriOlarakSecilenUrunleriGorur() {
+        System.out.println("favorilerimPage.favoriUrunIkı.getText() = " + favorilerimPage.favoriUrunIkı.getText());
+    }
 }
