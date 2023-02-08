@@ -13,4 +13,8 @@ public class FavorilerimPage extends BasePage {
 
     @FindBy(xpath = "//div[@class='productDetailRight']")
     public WebElement favoriUrununSayfasi;
+
+    @FindBy(xpath = "//a/div[@class='content']")
+    public WebElement favoriUrunIkı;
+
 }
