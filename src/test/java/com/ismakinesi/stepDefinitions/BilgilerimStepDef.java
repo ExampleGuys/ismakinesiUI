@@ -186,4 +186,10 @@ public class BilgilerimStepDef {
         bilgilerimPage.kapat.click();
         BrowserUtilities.waitFor(2);
     }
+
+    @Then("Kullanici Firma Bilgilerini gorur")
+    public void kullaniciFirmaBilgileriniGorur() {
+        BrowserUtilities.waitFor(3);
+        System.out.println("bilgilerimPage.firmaBilgisi.getText() = " + bilgilerimPage.firmaBilgisi.getText());
+    }
 }

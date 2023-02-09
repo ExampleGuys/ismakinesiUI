@@ -57,3 +57,8 @@ Feature: Bilgilerim
   Scenario: TC:IS-332 Kullanici Kalici Olarak Sil butonu gorunmeli ve tiklanmalidir
     And Kullanici Adreslerim butonuna tiklar
     Then Kullanici Kalici Olarak Sil butonu gorunmeli ve tiklanmalidir
+
+  @IS-333
+  Scenario: TC:IS-333 Kullanici Firma Bilgilerini gorur
+    And Kullanici Firma Bilgilerim butonuna tiklar
+    Then Kullanici Firma Bilgilerini gorur
