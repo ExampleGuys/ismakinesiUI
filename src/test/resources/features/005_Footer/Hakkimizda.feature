@@ -26,9 +26,9 @@ Feature: ismakinasi.com hakkinda
   @IS-154
   Scenario:IS-154 TC:IS-154 Gizlilik sozlesmesi butonuna tiklandigi gorulebilmeli
     And Kullanici Gizlilik Merkezi butonuna tiklar
-    Then acilan sayfada Gizlilik Sözleşmesi oldugu dogrulanir
+    Then acilan sayfada Gizlilik Sozlesmesi oldugu dogrulanir
 
-  @TicaretNasilGerceklesiyor
+  @TicaretNasilGerceklesiyo
 
   @IS-159
   Scenario: IS-159 TC:IS-159 Teklif sistemi butonuna tiklandigi gorulebilmeli
