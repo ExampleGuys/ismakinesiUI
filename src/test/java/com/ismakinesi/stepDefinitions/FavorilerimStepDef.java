@@ -29,6 +29,6 @@ public class FavorilerimStepDef {
 
     @Then("Kullanici Favori olarak secilen urunleri gorur")
     public void kullaniciFavoriOlarakSecilenUrunleriGorur() {
-        System.out.println("favorilerimPage.favoriUrunIkı.getText() = " + favorilerimPage.favoriUrunIkı.getText());
+        System.out.println("favorilerimPage.favoriUrunIkı.getText() = " + favorilerimPage.favoriUrunIki.getText());
     }
 }
