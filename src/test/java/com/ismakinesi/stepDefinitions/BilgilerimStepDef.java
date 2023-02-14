@@ -192,4 +192,25 @@ public class BilgilerimStepDef {
         BrowserUtilities.waitFor(3);
         System.out.println("bilgilerimPage.firmaBilgisi.getText() = " + bilgilerimPage.firmaBilgisi.getText());
     }
+
+    @Then("Kullanici Firma adi, Adres ve Telefon Numarasi metin kutularina tiklar")
+    public void kullaniciFirmaAdiAdresVeTelefonNumarasiMetinKutularinaTiklar() {
+        bilgilerimPage.adresDuzenle.click();
+        BrowserUtilities.waitFor(3);
+
+        bilgilerimPage.firmaAdi.click();
+        BrowserUtilities.waitFor(3);
+        BrowserUtilities.cleanTextInBox(bilgilerimPage.firmaAdi);
+        bilgilerimPage.firmaAdi.sendKeys("Berk İnşaat A:Ş:");
+
+        bilgilerimPage.adres.click();
+        BrowserUtilities.waitFor(3);
+        BrowserUtilities.cleanTextInBox(bilgilerimPage.adres);
+        bilgilerimPage.adres.sendKeys("Yeni Doğan Mahallesi  , Sancaktar Sokak No:1/15 Erdem Apt. Kat:7");
+
+        bilgilerimPage.telefonNumarasi.click();
+        BrowserUtilities.waitFor(3);
+        BrowserUtilities.cleanTextInBox(bilgilerimPage.telefonNumarasi);
+        bilgilerimPage.adres.sendKeys("90 551 655 96 38");
+    }
 }

@@ -62,3 +62,8 @@ Feature: Bilgilerim
   Scenario: TC:IS-333 Kullanici Firma Bilgilerini gorur
     And Kullanici Firma Bilgilerim butonuna tiklar
     Then Kullanici Firma Bilgilerini gorur
+
+  @IS-335
+  Scenario: TC:IS-335 Kullanici Firma adi, Adres ve Telefon Numarasi metin kutularina tiklar
+    And Kullanici Firma Bilgilerim butonuna tiklar
+    Then Kullanici Firma adi, Adres ve Telefon Numarasi metin kutularina tiklar
