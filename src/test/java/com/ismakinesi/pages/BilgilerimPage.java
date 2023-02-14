@@ -77,4 +77,7 @@ public class BilgilerimPage extends BasePage {
     @FindBy(xpath = "//*[@class=\"h180 address-item\"]")
     public WebElement firmaBilgisi;
 
+    @FindBy(xpath = "//*[@id=\"coordinated_title\"]")
+    public WebElement firmaAdi;
+
 }
