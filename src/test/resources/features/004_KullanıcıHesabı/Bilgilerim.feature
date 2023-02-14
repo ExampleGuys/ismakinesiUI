@@ -67,3 +67,8 @@ Feature: Bilgilerim
   Scenario: TC:IS-335 Kullanici Firma adi, Adres ve Telefon Numarasi metin kutularina tiklar
     And Kullanici Firma Bilgilerim butonuna tiklar
     Then Kullanici Firma adi, Adres ve Telefon Numarasi metin kutularina tiklar
+
+  @IS-336
+  Scenario: TC:IS-336 Kullanici Kalici olarak sil, Kaydet ve Kapat butonlarina tiklar
+    And Kullanici Firma Bilgilerim butonuna tiklar
+    Then Kullanici Kalici olarak sil, Kaydet ve Kapat butonlarina tiklar

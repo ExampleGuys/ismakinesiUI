@@ -213,4 +213,25 @@ public class BilgilerimStepDef {
         BrowserUtilities.cleanTextInBox(bilgilerimPage.telefonNumarasi);
         bilgilerimPage.adres.sendKeys("90 551 655 96 38");
     }
+
+    @Then("Kullanici Kalici olarak sil, Kaydet ve Kapat butonlarina tiklar")
+    public void kullaniciKaliciOlarakSilKaydetVeKapatButonlarinaTiklar() {
+        bilgilerimPage.adresDuzenle.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.kaliciOlarakSil.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.iptal.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.kaydet.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.adresDuzenle.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.kapat.click();
+        BrowserUtilities.waitFor(2);
+    }
 }
