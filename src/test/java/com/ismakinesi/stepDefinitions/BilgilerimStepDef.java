@@ -234,4 +234,20 @@ public class BilgilerimStepDef {
         bilgilerimPage.kapat.click();
         BrowserUtilities.waitFor(2);
     }
+
+    @Then("Kullanici Firma Sec ve Para Birimi Listelerine tiklar ve bir opsiyon secer")
+    public void kullaniciFirmaSecVeParaBirimiListelerineTiklarVeBirOpsiyonSecer() {
+        bilgilerimPage.yeniAdres.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.firmaSec.click();
+        BrowserUtilities.waitFor(2);
+        bilgilerimPage.firmaDropdown.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.paraBirimiSec.click();
+        BrowserUtilities.waitFor(2);
+        bilgilerimPage.firmaDropdown.click();
+        BrowserUtilities.waitFor(2);
+    }
 }

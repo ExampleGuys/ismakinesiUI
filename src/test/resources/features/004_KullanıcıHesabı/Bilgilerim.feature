@@ -72,3 +72,8 @@ Feature: Bilgilerim
   Scenario: TC:IS-336 Kullanici Kalici olarak sil, Kaydet ve Kapat butonlarina tiklar
     And Kullanici Firma Bilgilerim butonuna tiklar
     Then Kullanici Kalici olarak sil, Kaydet ve Kapat butonlarina tiklar
+
+  @IS-339
+  Scenario: TC:IS-339 Kullanici Firma Sec ve Para Birimi Listelerine tiklar ve bir opsiyon secer
+    And Kullanici Banka Bilgilerim butonuna tiklar
+    Then Kullanici Firma Sec ve Para Birimi Listelerine tiklar ve bir opsiyon secer
