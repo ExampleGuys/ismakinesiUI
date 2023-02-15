@@ -80,4 +80,13 @@ public class BilgilerimPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"coordinated_title\"]")
     public WebElement firmaAdi;
 
+    @FindBy(xpath = "//*[@id=\"coordinated_company_id\"]/div")
+    public WebElement firmaSec;
+
+    @FindBy(xpath = "//li[@class=\"ant-select-dropdown-menu-item ant-select-dropdown-menu-item-active\"]")
+    public WebElement firmaDropdown;
+
+    @FindBy(xpath = "//*[@id=\"coordinated_currency_code\"]")
+    public WebElement paraBirimiSec;
+
 }
