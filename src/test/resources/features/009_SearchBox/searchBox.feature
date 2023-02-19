@@ -1,4 +1,4 @@
-@SearchBox
+@SearchBox @regression
 Feature: SearchBox
 
   Background:
@@ -24,7 +24,4 @@ Feature: SearchBox
       | forklift      |
       | ekskavator    |
       | ekskavatorler |
-
-
-
 
