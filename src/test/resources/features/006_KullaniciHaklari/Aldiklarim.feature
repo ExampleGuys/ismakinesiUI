@@ -1,5 +1,5 @@
 @regression @aldiklarim
-Feature:
+Feature: aldiklarim
 
   Background:
     Given Kullanici ismakinesi.com adresine gider
