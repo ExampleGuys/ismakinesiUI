@@ -86,4 +86,4 @@ Feature: Bilgilerim
   @IS-342
   Scenario: TC:IS-342 Kullanici Kapat butonuna tiklar ve calistirir
     And Kullanici Banka Bilgilerim butonuna tiklar
-    Then Kullanıcı Kapat butonunu görür, tıklar ve çalıştırır
+    Then Kullanici Kapat butonuna tiklar ve calistirir

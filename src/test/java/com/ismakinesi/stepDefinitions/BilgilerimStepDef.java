@@ -279,8 +279,8 @@ public class BilgilerimStepDef {
 
     }
 
-    @Then("Kullanıcı Kapat butonunu görür, tıklar ve çalıştırır")
-    public void kullanıcıKapatButonunuGörürTıklarVeÇalıştırır() {
+    @Then("Kullanici Kapat butonuna tiklar ve calistirir")
+    public void kullaniciKapatButonunaTiklarVeCalistirir() {
         bilgilerimPage.yeniAdres.click();
         BrowserUtilities.waitFor(2);
 
