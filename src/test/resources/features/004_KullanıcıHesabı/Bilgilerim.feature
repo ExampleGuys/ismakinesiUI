@@ -87,3 +87,8 @@ Feature: Bilgilerim
   Scenario: TC:IS-342 Kullanici Kapat butonuna tiklar ve calistirir
     And Kullanici Banka Bilgilerim butonuna tiklar
     Then Kullanici Kapat butonuna tiklar ve calistirir
+
+  @IS-346
+  Scenario: TC:IS-346 Kullanici Telefon Numarasinin Ulke Kodu listesine tiklar, acar ve ulke kodu secer
+    And Kullanici Adreslerim butonuna tiklar
+    Then Kullanici Telefon Numarasinin Ulke Kodu listesine tiklar, acar ve ulke kodu secer

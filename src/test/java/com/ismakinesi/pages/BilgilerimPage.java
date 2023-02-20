@@ -104,4 +104,9 @@ public class BilgilerimPage extends BasePage {
     @FindBy(xpath = "//textarea[@placeholder=\"Not\"]")
     public WebElement not;
 
+    @FindBy(xpath = "//input[@placeholder=\"Country code\"]")
+    public WebElement ulkeKodu;
+
+    @FindBy(xpath = "//div/button/div[2]")
+    public WebElement ulke;
 }

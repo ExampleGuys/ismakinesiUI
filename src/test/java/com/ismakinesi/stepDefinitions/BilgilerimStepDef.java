@@ -287,4 +287,16 @@ public class BilgilerimStepDef {
         bilgilerimPage.kapat.click();
         BrowserUtilities.waitFor(2);
     }
+
+    @Then("Kullanici Telefon Numarasinin Ulke Kodu listesine tiklar, acar ve ulke kodu secer")
+    public void kullaniciTelefonNumarasininUlkeKoduListesineTiklarAcarVeUlkeKoduSecer() {
+        bilgilerimPage.adresDuzenle.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.ulkeKodu.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.ulke.click();
+        BrowserUtilities.waitFor(2);
+    }
 }
