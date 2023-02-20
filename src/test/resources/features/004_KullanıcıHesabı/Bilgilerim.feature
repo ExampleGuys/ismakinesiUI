@@ -82,3 +82,8 @@ Feature: Bilgilerim
   Scenario: TC:IS-340 Kullanici Banka Adi, Iban, Swift Kodu, Adres ve Not metin kutularina tiklar ve karakter girer
     And Kullanici Banka Bilgilerim butonuna tiklar
     Then Kullanıcı Banka Adı, Iban, Swift Kodu, Adres ve Not metin kutularını görür, tıklar ve karakter girer
+
+  @IS-342
+  Scenario: TC:IS-342 Kullanici Kapat butonuna tiklar ve calistirir
+    And Kullanici Banka Bilgilerim butonuna tiklar
+    Then Kullanıcı Kapat butonunu görür, tıklar ve çalıştırır

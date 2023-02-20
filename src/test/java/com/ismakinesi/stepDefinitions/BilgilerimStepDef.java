@@ -278,4 +278,13 @@ public class BilgilerimStepDef {
         bilgilerimPage.not.sendKeys("testing in progress...");
 
     }
+
+    @Then("Kullanıcı Kapat butonunu görür, tıklar ve çalıştırır")
+    public void kullanıcıKapatButonunuGörürTıklarVeÇalıştırır() {
+        bilgilerimPage.yeniAdres.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.kapat.click();
+        BrowserUtilities.waitFor(2);
+    }
 }
