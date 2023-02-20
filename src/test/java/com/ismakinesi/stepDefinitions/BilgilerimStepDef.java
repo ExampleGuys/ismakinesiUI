@@ -250,4 +250,32 @@ public class BilgilerimStepDef {
         bilgilerimPage.firmaDropdown.click();
         BrowserUtilities.waitFor(2);
     }
+
+    @Then("Kullanıcı Banka Adı, Iban, Swift Kodu, Adres ve Not metin kutularını görür, tıklar ve karakter girer")
+    public void kullanıcıBankaAdıIbanSwiftKoduAdresVeNotMetinKutularınıGörürTıklarVeKarakterGirer() {
+        bilgilerimPage.yeniAdres.click();
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.bankaAdi.click();
+        BrowserUtilities.waitFor(2);
+        bilgilerimPage.bankaAdi.sendKeys("İş Bankası");
+
+        bilgilerimPage.iban.click();
+        BrowserUtilities.waitFor(2);
+        bilgilerimPage.iban.sendKeys("IBAN414141414141");
+
+        bilgilerimPage.swiftKodu.click();
+        BrowserUtilities.waitFor(2);
+        bilgilerimPage.swiftKodu.sendKeys("41414141");
+
+        bilgilerimPage.bankaBilgisiAdres.click();
+        BrowserUtilities.waitFor(2);
+        bilgilerimPage.bankaBilgisiAdres.sendKeys("Arap Hasan, İnönü Cd. 313/A, 35150 Karabağlar/İzmir Türkiye İş Bankası Hatay/İzmir Şubesi");
+        BrowserUtilities.waitFor(2);
+
+        bilgilerimPage.not.click();
+        BrowserUtilities.waitFor(2);
+        bilgilerimPage.not.sendKeys("testing in progress...");
+
+    }
 }

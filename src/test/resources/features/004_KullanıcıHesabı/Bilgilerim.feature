@@ -77,3 +77,8 @@ Feature: Bilgilerim
   Scenario: TC:IS-339 Kullanici Firma Sec ve Para Birimi Listelerine tiklar ve bir opsiyon secer
     And Kullanici Banka Bilgilerim butonuna tiklar
     Then Kullanici Firma Sec ve Para Birimi Listelerine tiklar ve bir opsiyon secer
+
+  @IS-340
+  Scenario: TC:IS-340 Kullanici Banka Adi, Iban, Swift Kodu, Adres ve Not metin kutularina tiklar ve karakter girer
+    And Kullanici Banka Bilgilerim butonuna tiklar
+    Then Kullanıcı Banka Adı, Iban, Swift Kodu, Adres ve Not metin kutularını görür, tıklar ve karakter girer

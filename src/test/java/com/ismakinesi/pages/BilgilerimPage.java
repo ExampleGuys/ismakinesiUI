@@ -89,4 +89,19 @@ public class BilgilerimPage extends BasePage {
     @FindBy(xpath = "//*[@id=\"coordinated_currency_code\"]")
     public WebElement paraBirimiSec;
 
+    @FindBy(xpath = "//input[@placeholder=\"Banka Adı\"]")
+    public WebElement bankaAdi;
+
+    @FindBy(xpath = "//input[@placeholder=\"Iban\"]")
+    public WebElement iban;
+
+    @FindBy(xpath = "//input[@placeholder=\"Swift Kodu\"]")
+    public WebElement swiftKodu;
+
+    @FindBy(xpath = "//textarea[@placeholder=\"Adres\"]")
+    public WebElement bankaBilgisiAdres;
+
+    @FindBy(xpath = "//textarea[@placeholder=\"Not\"]")
+    public WebElement not;
+
 }
