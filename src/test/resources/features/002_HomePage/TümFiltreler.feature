@@ -51,3 +51,19 @@ Feature: All Filters
     And calisma saati araligi girer
     And fiyat araligi girer
     Then secilen ilanin filitrelendigini dogrular.
+
+  @IS-54
+  Scenario: TC:IS-54 Sinirli Servis Garantisi yazisi dogrulanmali.
+    Then Kullanici Sinirli Servis Garantisi basligini dogrular
+
+  @IS-55
+  Scenario: TC:IS-55 Üretim Yili yazisi dogrulanmali.
+    Then Uretim Yili basligini dogrular
+
+  @IS-56
+  Scenario: TC:IS-56 Calisma Saati yazisi dogrulanmali
+    Then Calisma Saati basligini dogrular
+
+  @IS-57
+  Scenario: TC:IS-57 Fiyat yazisi dogrulanmali
+    Then Fiyat basligini dogrular

@@ -20,8 +20,9 @@ public class HomeStepDef{
 
     @When("Forkliftler'e tiklar")
     public void forkliftler_e_tiklar() {
-        BrowserUtilities.hover(homePage.forklift);
-        homePage.forklift.click();
+        BrowserUtilities.hover(homePage.forkliftler);
+        homePage.forkliftler.click();
+        BrowserUtilities.waitFor(3);
 
     }
 
@@ -29,6 +30,7 @@ public class HomeStepDef{
     public void tum_filtreler_e_tiklar() {
         BrowserUtilities.hover(homePage.allFilters);
         homePage.allFilters.click();
+        BrowserUtilities.waitFor(3);
 
     }
 
@@ -260,5 +262,25 @@ public class HomeStepDef{
     public void logoyaTiklar() {
         homePage.logo.click();
         BrowserUtilities.waitFor(4);
+    }
+
+    @Then("Kullanici Sinirli Servis Garantisi basligini dogrular")
+    public void kullaniciSinirliServisGarantisiBasliginiDogrular() {
+        System.out.println("homePage.limitedService.getText() = " + homePage.limitedService.getText());
+    }
+
+    @Then("Uretim Yili basligini dogrular")
+    public void uretimYiliBasliginiDogrular() {
+        System.out.println("homePage.yearOfProduction.getText() = " + homePage.yearOfProduction.getText());
+    }
+
+    @Then("Calisma Saati basligini dogrular")
+    public void calismaSaatiBasliginiDogrular() {
+        System.out.println("homePage.studyTime.getText() = " + homePage.studyTime.getText());
+    }
+
+    @Then("Fiyat basligini dogrular")
+    public void fiyatBasliginiDogrular() {
+        System.out.println("homePage.price.getText() = " + homePage.price.getText());
     }
 }
