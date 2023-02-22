@@ -265,7 +265,12 @@ public class HomeStepDef{
     }
 
     @Then("Kullanici Sinirli Servis Garantisi basligini dogrular")
-    public void kullaniciSınırlıServisGarantisiBasliginiDogrular() {
+    public void kullaniciSinirliServisGarantisiBasliginiDogrular() {
         System.out.println("homePage.limitedService.getText() = " + homePage.limitedService.getText());
+    }
+
+    @Then("Uretim Yili basligini dogrular")
+    public void uretimYiliBasliginiDogrular() {
+        System.out.println("homePage.yearOfProduction.getText() = " + homePage.yearOfProduction.getText());
     }
 }

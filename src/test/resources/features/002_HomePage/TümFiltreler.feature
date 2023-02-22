@@ -53,5 +53,9 @@ Feature: All Filters
     Then secilen ilanin filitrelendigini dogrular.
 
   @IS-54
-  Scenario: TC:IS-54 "Sinirli Servis Garantisi" yazisi dogrulanmali.
+  Scenario: TC:IS-54 Sinirli Servis Garantisi yazisi dogrulanmali.
     Then Kullanici Sinirli Servis Garantisi basligini dogrular
+
+  @IS-55
+  Scenario: TC:IS-55 Üretim Yili yazisi dogrulanmali.
+    Then Uretim Yili basligini dogrular
