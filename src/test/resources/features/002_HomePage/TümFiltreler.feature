@@ -54,4 +54,4 @@ Feature: All Filters
 
   @IS-54
   Scenario: TC:IS-54 "Sinirli Servis Garantisi" yazisi dogrulanmali.
-    Then Kullanici Sınırlı Servis Garantisi basligini dogrular
+    Then Kullanici Sinirli Servis Garantisi basligini dogrular

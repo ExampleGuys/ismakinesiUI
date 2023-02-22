@@ -264,7 +264,7 @@ public class HomeStepDef{
         BrowserUtilities.waitFor(4);
     }
 
-    @Then("Kullanici Sınırlı Servis Garantisi basligini dogrular")
+    @Then("Kullanici Sinirli Servis Garantisi basligini dogrular")
     public void kullaniciSınırlıServisGarantisiBasliginiDogrular() {
         System.out.println("homePage.limitedService.getText() = " + homePage.limitedService.getText());
     }
