@@ -278,4 +278,9 @@ public class HomeStepDef{
     public void calismaSaatiBasliginiDogrular() {
         System.out.println("homePage.studyTime.getText() = " + homePage.studyTime.getText());
     }
+
+    @Then("Fiyat basligini dogrular")
+    public void fiyatBasliginiDogrular() {
+        System.out.println("homePage.price.getText() = " + homePage.price.getText());
+    }
 }

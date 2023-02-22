@@ -63,3 +63,7 @@ Feature: All Filters
   @IS-56
   Scenario: TC:IS-56 Calisma Saati yazisi dogrulanmali
     Then Calisma Saati basligini dogrular
+
+  @IS-57
+  Scenario: TC:IS-57 Fiyat yazisi dogrulanmali
+    Then Fiyat basligini dogrular
