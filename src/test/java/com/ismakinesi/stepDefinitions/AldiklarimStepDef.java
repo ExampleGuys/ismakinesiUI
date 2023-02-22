@@ -70,12 +70,24 @@ public class AldiklarimStepDef {
     public void kullaniciOncedenAlmisOlduguUrunleriGorur() {
         try {
             BrowserUtilities.doubleClick(aldiklarimPage.photosAl);
-            BrowserUtilities.waitForVisibility(aldiklarimPage.alinanArac,5);
+            BrowserUtilities.waitForVisibility(aldiklarimPage.alinanArac, 5);
             String alMakine = aldiklarimPage.alinanArac.getText();
             Assert.assertEquals("SATILDI", alMakine);
         } catch (Exception e) {
             e.printStackTrace();
         }
 
+    }
+
+    @Then("kullanici  teklif vermis oldugu urunleri gorur")
+    public void kullaniciTeklifVermisOlduguUrunleriGorur() {
+        System.out.println("aldiklarimPage.teklifVerilenUrunler.getText() = " + aldiklarimPage.teklifVerilenUrunler.getText());
+        BrowserUtilities.waitFor(2);
+    }
+
+    @And("kullanici bu sayfadaki Tekliflerim'e  tiklar")
+    public void kullaniciBuSayfadakiTekliflerimETiklar() {
+        aldiklarimPage.tekliflerim.click();
+        BrowserUtilities.waitFor(2);
     }
 }

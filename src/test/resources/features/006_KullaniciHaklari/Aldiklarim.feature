@@ -22,3 +22,8 @@ Feature: aldiklarim
 
     Then kullanici onceden almis oldugu urunleri gorur
 
+  @IS-97
+  Scenario: TC:IS-97 Kullanici Aldiklarim sayfasindaki Tekliflerim'e tiklayinca teklif vermis oldugu urunleri gorur
+    And kullanici bu sayfadaki Tekliflerim'e  tiklar
+    Then kullanici  teklif vermis oldugu urunleri gorur
+
