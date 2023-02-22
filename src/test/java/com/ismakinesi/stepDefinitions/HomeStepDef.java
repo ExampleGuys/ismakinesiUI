@@ -20,8 +20,9 @@ public class HomeStepDef{
 
     @When("Forkliftler'e tiklar")
     public void forkliftler_e_tiklar() {
-        BrowserUtilities.hover(homePage.forklift);
-        homePage.forklift.click();
+        BrowserUtilities.hover(homePage.forkliftler);
+        homePage.forkliftler.click();
+        BrowserUtilities.waitFor(3);
 
     }
 
@@ -29,6 +30,7 @@ public class HomeStepDef{
     public void tum_filtreler_e_tiklar() {
         BrowserUtilities.hover(homePage.allFilters);
         homePage.allFilters.click();
+        BrowserUtilities.waitFor(3);
 
     }
 
@@ -260,5 +262,10 @@ public class HomeStepDef{
     public void logoyaTiklar() {
         homePage.logo.click();
         BrowserUtilities.waitFor(4);
+    }
+
+    @Then("Kullanici Sınırlı Servis Garantisi basligini dogrular")
+    public void kullaniciSınırlıServisGarantisiBasliginiDogrular() {
+        System.out.println("homePage.limitedService.getText() = " + homePage.limitedService.getText());
     }
 }

@@ -51,3 +51,7 @@ Feature: All Filters
     And calisma saati araligi girer
     And fiyat araligi girer
     Then secilen ilanin filitrelendigini dogrular.
+
+  @IS-54
+  Scenario: TC:IS-54 "Sinirli Servis Garantisi" yazisi dogrulanmali.
+    Then Kullanici Sınırlı Servis Garantisi basligini dogrular
