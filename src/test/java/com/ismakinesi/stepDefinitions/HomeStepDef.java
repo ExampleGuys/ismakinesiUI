@@ -273,4 +273,9 @@ public class HomeStepDef{
     public void uretimYiliBasliginiDogrular() {
         System.out.println("homePage.yearOfProduction.getText() = " + homePage.yearOfProduction.getText());
     }
+
+    @Then("Calisma Saati basligini dogrular")
+    public void calismaSaatiBasliginiDogrular() {
+        System.out.println("homePage.studyTime.getText() = " + homePage.studyTime.getText());
+    }
 }
