@@ -15,7 +15,7 @@ Feature: Uye Ol / Register
     And kullanici Register Uye Ol'a tiklar
     Then kullanici Telefon Kodu Dogrulama sayfasinin acildigini dogrular
 
-  @IS-363
+  @IS-365
     Scenario Outline: TC:IS-365 Sekiz(8) Karakterden Az Sifre Ile Register Olma
     When kullanici Uye Ol Veya Giris Yap'a tiklar
     When kullanici Uye Ol'a tiklar
