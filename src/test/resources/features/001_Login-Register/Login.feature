@@ -4,8 +4,8 @@ Feature: Giris
   Background:
     Given Kullanici ismakinesi.com adresine gider
 
-  @IS-89
-  Scenario: TC:IS-89 Kullanici Sign-in sayfasina yazdigi email adresi ve valid sifre ile siteye uye olarak girebilir.
+  @IS-366
+  Scenario: TC:IS-366 Kullanici Sign-in sayfasina yazdigi email adresi ve valid sifre ile siteye uye olarak girebilir.
     When kullanici Uye Ol Veya Giris Yapa tiklar
     Then Uye Girisi sayfasi acilir
     When kullanici valid email adresi yazar
