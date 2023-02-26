@@ -85,8 +85,8 @@ public class AldiklarimStepDef {
         BrowserUtilities.waitFor(2);
     }
 
-    @And("kullanici bu sayfadaki Tekliflerim'e  tiklar")
-    public void kullaniciBuSayfadakiTekliflerimETiklar() {
+    @And("kullanici bu sayfadaki Tekliflerim'e tiklar")
+    public void kullaniciBuSayfadakiTekliflerimeTiklar() {
         aldiklarimPage.tekliflerim.click();
         BrowserUtilities.waitFor(2);
     }
