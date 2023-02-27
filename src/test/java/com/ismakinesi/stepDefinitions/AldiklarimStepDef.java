@@ -81,7 +81,8 @@ public class AldiklarimStepDef {
 
     @Then("kullanici  teklif vermis oldugu urunleri gorur")
     public void kullaniciTeklifVermisOlduguUrunleriGorur() {
-        System.out.println("aldiklarimPage.teklifVerilenUrunler.getText() = " + aldiklarimPage.teklifVerilenUrunler.getText());
+        String teklifVer = aldiklarimPage.teklifVerilenArac.getText();
+        Assert.assertEquals("Teklifiniz Onay Bekliyor", teklifVer);
         BrowserUtilities.waitFor(2);
     }
 

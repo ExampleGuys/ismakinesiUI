@@ -23,5 +23,6 @@ public class AldiklarimPage extends BasePage {
     @FindBy(css = "a[href='/profile/item/offer/list']")
     public WebElement tekliflerim;
 
-
+    @FindBy(css = "div[class*='status']")
+    public WebElement teklifVerilenArac;
 }
