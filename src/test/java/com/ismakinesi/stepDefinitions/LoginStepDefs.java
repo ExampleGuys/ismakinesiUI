@@ -169,4 +169,26 @@ public class LoginStepDefs {
         BrowserUtilities.doubleClick(loginPage.loginSekmesi);
         BrowserUtilities.waitFor(5);
     }
+
+    @And("Kullanici Giris Yap sekmesindeki Uye Ol’a tiklar")
+    public void kullaniciGirisYapSekmesindekiUyeOlATiklar() {
+        loginPage.uyeOl.click();
+        BrowserUtilities.waitFor(2);
+    }
+
+    @And("kullanici eksik sifre yazar")
+    public void kullaniciEksikSifreYazar() {
+        loginPage.sifre.sendKeys("test123");
+    }
+
+    @Then("Sifre en az 8 karekter olmalidir mesaji geldigini dogrular")
+    public void mesajiGeldiginiDogrular() {
+        Assert.assertEquals("Şifre değeri en az 8 karakter uzunluğunda olmalıdır.", loginPage.sifreUyari.getText());
+    }
+
+    @And("Kullanici Uye Ol'a tiklar")
+    public void kullaniciUyeOlATiklar() {
+        loginPage.uyeOlSubmit.click();
+        BrowserUtilities.waitFor(2);
+    }
 }
