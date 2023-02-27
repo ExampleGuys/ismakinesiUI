@@ -81,8 +81,17 @@ Feature: Giris
       | softwareengineer00090@mail.com    |
 
   @IS-371
-  Scenario: TC:IS Kullanici Uye Girisi sekmesindeyken herhangi bir yere tiklandiginda sekme kapanmamalidir
+  Scenario: TC:IS-371 Kullanici Uye Girisi sekmesindeyken herhangi bir yere tiklandiginda sekme kapanmamalidir
     When kullanici Uye Ol Veya Giris Yap'a tiklar
     Then Kullanici Uye Ol Veya Giris Yap sekmesindeyken sayfanin herhangi bir yerine tiklar
 
-
+  @IS-381
+  Scenario: TC:IS-381 Kullanici 8 karekterden az sifre girdiyse uyari mesaji gelir
+    When kullanici Uye Ol Veya Giris Yap'a tiklar
+    And Kullanici Giris Yap sekmesindeki Uye Ol’a tiklar
+    And kullanici adini soyadini yazar
+    And kullanici emailini yazar
+    And kullanici telefon numarasini yazar
+    And kullanici eksik sifre yazar
+    And Kullanici Uye Ol'a tiklar
+    Then Sifre en az 8 karekter olmalidir mesaji geldigini dogrular

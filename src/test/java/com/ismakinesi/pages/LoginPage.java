@@ -43,6 +43,18 @@ public class LoginPage extends BasePage {
     @FindBy(css = "div[title*='Login']")
     public WebElement loginSekmesi;
 
+    @FindBy(css = "div[class*='ant-message-notice-content']")
+    public WebElement sifreUyari;
+
+    @FindBy(css = "div>p>button")
+    public WebElement uyeOl;
+
+    @FindBy(css = "button[type='submit']")
+    public WebElement uyeOlSubmit;
+
+    @FindBy(css = "input[name*='pa']")
+    public WebElement sifre;
+
     public LoginPage() {
         PageFactory.initElements(Driver.get(), this);
     }
