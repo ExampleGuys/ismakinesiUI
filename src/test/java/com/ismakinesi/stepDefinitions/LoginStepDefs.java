@@ -163,4 +163,10 @@ public class LoginStepDefs {
     }
 
 
+    @Then("Kullanici Uye Ol Veya Giris Yap sekmesindeyken sayfanin herhangi bir yerine tiklar")
+    public void kullaniciUyeOlVeyaGirisYapSekmesindeykenSayfaninHerhangiBirYerineTiklar() {
+        BrowserUtilities.hover(loginPage.loginSekmesi);
+        BrowserUtilities.doubleClick(loginPage.loginSekmesi);
+        BrowserUtilities.waitFor(5);
+    }
 }

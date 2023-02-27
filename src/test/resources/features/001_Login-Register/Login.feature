@@ -80,4 +80,9 @@ Feature: Giris
       | softwareengineer0000@gmail.com    |
       | softwareengineer00090@mail.com    |
 
+  @IS-371
+  Scenario: TC:IS Kullanici Uye Girisi sekmesindeyken herhangi bir yere tiklandiginda sekme kapanmamalidir
+    When kullanici Uye Ol Veya Giris Yap'a tiklar
+    Then Kullanici Uye Ol Veya Giris Yap sekmesindeyken sayfanin herhangi bir yerine tiklar
+
 
