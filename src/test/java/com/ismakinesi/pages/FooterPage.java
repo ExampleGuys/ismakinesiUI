@@ -73,6 +73,12 @@ public class FooterPage {
     @FindBy(css = "button[class*='submit']")
     public WebElement oturumAc;
 
+    @FindBy(css = "i[class='far fa-heart']")
+    public WebElement kalp;
+
+    @FindBy(css = "img[src*='b92']")
+    public WebElement favoriUrun;
+
     public FooterPage() {
         PageFactory.initElements(Driver.get(), this);
     }

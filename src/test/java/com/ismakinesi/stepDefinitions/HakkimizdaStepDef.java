@@ -225,11 +225,11 @@ public class HakkimizdaStepDef {
     public void kullaniciSonIlanlarBolmesindekiBirIlanaTiklar() {
         BrowserUtilities.clickWithJS(footerPage.ilan);
         BrowserUtilities.waitFor(2);
+        BrowserUtilities.switchToWindow("2018 Caterpillar 930M");
     }
 
     @And("Kullanici Teklif Ver butonuna tiklar")
     public void kullaniciTeklifVerButonunaTiklar() {
-        BrowserUtilities.switchToWindow("2018 Caterpillar 930M");
         footerPage.teklifVer.click();
         BrowserUtilities.waitFor(2);
     }
@@ -238,6 +238,17 @@ public class HakkimizdaStepDef {
     public void girisYapSayfasiAcilir() {
         Assert.assertEquals("Giriş Yap", footerPage.oturumAc.getText());
         BrowserUtilities.waitFor(2);
+    }
+
+    @And("Kullanici Kalp simgesine tiklar")
+    public void kullaniciKalpSimgesineTiklar() {
+        footerPage.kalp.click();
+        BrowserUtilities.waitFor(2);
+    }
+
+    @Then("Kullanici secilen urunu gorur")
+    public void kullaniciSecilenUrunuGorur() {
+        BrowserUtilities.isExist(footerPage.favoriUrun);
     }
 }
 

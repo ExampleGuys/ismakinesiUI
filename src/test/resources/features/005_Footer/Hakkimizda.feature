@@ -81,3 +81,12 @@ Feature: ismakinasi.com hakkinda
     When Kullanici Son Ilanlar bolmesindeki bir ilana tiklar
     And Kullanici Teklif Ver butonuna tiklar
     Then Giris Yap sayfasi acilir
+
+  @IS-29
+  Scenario: Kullanici Ilan sayfasindaki kalp simgesine tiklar ve favoriler sayfasinda secilen ilani gorur
+    When Kullanici uye olarak giris yapar
+    And Kullanici Son Ilanlar bolmesindeki bir ilana tiklar
+    And Kullanici Kalp simgesine tiklar
+    And Kullanici Hesabim butonuna tiklar
+    And Kullanici Favorilerim butonuna tiklar
+    Then Kullanici secilen urunu gorur
