@@ -75,3 +75,9 @@ Feature: ismakinasi.com hakkinda
     And  acilan sayfada Ulke kismi doldurulur
     And  acilan sayfada Mesajiniz kismi doldurulur
     Then Gonder butonuna tiklanir
+
+  @IS-27
+  Scenario: Kullanici bir ilan sayfasinda "Teklif Ver" butonuna tiklandiginda, Oturum Ac bolmesi acilmalidir
+    When Kullanici Son Ilanlar bolmesindeki bir ilana tiklar
+    And Kullanici Teklif Ver butonuna tiklar
+    Then Giris Yap sayfasi acilir

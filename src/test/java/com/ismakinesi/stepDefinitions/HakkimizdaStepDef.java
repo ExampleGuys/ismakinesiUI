@@ -220,5 +220,24 @@ public class HakkimizdaStepDef {
         Assert.assertTrue(footerPage.GizlilikZleMesiickisim.isDisplayed());
 
     }
+
+    @When("Kullanici Son Ilanlar bolmesindeki bir ilana tiklar")
+    public void kullaniciSonIlanlarBolmesindekiBirIlanaTiklar() {
+        BrowserUtilities.clickWithJS(footerPage.ilan);
+        BrowserUtilities.waitFor(2);
+    }
+
+    @And("Kullanici Teklif Ver butonuna tiklar")
+    public void kullaniciTeklifVerButonunaTiklar() {
+        BrowserUtilities.switchToWindow("2018 Caterpillar 930M");
+        footerPage.teklifVer.click();
+        BrowserUtilities.waitFor(2);
+    }
+
+    @Then("Giris Yap sayfasi acilir")
+    public void girisYapSayfasiAcilir() {
+        Assert.assertEquals("Giriş Yap", footerPage.oturumAc.getText());
+        BrowserUtilities.waitFor(2);
+    }
 }
 
