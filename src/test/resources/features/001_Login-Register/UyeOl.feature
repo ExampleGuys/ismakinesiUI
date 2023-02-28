@@ -1,4 +1,4 @@
-@register @smoke @uyeOl
+@regression @register @smoke @uyeOl 
 Feature: Uye Ol / Register
 
   Background: AnaSayfa Acilis
