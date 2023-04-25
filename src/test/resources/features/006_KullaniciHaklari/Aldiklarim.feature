@@ -18,7 +18,7 @@ Feature: aldiklarim
 
 
   @IS-96
-  Scenario: TC:IS-96 Kullanici Aldiklarim sayfasindaki Aldiklarim'a tiklayinca onceden satin almis oldugu urunleri gorur
+  Scenario: TC:IS-96 Kullanici Aldiklarim sayfasindaki Aldiklarim'a tiklayinca onceden satin almis oldugu urunleri gorur.
 
     Then kullanici onceden almis oldugu urunleri gorur
 
